@@ -118,3 +118,18 @@
     display: none;
   }
   
+  /*=============== SPONSORS ===============*/
+.sponsor__container {
+ 
+  justify-items: center;
+ 
+}
+
+.sponsor__content:hover .sponsor__img {
+  filter: invert(0.2);
+}
+
+.sponsor__img {
+  width: 150px;
+  transition: var(--img-transition);
+}

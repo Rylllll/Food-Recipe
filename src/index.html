@@ -313,9 +313,9 @@
          
           <p class="text-sm text-gray-500">Adobo is a famous Filipino dish of meat or fish cooked in a full-flavored sauce made from everyday pantry ingredients.</p>
          
-          <div class="flex justify-between gap-6">
-            <button class="bg-gray-700 w-64 h-10 mt-5 rounded-lg text-white">View Recipe</button>
-            <div class="mt-5 w-full h-10 border-2 border-gray-700 rounded-lg cursor-pointer bg-white">
+          <div class="flex gap-6">
+            <button class="bg-gray-700 w-full h-10 mt-5 rounded-lg text-white cursor-pointer transition-transform transform-gpu hover:scale-105">View Recipe</button>
+            <div class="mt-5 w-full h-10 border-2 border-gray-700 rounded-lg cursor-pointer bg-white cursor-pointer transition-transform transform-gpu hover:scale-105">
             <h1 class=" text-gray-700 text-sm text-center"> <i class="fa-solid fa-cart-shopping mt-2 text-lg"></i> Add to cart</h1>
           
           </div>
@@ -569,62 +569,71 @@
         </div>
 
         <div class="flex mx-auto justify-center mt-28">
-        <button class="py-2 px-6 bg-gray-700 text-white rounded-full">See all blogs</button>
+          <button class="py-2 px-6 bg-gray-700 text-white rounded-full shadow-md hover:shadow-2xl transform hover:-translate-y-1 transition-all">See all blogs</button>
+
 
         </div>
     </section>
 
     <section class="mt-28 w-full relative mx-auto justify-center container">
       <div class="relative">
-        <img src="./img/bgvid.png" class="w-full h-104 object-cover" alt="">
+        <img src="./img/bgvid.png" class="w-full rounded-2xl h-104 object-cover" alt="">
         <div class="absolute top-16 justify-center mx-auto">
           <h1 class="text-3xl font-bold mx-auto justify-center flex">New Recipes every week</h1>
           <p class="mt-2 text-gray-500 mx-auto justify-center flex text-center px-64 text-sm ">Lorem ipsum dolor sit amet consectetur adipisicing elit. A deleniti quod officia quis illo voluptatem porro corporis exercitationem ea optio, saepe, perferendis temporibus reprehenderit sunt? Officia quae nisi incidunt facilis?</p>
         </div>
 
-        <div class="absolute gap-6 flex justify-center mx-auto px-64 top-52">
-          <video id="video1" width="540" height="200" class="rounded-xl">
-            <source src="../vid/vid1.mp4" type="video/mp4">
-          </video>
-          <button id="playPause1"
-            class="absolute left-80 top-32 flex bg-gray-500 p-4 rounded-full">
-            <i class="fa-solid fa-play px-2 py-1.5 text-xl text-white"></i>
-        
-          </button>
+        <div class="absolute gap-6 flex justify-center mx-auto container px-64 top-52">
           
-        <video id="video2" width="540" height="200" class="rounded-xl">
-          <source src="../vid/vid2.mp4" type="video/mp4">
-        </video>
-          <button id="playPause2"
-          class="absolute right-80 top-32 flex bg-gray-500 p-4 rounded-full">
-          <i class="fa-solid fa-play px-2 py-1.5 text-xl text-white"></i>
+            <img class="w-full h-72 cursor-pointer transition-transform transform-gpu hover:scale-105" src="./img/1.png" alt="">
+         <img class="w-full h-72 cursor-pointer transition-transform transform-gpu hover:scale-105" src="./img/2.png" alt="">
+           
         
-        </button>
-    
         </div>
        
       </div>
     </section>
     
-    
+    <section class="mt-28 w-full relative mx-auto justify-center container">
+      <div class="sponsor__container container flex justify-center cursor-pointer">
+                    <div class="sponsor__content">
+                        <img src="./img/bigbitelogo.png" alt="" class="sponsor__img">
+                    </div>
+                    <div class="sponsor__content">
+                        <img src="./img/crispylogo.png" alt="" class="sponsor__img">
+                    </div>
+                    <div class="sponsor__content">
+                        <img src="./img/lolilogo.png" alt="" class="sponsor__img">
+                    </div>
+                    <div class="sponsor__content">
+                        <img src="./img/burgerlogo.png" alt="" class="sponsor__img">
+                    </div>
+                    <div class="sponsor__content">
+                        <img src="./img/traylogo.png" alt="" class="sponsor__img">
+                    </div>
+                    <div class="sponsor__content">
+                        <img src="./img/olivelogo.png" alt="" class="sponsor__img">
+                    </div>
+                </div>
+    </section>
 
   <section class="mt-28 mb-28 container mx-auto justify-center">
   <div class="mx-auto flex justify-between">
     <h1 class="text-3xl font-bold mx-auto justify-center block">Websites gallery</h1>
 
   </div>
-  <p class="mt-2 text-gray-500 mx-auto justify-center flex text-sm">Visit our collection of images from different recipes around the world</p>
+  <p class="mt-2 text-gray-500 mx-auto justify-center flex text-sm px-64 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. A deleniti quod officia quis illo voluptatem porro corporis exercitationem ea optio, saepe, perferendis temporibus reprehenderit sunt? Officia quae nisi incidunt facilis?</p>
 
   <div class="w-full max-w-full p-5 pb-10 mx-auto mb-10 gap-5 columns-3 space-y-5 mt-12">
-    <img class="rounded-2xl" src="./img/por2.jpg" alt="">
-   <img class="rounded-2xl" src="./img/adobo.jpg" alt="">
-   <img class="rounded-2xl" src="./img/katsudon.jpg" alt="">
-   <img class="rounded-2xl" src="./img/french.jpg" alt="">
-   <img class="rounded-2xl" src="./img/por1.jpg" alt="">
-   <img class="rounded-2xl" src="./img/britain.jpg" alt="">
-   <img class="rounded-2xl" src="./img/bg.jpg" alt="">
-   <img class="rounded-2xl" src="./img/salad.jpg" alt="">
-   <img class="rounded-2xl" src="./img/turkey.jpg" alt=""><img class="rounded-2xl" src="./img/india.jpg" alt="">
+    <img class="rounded-2xl cursor-pointer transition-transform transform-gpu hover:scale-105" src="./img/por2.jpg" alt="">
+   <img class="rounded-2xl cursor-pointer transition-transform transform-gpu hover:scale-105" src="./img/adobo.jpg" alt="">
+   <img class="rounded-2xl cursor-pointer transition-transform transform-gpu hover:scale-105" src="./img/katsudon.jpg" alt="">
+   <img class="rounded-2xl cursor-pointer transition-transform transform-gpu hover:scale-105" src="./img/french.jpg" alt="">
+   <img class="rounded-2xl cursor-pointer transition-transform transform-gpu hover:scale-105" src="./img/por1.jpg" alt="">
+   <img class="rounded-2xl cursor-pointer transition-transform transform-gpu hover:scale-105" src="./img/britain.jpg" alt="">
+   <img class="rounded-2xl cursor-pointer transition-transform transform-gpu hover:scale-105" src="./img/bg.jpg" alt="">
+   <img class="rounded-2xl cursor-pointer transition-transform transform-gpu hover:scale-105" src="./img/salad.jpg" alt="">
+   <img class="rounded-2xl cursor-pointer transition-transform transform-gpu hover:scale-105" src="./img/turkey.jpg" alt=""><img class="rounded-2xl" src="./img/india.jpg" alt="">
    
 </div>
 
