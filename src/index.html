@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="../dist/output.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/730a8ae355.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <link rel="stylesheet" href="../src/input.css">
    
     <title>Food Recipe</title>
@@ -144,7 +146,7 @@
       </div>
 
 
-      <div class="absolute top-20 left-10 w-2/5 h-96 bg-white   ">
+      <div class="absolute top-20 left-10 w-2/5 h-96 bg-white  scrollrevs">
         <div class="px-7 mt-10 font-sans flex gap-6 mx-auto text-sm">
           <h1><i class="fa-solid fa-heart text-gray-700"></i> 2.5M</h1>
           <h1><i class="fa-sharp fa-regular fa-comment"></i> 500 Comments</h1>
@@ -181,11 +183,11 @@
     
 <!-- Recipes -->
 
-    <section class="mx-auto container" id="Recipe">
+    <section class="mx-auto container" id="Recipe scrollrevs">
         <div class="mx-auto flex justify-between" >
-          <h1 class="mt-28 text-3xl font-bold" >Featured Recipes</h1>
+          <h1 class="mt-28 text-3xl font-bold scrollrevs" >Featured Recipes</h1>
           
-          <div class="mt-28 relative flex gap-6">
+          <div class="mt-28 relative flex gap-6 scrollrevs">
             <input type="text" placeholder="Search for recipes..." class="rounded-full w-96 h-10 bg-white-300 bg-[#efebe9] border border-gray-500 pl-10">
             <i class="absolute top-1 left-2 fa-solid fa-magnifying-glass text-gray-500 p-2 cursor-pointer"></i>
 
@@ -196,12 +198,12 @@
 
  
         </div>
-        <p class="mt-2 text-gray-500">Explore the latest recipes around the world</p>
+        <p class="mt-2 text-gray-500 scrollrevs">Explore the latest recipes around the world</p>
         
         <div class="flex justify-between container mx-auto gap-6">
-        <div class="cards mt-6 container">
+        <div class="cards mt-6 container scrollrev">
          
-          <div class="card active" style="--bg: url(./img/adobo.jpg)">
+          <div class="card active" style="--bg: url(./img/adobo.jpg) ">
             <div class="shadow"></div> 
             <div class="label">
               <div class="icon" style="--color: green">
@@ -283,7 +285,7 @@
         </div>
 
         
-        <div class="border-1 border-gray-500 w-1/2 h-96 mt-6 rounded-2xl">
+        <div class="border-1 border-gray-500 w-1/2 h-96 mt-6 rounded-2xl scrollrevss">
           <img src="./img/adobo.jpg" onclick="toggleFullscreen()" class="w-full h-44 object-cover rounded-2xl cursor-pointer" alt="">
           <!-- Hidden overlay and close button -->
           <div id="imageOverlay" class="hidden fixed inset-0 bg-black bg-opacity-75 z-50">
@@ -313,9 +315,9 @@
          
           <p class="text-sm text-gray-500">Adobo is a famous Filipino dish of meat or fish cooked in a full-flavored sauce made from everyday pantry ingredients.</p>
          
-          <div class="flex gap-6">
+          <div class="flex gap-6 scrollrevs">
             <button class="bg-gray-700 w-full h-10 mt-5 rounded-lg text-white cursor-pointer transition-transform transform-gpu hover:scale-105">View Recipe</button>
-            <div class="mt-5 w-full h-10 border-2 border-gray-700 rounded-lg cursor-pointer bg-white cursor-pointer transition-transform transform-gpu hover:scale-105">
+            <div class="mt-5 w-full h-10 border-2 border-gray-700 rounded-lg cursor-pointer bg-white transition-transform transform-gpu hover:scale-105">
             <h1 class=" text-gray-700 text-sm text-center"> <i class="fa-solid fa-cart-shopping mt-2 text-lg"></i> Add to cart</h1>
           
           </div>
@@ -339,7 +341,7 @@
       <p class="mt-2 text-gray-500 mx-auto justify-center flex text-sm">Testemonials for our valued customers</p>
 
       
-      <div class="slider-container bg-[#d7ccc8] px-0 py-0 rounded-xl mb-4 mt-12 overflow-hidden relative">
+      <div class="scrollrev slider-container bg-[#d7ccc8] px-0 py-0 rounded-xl mb-4 mt-12 overflow-hidden relative ">
         <div class="slider-wrapper flex transition-transform">
           
           <div class="slide w-full flex ">
@@ -464,110 +466,264 @@
     
       <section class="mx-auto container" id="Blogs" >
         <div class="mx-auto flex justify-between">
-          <h1 class="mt-28 text-3xl font-bold mx-auto justify-center block" >Checkout our latest blogs</h1>
+          <h1 class="mt-28 text-3xl font-bold mx-auto justify-center block" >Checkout our Food blogs</h1>
   
         </div>
         <p class="mt-2 text-gray-500 mx-auto justify-center flex text-sm">Visit the most recent reviews and comments from our trusted customers</p>
 
-        <div class="mt-12 flex justify-between gap-6">
-          <div class="card1">
-            <img class="w-full h-1/2 object-cover rounded-2xl" src="./img/blog1.jpg" alt="">
-            <div class="flex text-gray-700 mt-4 gap-6 ">
-              <h1 class="text-md mb-4"><i class="fa-regular fa-heart text-lg"></i> 500 LIKES</h1>
-              <h1 class="text-md mb-4"><i class="fa-regular fa-comment text-lg"></i> 120 COMMENTS</h1>
-            </div>
-       
+      <!--Blogs------------------------------>
+        <div class="flex gap-6">
+        <div class="mt-12 justify-between space-y-6 w-full">
+          <div class="card1 flex gap-6 w-full">
+            <img class="w-1/2 h-1/2 object-cover rounded-2xl" src="./img/blog1.jpg" alt="">
             <div>
-              <h1 class="text-xl mb-4 font-semibold">Mastering the Art of Culinary Alchemy: Exploring Essential Cooking Techniques</h1>
-              <p class="text-gray-500">In the culinary world, cooking techniques serve as the magical spells that transform raw ingredients into delectable masterpieces...</p>
-              <button class="mt-4 text-gray-700 underline">Read more</button>
+            <div class="flex mt-4 gap-6 ">
+              <h1 class="text-sm mb-4"><i class="fa-regular fa-heart text-sm"></i> 500 LIKES</h1>
+              <h1 class="text-sm mb-4"><i class="fa-regular fa-comment text-lm"></i> 120 COMMENTS</h1>
+            </div>
+            
+            <div>
+            <div class="info">
+              <h1 class="text-md mb-3 font-semibold">Mastering the Art of Culinary Alchemy: Exploring Essential Cooking Techniques</h1>
+              <p class="text-gray-500 text-sm">In the culinary world, cooking techniques serve as the magical spells that transform raw ingredients into delectable masterpieces...</p>
+              <button class="mt-2 text-gray-700 underline">Read more</button>
 
               <div class="justify-between flex ">
-                <div class="mt-5 flex gap-4">
-                  <img src="./img/commentor.jpg" class="rounded-full w-14 h-14" alt="">
-                  <div class="mt-3">
+                <div class="mt-3 flex gap-4">
+                  <img src="./img/commentor.jpg" class="rounded-full w-10 h-10" alt="">
+                  <div class="mt-1">
                   <h1 class="text-sm">Reymark E. Boquiron</h1>
                   <p class="text-gray-500 text-xs">July 4, 2023</p>
                 </div>
         
                 
                 </div>
-                <div class="px-8 mt-9 gap-6 space-x-5">
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                  <i class="fa-sharp fa-regular fa-bookmark" style="color: #000000;"></i>
+                <div class="px-8 mt-6 gap-6 space-x-5">
+                  <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+                  <i class="fa-sharp fa-regular fa-bookmark text-sm" style="color: #000000;"></i>
                 </div>
               </div>
-              
             </div>
-            
+            </div>
+          </div>
           </div>
 
-          <div class="card2">
-            <img class="w-full h-1/2 object-cover rounded-2xl" src="./img/blog2.jpg" alt="">
-            <div class="flex text-gray-700 mt-4 gap-6 ">
-              <h1 class="text-md mb-4"><i class="fa-regular fa-heart text-lg"></i> 1500 LIKES</h1>
-              <h1 class="text-md mb-4"><i class="fa-regular fa-comment text-lg"></i> 960 COMMENTS</h1>
-            </div>
-       
+          <div class="card2 flex gap-6">
+            <img class="w-1/2 h-1/2 object-cover rounded-2xl" src="./img/blog2.jpg" alt="">
             <div>
-              <h1 class="text-xl mb-4 font-semibold">Elevate Your Dining Experience: The Art of Proper Plating Unveiled</h1>
-              <p class="text-gray-500">In the world of gastronomy, presentation is just as crucial as taste. "Elevate Your Dining Experience: The Art of Proper Plating Unveiled" is a captivating journey into the meticulous art of arranging food on a plate...</p>
-              <button class="mt-4 text-gray-700 underline">Read more</button>
+            <div class="flex  mt-4 gap-6 ">
+              <h1 class="text-sm mb-4"><i class="fa-regular fa-heart text-sm"></i> 1500 LIKES</h1>
+              <h1 class="text-sm mb-4"><i class="fa-regular fa-comment text-lm"></i> 960 COMMENTS</h1>
+            </div>
+            
+            <div>
+            <div class="info">
+              <h1 class="text-md mb-3 font-semibold">Elevate Your Dining Experience: The Art of Proper Plating Unveiled</h1>
+              <p class="text-gray-500 text-sm">In the world of gastronomy, presentation is just as crucial as taste. "Elevate Your Dining Experience: The Art of Proper Plating Unveiled"...</p>
+              <button class="mt-2 text-gray-700 underline">Read more</button>
 
               <div class="justify-between flex ">
-                <div class="mt-5 flex gap-4">
-                  <img src="./img/chef3.jpg" class="rounded-full w-14 h-14" alt="">
-                  <div class="mt-3">
+                <div class="mt-3 flex gap-4">
+                  <img src="./img/chef3.jpg" class="rounded-full w-10 h-10" alt="">
+                  <div class="mt-1">
                   <h1 class="text-sm">Food Recipes</h1>
                   <p class="text-gray-500 text-xs">July 26, 2023</p>
                 </div>
         
                 
                 </div>
-                <div class="px-8 mt-9 gap-6 space-x-5">
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                  <i class="fa-sharp fa-regular fa-bookmark" style="color: #000000;"></i>
+                <div class="px-8 mt-6 gap-6 space-x-5">
+                  <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+                  <i class="fa-sharp fa-regular fa-bookmark text-sm" style="color: #000000;"></i>
                 </div>
               </div>
-              
             </div>
-            
+            </div>
+          </div>
           </div>
 
-          <div class="card3">
-            <img class="w-full h-1/2 object-cover rounded-2xl" src="./img/blog3.jpg" alt="">
-            <div class="flex text-gray-700 mt-4 gap-6 ">
-              <h1 class="text-md mb-4"><i class="fa-regular fa-heart text-lg"></i> 390 LIKES</h1>
-              <h1 class="text-md mb-4"><i class="fa-regular fa-comment text-lg"></i> 8654 COMMENTS</h1>
-            </div>
-       
+          <div class="card3 flex gap-6">
+            <img class="w-1/2 h-1/2 object-cover rounded-2xl" src="./img/blog3.jpg" alt="">
             <div>
-              <h1 class="text-xl mb-4 font-semibold">Playing with Fire: The Mesmerizing Art of Pyrotechnic Cooking</h1>
-              <p class="text-gray-500">Prepare to be spellbound as we delve into the captivating world of pyrotechnic cooking in "Playing with Fire: The Mesmerizing Art of Pyrotechnic Cooking." ...</p>
-              <button class="mt-4 text-gray-700 underline">Read more</button>
+            <div class="flex  mt-4 gap-6 ">
+              <h1 class="text-sm mb-4"><i class="fa-regular fa-heart text-sm"></i> 390 LIKES</h1>
+              <h1 class="text-sm mb-4"><i class="fa-regular fa-comment text-lm"></i> 390 LIKES</h1>
+            </div>
+            
+            <div>
+            <div class="info">
+              <h1 class="text-md mb-3 font-semibold">Playing with Fire: The Mesmerizing Art of Pyrotechnic Cooking</h1>
+              <p class="text-gray-500 text-sm">Prepare to be spellbound as we delve into the captivating world of pyrotechnic cooking in "Playing with Fire: The Mesmerizing Art of Pyrotechnic Cooking."...</p>
+              <button class="mt-2 text-gray-700 underline">Read more</button>
 
               <div class="justify-between flex ">
-                <div class="mt-5 flex gap-4">
-                  <img src="./img/model.png" class="rounded-full w-14 h-14" alt="">
-                  <div class="mt-3">
+                <div class="mt-3 flex gap-4">
+                  <img src="./img/model.png" class="rounded-full w-10 h-10" alt="">
+                  <div class="mt-1">
                   <h1 class="text-sm">Beauty cook</h1>
                   <p class="text-gray-500 text-xs">January 15, 2023</p>
                 </div>
         
                 
                 </div>
-                <div class="px-8 mt-9 gap-6 space-x-5">
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                  <i class="fa-sharp fa-regular fa-bookmark" style="color: #000000;"></i>
+                <div class="px-8 mt-6 gap-6 space-x-5">
+                  <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+                  <i class="fa-sharp fa-regular fa-bookmark text-sm" style="color: #000000;"></i>
                 </div>
               </div>
-              
+            </div>
+            </div>
+          </div>
+          </div>
+
+          <div class="card3 flex gap-6">
+            <img class="w-1/2 h-1/2 object-cover rounded-2xl" src="./img/turkey.jpg" alt="">
+            <div>
+            <div class="flex  mt-4 gap-6 ">
+              <h1 class="text-sm mb-4"><i class="fa-regular fa-heart text-sm"></i> 390 LIKES</h1>
+              <h1 class="text-sm mb-4"><i class="fa-regular fa-comment text-lm"></i> 390 LIKES</h1>
             </div>
             
+            <div>
+            <div class="info">
+              <h1 class="text-md mb-3 font-semibold">Playing with Fire: The Mesmerizing Art of Pyrotechnic Cooking</h1>
+              <p class="text-gray-500 text-sm">Prepare to be spellbound as we delve into the captivating world of pyrotechnic cooking in "Playing with Fire: The Mesmerizing Art of Pyrotechnic Cooking."...</p>
+              <button class="mt-2 text-gray-700 underline">Read more</button>
+
+              <div class="justify-between flex ">
+                <div class="mt-3 flex gap-4">
+                  <img src="./img/model.png" class="rounded-full w-10 h-10" alt="">
+                  <div class="mt-1">
+                  <h1 class="text-sm">Beauty cook</h1>
+                  <p class="text-gray-500 text-xs">January 15, 2023</p>
+                </div>
+        
+                
+                </div>
+                <div class="px-8 mt-6 gap-6 space-x-5">
+                  <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+                  <i class="fa-sharp fa-regular fa-bookmark text-sm" style="color: #000000;"></i>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+          </div>
+          <div class="card3 flex gap-6">
+            <img class="w-1/2 h-1/2 object-cover rounded-2xl" src="./img/salad.jpg" alt="">
+            <div>
+            <div class="flex  mt-4 gap-6 ">
+              <h1 class="text-sm mb-4"><i class="fa-regular fa-heart text-sm"></i> 390 LIKES</h1>
+              <h1 class="text-sm mb-4"><i class="fa-regular fa-comment text-lm"></i> 390 LIKES</h1>
+            </div>
+            
+            <div>
+            <div class="info">
+              <h1 class="text-md mb-3 font-semibold">Playing with Fire: The Mesmerizing Art of Pyrotechnic Cooking</h1>
+              <p class="text-gray-500 text-sm">Prepare to be spellbound as we delve into the captivating world of pyrotechnic cooking in "Playing with Fire: The Mesmerizing Art of Pyrotechnic Cooking."...</p>
+              <button class="mt-2 text-gray-700 underline">Read more</button>
+
+              <div class="justify-between flex ">
+                <div class="mt-3 flex gap-4">
+                  <img src="./img/model.png" class="rounded-full w-10 h-10" alt="">
+                  <div class="mt-1">
+                  <h1 class="text-sm">Beauty cook</h1>
+                  <p class="text-gray-500 text-xs">January 15, 2023</p>
+                </div>
+        
+                
+                </div>
+                <div class="px-8 mt-6 gap-6 space-x-5">
+                  <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+                  <i class="fa-sharp fa-regular fa-bookmark text-sm" style="color: #000000;"></i>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
           </div>
           
         </div>
 
+        <!--Latest Post-->
+        <div class="mt-12 space-y-6">
+          <div class="w-full h-96 bg-[#efebe9] border 1px border-[#bcaaa4] rounded-2xl">
+            <h1 class="mt-6 text-center font-semibold">Latest Post</h1>
+
+            <div class="card3 flex gap-6 px-4 mt-6 mb-4 w-full">
+            <img class="w-28 h-20 object-cover " src="./img/turkey.jpg" alt="">
+            <div>
+            <div class="flex gap-6 mb-1">
+              <h1 class="text-xs "><i class="fa-regular fa-heart text-sm"></i> 390 LIKES</h1>
+              <h1 class="text-xs"><i class="fa-regular fa-comment text-lm"></i> 390 LIKES</h1>
+            </div>
+            
+            <div>
+            <div class="info">
+              <h1 class="text-sm mb-3 font-semibold">Its Turkey season: Filled your belly with this delicous turkey recipe</h1>
+            </div>
+            </div>
+
+          </div>
+          </div>
+
+          <div class="card3 flex gap-6 px-4 mb-4">
+            <img class="w-28 h-20 object-cover " src="./img/salad.jpg" alt="">
+            <div>
+            <div class="flex gap-6 mb-1">
+              <h1 class="text-xs "><i class="fa-regular fa-heart text-sm"></i> 390 LIKES</h1>
+              <h1 class="text-xs"><i class="fa-regular fa-comment text-lm"></i> 390 LIKES</h1>
+            </div>
+            
+            <div>
+            <div class="info">
+              <h1 class="text-sm mb-3 font-semibold">Playing with Fire: The Mesmerizing Art of Pyrotechnic Cooking</h1>
+            </div>
+            </div>
+
+          </div>
+          </div>
+
+          <div class="card3 flex gap-6 px-4  mb-4">
+            <img class="w-28 h-20 object-cover " src="./img/balls.jpg" alt="">
+            <div>
+            <div class="flex gap-6 mb-1">
+              <h1 class="text-xs "><i class="fa-regular fa-heart text-sm"></i> 390 LIKES</h1>
+              <h1 class="text-xs"><i class="fa-regular fa-comment text-lm"></i> 390 LIKES</h1>
+            </div>
+            
+            <div>
+            <div class="info">
+              <h1 class="text-sm mb-3 font-semibold">Playing with Fire: The Mesmerizing Art of Pyrotechnic Cooking</h1>
+            </div>
+            </div>
+
+          </div>
+          </div>
+
+            </div>
+
+            <div class="w-full h-72 bg-[#d7ccc8] border 1px border-[#d7ccc8] rounded-2xl">
+            <h1 class="mt-6 text-center font-semibold text-2xl">Never miss a Post!</h1>
+            <p class="text-center text-sm px-7 mt-4 text-gray-500">Sign up and join our cooking community and get notified on latest update</p>
+            <div class="relative">
+
+  
+              <input type="text" placeholder="Enter your email" class="pl-10 pr-6 py-4 w-72 mx-auto flex mt-7 text-xs border border-gray-300 focus:ring focus:ring-blue-200 focus:border-blue-500">
+              <i class="absolute right-24 top-1/2 transform -translate-y-1/2 fas fa-envelope text-gray-400"></i></input>
+              </div>
+
+            <button class="mx-auto flex bg-gray-700 justify-center text-white mt-2 text-sm w-72 py-4 px-6">Subscribe</button>
+
+            </div>
+            
+            
+          </div>
+
+          
+      </div>
+
+      
         <div class="flex mx-auto justify-center mt-28">
           <button class="py-2 px-6 bg-gray-700 text-white rounded-full shadow-md hover:shadow-2xl transform hover:-translate-y-1 transition-all">See all blogs</button>
 
@@ -943,6 +1099,9 @@
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script> 
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="./js/main.js"></script>
+<script src="./js/scroll.js"></script>
+<script src="./js/scrollreveal.min.js"></script>
   </body>
 </html>

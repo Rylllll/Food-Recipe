@@ -84,3 +84,4 @@ const sliderWrapper = document.querySelector('.slider-wrapper');
       pauseIcon2.classList.add('hidden');
     }
   });
+
