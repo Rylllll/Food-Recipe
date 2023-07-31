@@ -133,3 +133,29 @@
   width: 150px;
   transition: var(--img-transition);
 }
+/* Additional CSS to hide the logo initially and adjust Home nav when the logo is shown */
+/* Additional CSS to hide the logo initially and adjust Home nav when the logo is shown */
+.sticky-nav {
+  position: sticky;
+  top: 0;
+}
+
+.hidden-logo {
+  display: none;
+}
+
+.show-logo .hidden-logo {
+  display: block;
+}
+
+.show-logo img {
+  display: block;
+}
+
+.show-logo nav {
+  margin-left: auto;
+  font-size: 100px;
+  margin-top: 10px; /* Adjust this value as per your requirements */
+}
+
+

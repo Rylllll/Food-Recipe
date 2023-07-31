@@ -2,7 +2,7 @@
 const sr = ScrollReveal({
     distance: '60px',
     duration: 2800,
-    // reset: true,
+    reset: true,
 })
 
 
@@ -16,4 +16,8 @@ sr.reveal(".scrollrevs", {
 
 sr.reveal(".scrollrevss", {
   origin: 'bottom',
+})
+
+sr.reveal(".rightsroll", {
+  origin: 'right',
 })

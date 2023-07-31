@@ -46,14 +46,14 @@ const sliderWrapper = document.querySelector('.slider-wrapper');
   }
 
 
-  window.addEventListener('scroll', function() {
-    const logo = document.querySelector('.hidden-logo');
-    
-    // Check the scrolling position, and toggle the 'hidden-logo' class accordingly
-    if (window.scrollY > 0) {
-      logo.classList.remove('hidden');
+  window.addEventListener("scroll", function () {
+    const logo = document.querySelector(".hidden-logo");
+    const threshold = 100; // Adjust this value as per your requirements
+  
+    if (window.scrollY > threshold) {
+      logo.parentElement.classList.add("show-logo");
     } else {
-      logo.classList.add('hidden');
+      logo.parentElement.classList.remove("show-logo");
     }
   });
 
