@@ -22,65 +22,75 @@
 }n
 </style>
   <body class="font-sans bg-[#efebe9]" id="Home">
-    <header class="bg-[#efebe9] ">
-      <div class="mx-auto justify-between md:container flex h-16 max-w-screen-xl items-center">
-        <a class="top-0 text-teal-600 sticky-nav" href="/">
-          <img src="./img/logo.png" alt="" />
-        </a>
-  
+    <header class="bg-[#efebe9]">
+  <div class="mx-auto justify-between flex h-16 max-w-screen-2xl items-center container md:container lg:container">
+    <a class="top-0 text-teal-600" href="/">
+      <img src="./img/logo.png" alt="" />
+    </a>
 
-        <div class="">
-<input type="text" class="w-96 h-8 bg-white-300 border border-gray-500" placeholder="Search products...">
-<i class="fa-solid fa-magnifying-glass text-white bg-gray-700 p-2 cursor-pointer"></i>
-        </div>
-        <nav class="">
-          <ul class="flex items-center gap-6 space-x-6 text-sm">
-            <li>
-              <a href="">
-                <i class="fa-sharp fa-regular fa-bookmark" style="color: #000000;"></i>
-                Favorites
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <i class="fa-sharp fa-solid fa-cart-shopping"></i>
-                Add to cart
-              </a>
-            </li>
-            <li class="gap-6 space-x-6">
-              <a href="" class = "bg-gray-700 border-2 border-gray-700 px-6 py-2 rounded-full text-white text-sm  ">Login</a>
-              <a href="" class="py-1 bg-black border-gray border-2"></a>
-              <a href="" class = "border-2 border-gray-700 px-6 py-2 rounded-full text-gray-700 text-sm hover:bg-gray-700 hover:scale-110 hover:bg-none hover:text-white">Sign up</a>
-            </li>
-          </ul>
-
-        </nav>
-        </div>
+    <!-- Search Bar (Hidden on Mobile and Smaller Screens)
+    <div class="flex">
+      <input type="text" class="hidden md:w-full lg:flex h-8 bg-white-300 border border-gray-500" placeholder="Search products..." />
+      <i class="fa-solid fa-magnifying-glass text-white bg-gray-700 p-2 cursor-pointer"></i>
+    </div>
+  -->
     
-       
+    <nav class="hidden md:hidden lg:flex items-center  text-sm gap-6 ">
+      <div class="flex gap-6">
+      
+          <a href="" >
+            <i class="fa-sharp fa-regular fa-bookmark" style="color: #000000;"></i>
+            Favorites
+          </a>
         
-    </header>
-    
+     
+          <a href="">
+            <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+            Add to cart
+          </a>
+      
+        </div>
+      
+      <div class="flex items-center  text-sm ">
+
+        <div class="justify-between gap-2 space-x-6">
+          <a href="" class="bg-gray-700 border-2 border-gray-700 px-6 py-2 rounded-full text-white text-sm">Login</a>
+          <a href="" class="py-1 bg-black border-gray-500 border-2"></a>
+          <a href="" class="border-2 border-gray-700 px-6 py-2 rounded-full text-gray-700 text-sm hover:bg-gray-700 hover:scale-110 hover:bg-none hover:text-white">Sign up</a>
+        </div>
+      </div>
+
+      <i class="fa-solid fa-magnifying-glass text-gray-700  py-2 border-2 rounded-full border-gray-700 p-2 cursor-pointer"></i>
+    </nav>
+
+    <!-- Mobile Menu Toggle (Hidden on Larger Screens) -->
+    <div class="flex lg:hidden">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+
+  </div>
+</header>
+
 <!-- Line -->
     
 
 
   <!-- Nav home -->
-  <div class="bg-[#efebe9] top-0 w-full sticky-nav" >
+  <div class="bg-[#efebe9] top-0 w-full sticky-nav hidden md:hidden lg:flex " >
   <div class="text-gray-700 mx-auto flex item-center container py-4 justify-between">
     <a class="top-0 text-teal-600 sticky-nav hidden-logo" href="/">
       <img src="./img/logo.png" alt="" />
     </a>
-    <nav aria-label="Site Nav" class="hidden md:block">
-      <ul class="flex items-center gap-8 text-sm">
+    <nav aria-label="Site Nav" class="">
+      <ul class="flex items-center gap-8 text-sm ">
         <li><a class="transition hover:text-gray-500/75" href="#Home">Home</a></li>
         <li><a class="transition hover:text-gray-500/75" href="#Recipe">Recipes</a></li>
         <li><a class="transition hover:text-gray-500/75" href="#Blogs">Blogs</a></li>
         <li><a class="transition hover:text-gray-500/75" href="#Gallery">Gallery</a></li>
       </ul>
     </nav>
-    <nav>
-      <ul class="flex items-center gap-4 text-sm">
+    <nav class="">
+      <ul class="flex items-center gap-4 text-sm ">
         <li><a class="transition hover:text-gray-500/75" href="/"><i class="fa-brands fa-facebook-f text-gray-700 hover:text-gray-500/75"></i></a></li>
         <li><a class="transition hover:text-gray-500/75" href="/"><i class="fa-brands fa-twitter text-gray-700 hover:text-gray-500/75"></i></a></li>
         <li><a class="transition hover:text-gray-500/75" href="/"><i class="fa-brands fa-pinterest-p text-gray-700 hover:text-gray-500/75"></i></a></li>
@@ -89,6 +99,8 @@
         <li><a class="transition hover:text-gray-500/75" href="/"><i class="fa-brands fa-github text-gray-700 hover:text-gray-500/75"></i></a></li>
       </ul>
     </nav>
+
+
   </div>
 </div>
 
@@ -103,39 +115,34 @@
       </div>
 
 
-      <div class="absolute top-20 left-10 w-2/5 h-96 bg-white  scrollrevs">
-        <div class="px-7 mt-10 font-sans flex gap-6 mx-auto text-sm">
-          <h1><i class="fa-solid fa-heart text-gray-700"></i> 2.5M</h1>
-          <h1><i class="fa-sharp fa-regular fa-comment"></i> 500 Comments</h1>
-          <a href=""><i class="fa-solid fa-star text-gray-700"></i> Click for full review</a>
-        </div>
-        <!-- Content -->
-      <div class="px-7 mt-6">
-        <h1 class="text-5xl">Adobo the best food in philippines.</h1>
-        <p  class="mt-6 text-gray-500 text-sm">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis sapiente fugiat culpa, aliquid iure quos est eaque placeat fugit ullam, dignissimos ex vero adipisci. Laboriosam non dolores beatae corrupti ipsum.</p>
-      </div>
-       
-    
-   
-   
-      <div class="justify-between flex ">
-        <div class="px-7 mt-5 flex gap-4">
-          <img src="./img/commentor.jpg" class="rounded-full w-14 h-14" alt="">
-          <div class="mt-3">
-          <h1 class="text-sm">Reymark E. Boquiron</h1>
-          <p class="text-gray-500 text-xs">July 4, 2023</p>
-        </div>
+      <div class="absolute top-20 left-10 sm:w-25 w-2/5 h-96 bg-white scrollrevs md:w-2/5">
+  <div class="px-7 mt-10 font-sans flex gap-6 mx-auto text-sm">
+    <h1><i class="fa-solid fa-heart text-gray-700"></i> 2.5M</h1>
+    <h1><i class="fa-sharp fa-regular fa-comment"></i> 500 Comments</h1>
+    <a href=""><i class="fa-solid fa-star text-gray-700"></i> Click for full review</a>
+  </div>
 
-        
-        </div>
-        <div class="px-8 mt-9 gap-6 space-x-5">
-          <i class="fa-solid fa-share-nodes "></i>
-          <i class="fa-sharp fa-regular fa-bookmark" style="color: #000000;"></i>
-        </div>
-      </div>
-    
+  <!-- Content -->
+  <div class="px-7 mt-6">
+    <h1 class="text-5xl">Adobo the best food in the Philippines.</h1>
+    <p class="mt-6 text-gray-500 text-sm">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis sapiente fugiat culpa, aliquid iure quos est eaque placeat fugit ullam, dignissimos ex vero adipisci. Laboriosam non dolores beatae corrupti ipsum.</p>
+  </div>
 
+  <div class="justify-between flex">
+    <div class="px-7 mt-5 flex gap-4">
+      <img src="./img/commentor.jpg" class="rounded-full w-14 h-14" alt="">
+      <div class="mt-3">
+        <h1 class="text-sm">Reymark E. Boquiron</h1>
+        <p class="text-gray-500 text-xs">July 4, 2023</p>
       </div>
+    </div>
+    <div class="px-8 mt-9 gap-6 space-x-5">
+      <i class="fa-solid fa-share-nodes"></i>
+      <i class="fa-sharp fa-regular fa-bookmark" style="color: #000000;"></i>
+    </div>
+  </div>
+</div>
+
     </section>
     
 <!-- Recipes -->
@@ -759,8 +766,20 @@
 <footer class="bg-[#d7ccc8] rounded-t-3xl">
   <div class="relative">
     <img src="./img/bgvid1.png" class="w-full rounded-2xl h-80 object-cover" alt="">
-    <!-- White box centered on the image -->
-    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 w-20 h-20 bg-white rounded-full"></div>
+    <!--subscribe boxcentered on the image -->
+    <div class="w-full h-72 bg-[#d7ccc8] border 1px border-[#d7ccc8] rounded-2xl scrollrevs">
+            <h1 class="mt-6 text-center font-semibold text-2xl scrollrevs">Never miss a Post!</h1>
+            <p class="text-center text-sm px-7 mt-4 text-gray-500 scrollrevs">Sign up and join our cooking community and get notified on latest update</p>
+            <div class="relative">
+
+  
+              <input type="text" placeholder="Enter your email" class="scrollrevs pl-10 pr-6 py-4 w-72 mx-auto flex mt-7 text-xs border border-gray-300 focus:ring focus:ring-blue-200 focus:border-blue-500">
+              <i class="scrollrevs absolute right-24 top-1/2 transform -translate-y-1/2 fas fa-envelope text-gray-400"></i></input>
+              </div>
+
+            <button class="mx-auto flex bg-gray-700 justify-center text-white mt-2 text-sm w-72 py-4 px-6 animate__bounceInRight scrollrevs">Subscribe</button>
+
+            </div>
     <!-- End white box -->
     <div class="text-gray-700 mx-auto flex item-center container py-4 justify-between">
       <div class="text-sm">

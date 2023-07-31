@@ -138,6 +138,7 @@
 .sticky-nav {
   position: sticky;
   top: 0;
+  justify-content: space-between;
 }
 
 .hidden-logo {
@@ -153,9 +154,18 @@
 }
 
 .show-logo nav {
+  justify-content: space-between;
   margin-left: auto;
   font-size: 100px;
   margin-top: 10px; /* Adjust this value as per your requirements */
+}
+
+.search-bar {
+  display: none;
+}
+
+.search-bar.active {
+  display: block;
 }
 
 

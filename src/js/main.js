@@ -84,4 +84,12 @@ const sliderWrapper = document.querySelector('.slider-wrapper');
       pauseIcon2.classList.add('hidden');
     }
   });
+  document.addEventListener("DOMContentLoaded", function () {
+    const searchIcon = document.getElementById("searchIcon");
+    const searchBar = document.querySelector(".search-bar");
 
+    searchIcon.addEventListener("click", function () {
+      // Toggle the 'active' class on the search bar to show/hide it
+      searchBar.classList.toggle("active");
+    });
+  });
