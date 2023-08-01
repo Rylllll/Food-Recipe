@@ -115,7 +115,7 @@
       </div>
 
 
-      <div class="absolute top-20 left-10 sm:w-72 sm:container w-2/5 h-96 bg-white scrollrevs md:w-2/5">
+      <div class="hidden md:block lg:block absolute top-20 left-10 sm:w-72 sm:container w-2/5 h-96 bg-white scrollrevs md:w-2/5">
   <div class="px-7 mt-10 font-sans flex gap-6 mx-auto text-xs md:text-sm lg:text-sm">
     <h1><i class="fa-solid fa-heart text-gray-700 sm:text-xs"></i> 2.5M</h1>
     <h1><i class="fa-sharp fa-regular fa-comment sm:text-xs"></i> 500 Comments</h1>
@@ -147,7 +147,7 @@
     
 <!-- Recipes -->
 
-    <section class="mx-auto container scrollrevs" id="Recipe">
+    <section class="mx-auto md:container lg:container scrollrevs" id="Recipe">
         <div class="mx-auto md:flex lg:flex grid justify-between" >
           <h1 class="md:mt-28 lg:mt-28 mt-8 text-3xl font-bold scrollrevs" >Featured Recipes</h1>
           <p class="mt-2 md:hidden lg:hidden text-gray-500 scrollrevs">Explore the latest recipes around the world</p>
@@ -168,10 +168,10 @@
         </div>
         
         <p class="mt-2 hidden md:flex lg:flex text-gray-500 scrollrevs">Explore the latest recipes around the world</p>
-        <div class="flex justify-between container mx-auto gap-6">
-        <div class="cards mt-6 container scrollrev">
+        <div class="justify-between container mx-auto gap-6 md:flex lg:flex hidden">
+        <div class="cards mt-6 container scrollrev flex ">
          
-          <div class="card active" style="--bg: url(./img/adobo.jpg) ">
+          <div class="card active hidden md:flex lg:flex" style="--bg: url(./img/adobo.jpg) ">
             <div class="shadow"></div> 
             <div class="label">
               <div class="icon" style="--color: green">
@@ -184,7 +184,7 @@
             </div>
           </div>
     
-          <div class="card " style="--bg: url(./img/katsudon.jpg)">
+          <div class="card hidden md:flex lg:flex" style="--bg: url(./img/katsudon.jpg)">
             <div class="shadow"></div> 
             <div class="label">
               <div class="icon" style="--color: green">
@@ -197,7 +197,7 @@
             </div>
           </div>
     
-          <div class="card " style="--bg: url(./img/french.jpg)">
+          <div class="card hidden md:flex lg:flex" style="--bg: url(./img/french.jpg)">
             <div class="shadow"></div> 
             <div class="label">
               <div class="icon" style="--color: green">
@@ -210,7 +210,7 @@
             </div>
           </div>
     
-          <div class="card " style="--bg: url(./img/britain.jpg)">
+          <div class="card hidden md:flex lg:flex" style="--bg: url(./img/britain.jpg)">
             <div class="shadow"></div> 
             <div class="label">
               <div class="icon" style="--color: green">
@@ -223,7 +223,7 @@
             </div>
           </div>
     
-          <div class="card " style="--bg: url(./img/india.jpg)">
+          <div class="card hidden md:flex lg:flex" style="--bg: url(./img/india.jpg)">
             <div class="shadow"></div> 
             <div class="label">
               <div class="icon" style="--color: green">
@@ -236,7 +236,7 @@
             </div>
           </div>
     
-          <div class="card " style="--bg: url(./img/mexico.jpg)">
+          <div class="card hidden md:flex lg:flex" style="--bg: url(./img/mexico.jpg)">
             <div class="shadow"></div> 
             <div class="label">
               <div class="icon" style="--color: green">
@@ -253,7 +253,7 @@
         </div>
 
         
-        <div class="border-1 border-gray-500 w-1/2 h-96 mt-6 rounded-2xl scrollrevss">
+        <div class="border-1 border-gray-500 w-1/2  h-96 mt-6 rounded-2xl scrollrevss">
           <img src="./img/adobo.jpg" onclick="toggleFullscreen()" class="w-full h-44 object-cover rounded-2xl cursor-pointer" alt="">
           <!-- Hidden overlay and close button -->
           <div id="imageOverlay" class="hidden fixed inset-0 bg-black bg-opacity-75 z-50">
@@ -294,6 +294,47 @@
         </div>
         
         </div>
+
+        <div class=" md:hidden lg:hidden border-1 border-gray-500 w-full  h-96 mt-6 rounded-2xl scrollrevss">
+          <img src="./img/adobo.jpg" onclick="toggleFullscreen()" class="w-full h-44 object-cover rounded-2xl cursor-pointer" alt="">
+          <!-- Hidden overlay and close button -->
+          <div id="imageOverlay" class="hidden fixed inset-0 bg-black bg-opacity-75 z-50">
+            <div id="imageContainer" class="flex justify-center items-center h-screen">
+              <!-- Added the title attribute for the tooltip -->
+              <img id="fullscreenImage" src="./img/adobo.jpg" class="max-h-[calc(100vh-80px)] object-cover rounded-2xl cursor-pointer" alt="" title="Click to Full Screen">
+              <button id="closeButton" class="absolute top-4 right-4 bg-white rounded-full p-2 text-gray-700">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          
+          
+          <div class="flex justify-between">
+            <h1 class="mt-7 text-xl text-gray-700">Adobong Baboy</h1>
+            <div class="rounded-full text-white bg-gray-500 w-1/4 h-8 mt-5 text-center">
+              <h1 class="mt-1">Medium</h1>
+            </div>
+          </div>
+          <div class="flex justify-between mt-4 mb-3.5 text-lg text-gray-500">
+           <h1 class=""><i class="fa-regular fa-clock"></i> 30m</h1>
+           <h1 class=""><i class="fa-solid fa-list"></i> 10</h1> 
+           <h1 class=""><i class="fa-solid fa-person"></i></i> 1-2</h1> 
+            </div>
+         
+          <p class="text-sm text-gray-500">Adobo is a famous Filipino dish of meat or fish cooked in a full-flavored sauce made from everyday pantry ingredients.</p>
+         
+          <div class="flex gap-6 scrollrevs">
+            <button class="bg-gray-700 w-full h-10 mt-5 rounded-lg text-white cursor-pointer transition-transform transform-gpu hover:scale-105">View Recipe</button>
+            <div class="mt-5 w-full h-10 border-2 border-gray-700 rounded-lg cursor-pointer bg-white transition-transform transform-gpu hover:scale-105">
+            <h1 class=" text-gray-700 text-sm text-center"> <i class="fa-solid fa-cart-shopping mt-2 text-lg"></i> Add to cart</h1>
+          
+          </div>
+          </div>
+       
+        </div>
+        
       </section>
     
         
