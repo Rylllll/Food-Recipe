@@ -16,748 +16,104 @@
    
     <title>Food Recipe</title>
   </head>
-<style>
-  html {
-  scroll-behavior: smooth;
-}n
-</style>
-  <body class="font-sans bg-[#efebe9]" id="Home">
-    <header class="bg-[#efebe9]">
-  <div class="mx-auto justify-between flex h-16 max-w-screen-2xl items-center container md:container lg:container">
-    <a class="top-0 text-teal-600" href="/">
-      <img src="./img/logo.png" alt="" />
-    </a>
 
-    <!-- Search Bar (Hidden on Mobile and Smaller Screens)
-    <div class="flex">
-      <input type="text" class="hidden md:w-full lg:flex h-8 bg-white-300 border border-gray-500" placeholder="Search products..." />
-      <i class="fa-solid fa-magnifying-glass text-white bg-gray-700 p-2 cursor-pointer"></i>
-    </div>
-  -->
-    
-    <nav class="hidden md:hidden lg:flex items-center  text-sm gap-6 ">
-      <div class="flex gap-6">
-      
-          <a href="" >
-            <i class="fa-sharp fa-regular fa-bookmark" style="color: #000000;"></i>
-            Favorites
-          </a>
-        
+  <body class="font-sans  scrollbar-thumb-gray-500 scrollbar-thin" id="Home">
+   
+  <header class="mx-auto justify-between flex h-20 w-full items-center shadow-md ">
+  
+    <div class="container flex justify-between mx-auto">
      
-          <a href="">
-            <i class="fa-sharp fa-solid fa-cart-shopping"></i>
-            Add to cart
-          </a>
+    <div class="flex">
       
-        </div>
-      
-      <div class="flex items-center  text-sm ">
-
-        <div class="justify-between gap-2 space-x-6">
-          <a href="" class="bg-gray-700 border-2 border-gray-700 px-6 py-2 rounded-full text-white text-sm">Login</a>
-          <a href="" class="py-1 bg-black border-gray-500 border-2"></a>
-          <a href="" class="border-2 border-gray-700 px-6 py-2 rounded-full text-gray-700 text-sm hover:bg-gray-700 hover:scale-110 hover:bg-none hover:text-white">Sign up</a>
-        </div>
+  <h1 class="text-2xl font-semibold tracking-widest">FLAVORFUL BITES</h1>
       </div>
 
-      <i class="fa-solid fa-magnifying-glass text-gray-700  py-2 border-2 rounded-full border-gray-700 p-2 cursor-pointer"></i>
-    </nav>
-
-    <!-- Mobile Menu Toggle (Hidden on Larger Screens) -->
-    <div class="flex lg:hidden">
-      <i class="fa-solid fa-bars"></i>
-    </div>
-
-  </div>
-</header>
-
-<!-- Line -->
-    
-
-
-  <!-- Nav home -->
-  <div class="bg-[#efebe9] top-0 w-full sticky-nav hidden md:hidden lg:flex " >
-  <div class="text-gray-700 mx-auto flex item-center container py-4 justify-between">
-    <a class="top-0 text-teal-600 sticky-nav hidden-logo" href="/">
-      <img src="./img/logo.png" alt="" />
-    </a>
-    <nav aria-label="Site Nav" class="">
+   
+     
       <ul class="flex items-center gap-8 text-sm ">
         <li><a class="transition hover:text-gray-500/75" href="#Home">Home</a></li>
         <li><a class="transition hover:text-gray-500/75" href="#Recipe">Recipes</a></li>
         <li><a class="transition hover:text-gray-500/75" href="#Blogs">Blogs</a></li>
         <li><a class="transition hover:text-gray-500/75" href="#Gallery">Gallery</a></li>
       </ul>
-    </nav>
-    <nav class="">
-      <ul class="flex items-center gap-4 text-sm ">
-        <li><a class="transition hover:text-gray-500/75" href="/"><i class="fa-brands fa-facebook-f text-gray-700 hover:text-gray-500/75"></i></a></li>
-        <li><a class="transition hover:text-gray-500/75" href="/"><i class="fa-brands fa-twitter text-gray-700 hover:text-gray-500/75"></i></a></li>
-        <li><a class="transition hover:text-gray-500/75" href="/"><i class="fa-brands fa-pinterest-p text-gray-700 hover:text-gray-500/75"></i></a></li>
-        <li><a class="transition hover:text-gray-500/75" href="/"><i class="fa-brands fa-instagram text-gray-700 hover:text-gray-500/75"></i></a></li>
-        <li><a class="transition hover:text-gray-500/75" href="/"><i class="fa-brands fa-dribbble text-gray-700 hover:text-gray-500/75"></i></a></li>
-        <li><a class="transition hover:text-gray-500/75" href="/"><i class="fa-brands fa-github text-gray-700 hover:text-gray-500/75"></i></a></li>
-      </ul>
-    </nav>
+
+    <a href="" class="bg-[#fdd835] py-2 px-4 text-white rounded-md gap-2 flex text-sm" >
+            <i class="fa-sharp fa-regular fa-bookmark mt-1"></i>
+            <h1>Favorites</h1>
+          </a>
+        
+     
+   
+        </div>
+   
+
+  </header>
 
 
-  </div>
-</div>
 
 
-  
 
-<!-- Background pic -->
-    <section class="mx-auto w-full relative " >
-      <div class="relative">
-        <img src="./img/bg.jpg" class="w-full h-104 object-cover" alt="">
-    
+<section class="mx-auto w-full container mt-6 relative">
+  <div class="relative container">
+    <img src="./img/bg.jpg" class="w-full h-custom object-cover rounded-lg" alt="">
+    <div class="absolute inset-0 flex flex-col justify-center items-center">
+      <h1 class="text-5xl font-bai text-white font-semibold mb-6">Got any Favorites?</h1>
+      <div class="flex items-center relative" id="search-section">
+        <i class="fas fa-utensils absolute left-5 top-1/2 transform -translate-y-1/2 "></i>
+        <input
+          type="text"
+          id="search-input" 
+          class="w-custom py-3 px-12 rounded-sm text-sm border-gray-300 focus:outline-none"
+          placeholder="Search recipes..."
+        >
+        <button
+          type="submit"
+          id="search-button"
+          class="absolute right-1 px-6 py-2 bg-[#fdd835] text-white rounded-sm hover:opacity-50 transition"
+        >
+          <i class="fas fa-search"></i>
+        </button>
       </div>
-
-
-      <div class="hidden md:block lg:block absolute top-20 left-10 sm:w-72 sm:container w-2/5 h-96 bg-white scrollrevs md:w-2/5">
-  <div class="px-7 mt-10 font-sans flex gap-6 mx-auto text-xs md:text-sm lg:text-sm">
-    <h1><i class="fa-solid fa-heart text-gray-700 sm:text-xs"></i> 2.5M</h1>
-    <h1><i class="fa-sharp fa-regular fa-comment sm:text-xs"></i> 500 Comments</h1>
-    <a href=""><i class="fa-solid fa-star text-gray-700 sm:text-xs"></i> Click for full review</a>
-  </div>
-
-  <!-- Content -->
-  <div class="px-7 mt-6">
-    <h1 class="md:text-4xl lg:text-4xl text-lg">Adobo the best food in the Philippines.</h1>
-    <p class="mt-6 text-gray-500 md:text-sm lg:text-sm text-xs sm:mt-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis sapiente fugiat culpa, aliquid iure quos est eaque placeat fugit ullam, dignissimos ex vero adipisci. Laboriosam non dolores beatae corrupti ipsum.</p>
-  </div>
-
-  <div class="justify-between md:flex lg:flex grid">
-    <div class="px-7 mt-5 flex  gap-4">
-      <img src="./img/commentor.jpg" class="rounded-full w-9 h-9 md:w-14 md:h-14 lg:w-14 lg:h-14" alt="">
-      <div class="mt-3">
-        <h1 class="text-xs md:text-sm lg:text-sm">Reymark E. Boquiron</h1>
-        <p class="text-gray-500 text-xs">July 4, 2023</p>
-      </div>
-    </div>
-    <div class="px-8 mt-9 gap-6 space-x-5 hidden md:flex lg:flex">
-      <i class="fa-solid fa-share-nodes"></i>
-      <i class="fa-sharp fa-regular fa-bookmark" style="color: #000000;"></i>
+      <h1 class="text-xs font-sans text-white mt-4">Search your favorite recipes or any recipe around the world.</h1>
     </div>
   </div>
-</div>
+</section>
 
-    </section>
+
+
     
 <!-- Recipes -->
 
-    <section class="mx-auto md:container lg:container scrollrevs" id="Recipe">
-        <div class="mx-auto md:flex lg:flex grid justify-between" >
-          <h1 class="md:mt-28 lg:mt-28 mt-8 text-3xl font-bold scrollrevs" >Featured Recipes</h1>
-          <p class="mt-2 md:hidden lg:hidden text-gray-500 scrollrevs">Explore the latest recipes around the world</p>
-          <div class="md:mt-28 lg:mt-28 mt-4  relative flex md:flex lg:flex md:gap-6 lg:gap-6 gap-6 scrollrevs">
-            <input type="text" placeholder="Search for recipes..." class="rounded-full w-full md:w-96 lg:w-96 md:h-10 lg:h-10 bg-white-300 bg-[#efebe9] border border-gray-500 pl-10">
-            <i class="absolute top-1 left-2 fa-solid fa-magnifying-glass text-gray-500 p-2 cursor-pointer"></i>
-
-
-            <div class="md:hidden lg:hidden bg-white px-4 py-2 rounded-full cursor-pointer">
-              <i class="fa-solid fa-sort-down"></i>
-              </div>
-            <div class="hidden md:block lg:block rounded-full bg-white md:w-44 lg:w-44 lg:h-10 md:h-10 bg-white-300 border border-white text-center text-md cursor-pointer">
-              <h1 class="hidden md:block lg:block mt-2 text-gray-700">Sort by: <b>Newest</b> <i class="fa-solid fa-chevron-down"></i></h1>
-              </div>
-          </div>
-
- 
-        </div>
-        
-        <p class="mt-2 hidden md:flex lg:flex text-gray-500 scrollrevs">Explore the latest recipes around the world</p>
-        <div class="justify-between container mx-auto gap-6 md:flex lg:flex hidden">
-        <div class="cards mt-6 container scrollrev flex ">
-         
-          <div class="card active hidden md:flex lg:flex" style="--bg: url(./img/adobo.jpg) ">
-            <div class="shadow"></div> 
-            <div class="label">
-              <div class="icon" style="--color: green">
-                <img src="./img/ph.png" class="w-6 h-6" alt="">
-              </div>
-              <div class="info">
-                <div class="title text-white">Adobong Baboy</div>
-                <div class="text-white">Philippines best food</div>
-              </div>
-            </div>
-          </div>
-    
-          <div class="card hidden md:flex lg:flex" style="--bg: url(./img/katsudon.jpg)">
-            <div class="shadow"></div> 
-            <div class="label">
-              <div class="icon" style="--color: green">
-                <img src="./img/jp.png" class="w-9 h-6" alt="">
-              </div>
-              <div class="info">
-                <div class="title text-white">katsudon pork cutlet rice bowl</div>
-                <div class="text-white">Japan's bests food</div>
-              </div>
-            </div>
-          </div>
-    
-          <div class="card hidden md:flex lg:flex" style="--bg: url(./img/french.jpg)">
-            <div class="shadow"></div> 
-            <div class="label">
-              <div class="icon" style="--color: green">
-                <img src="./img/fr.png" class="w-6 h-6" alt="">
-              </div>
-              <div class="info">
-                <div class="title text-white">French Beef Bourguignon</div>
-                <div class="text-white">France bests food</div>
-              </div>
-            </div>
-          </div>
-    
-          <div class="card hidden md:flex lg:flex" style="--bg: url(./img/britain.jpg)">
-            <div class="shadow"></div> 
-            <div class="label">
-              <div class="icon" style="--color: green">
-                <img src="./img/br.png" class="w-6 h-6" alt="">
-              </div>
-              <div class="info">
-                <div class="title text-white">British Fish and Chips</div>
-                <div class="text-white">Britain's bests food</div>
-              </div>
-            </div>
-          </div>
-    
-          <div class="card hidden md:flex lg:flex" style="--bg: url(./img/india.jpg)">
-            <div class="shadow"></div> 
-            <div class="label">
-              <div class="icon" style="--color: green">
-                <img src="./img/in.png" class="w-6 h-6" alt="">
-              </div>
-              <div class="info">
-                <div class="title text-white">Indian Kheema Ki Khichdi</div>
-                <div class="text-white">India's bests food</div>
-              </div>
-            </div>
-          </div>
-    
-          <div class="card hidden md:flex lg:flex" style="--bg: url(./img/mexico.jpg)">
-            <div class="shadow"></div> 
-            <div class="label">
-              <div class="icon" style="--color: green">
-                <img src="./img/mx.png" class="w-6 h-6" alt="">
-              </div>
-              <div class="info">
-                <div class="title text-white">Mexican Pozole</div>
-                <div class="text-white">Mexico's bests food</div>
-              </div>
-            </div>
-          </div>
-    
-  
-        </div>
-
-        
-        <div class="border-1 border-gray-500 w-1/2  h-96 mt-6 rounded-2xl scrollrevss">
-          <img src="./img/adobo.jpg" onclick="toggleFullscreen()" class="w-full h-44 object-cover rounded-2xl cursor-pointer" alt="">
-          <!-- Hidden overlay and close button -->
-          <div id="imageOverlay" class="hidden fixed inset-0 bg-black bg-opacity-75 z-50">
-            <div id="imageContainer" class="flex justify-center items-center h-screen">
-              <!-- Added the title attribute for the tooltip -->
-              <img id="fullscreenImage" src="./img/adobo.jpg" class="max-h-[calc(100vh-80px)] object-cover rounded-2xl cursor-pointer" alt="" title="Click to Full Screen">
-              <button id="closeButton" class="absolute top-4 right-4 bg-white rounded-full p-2 text-gray-700">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
-          </div>
-          
-          
-          <div class="flex justify-between">
-            <h1 class="mt-7 text-xl text-gray-700">Adobong Baboy</h1>
-            <div class="rounded-full text-white bg-gray-500 w-1/4 h-8 mt-5 text-center">
-              <h1 class="mt-1">Medium</h1>
-            </div>
-          </div>
-          <div class="flex justify-between mt-4 mb-3.5 text-lg text-gray-500">
-           <h1 class=""><i class="fa-regular fa-clock"></i> 30m</h1>
-           <h1 class=""><i class="fa-solid fa-list"></i> 10</h1> 
-           <h1 class=""><i class="fa-solid fa-person"></i></i> 1-2</h1> 
-            </div>
-         
-          <p class="text-sm text-gray-500">Adobo is a famous Filipino dish of meat or fish cooked in a full-flavored sauce made from everyday pantry ingredients.</p>
-         
-          <div class="flex gap-6 scrollrevs">
-            <button class="bg-gray-700 w-full h-10 mt-5 rounded-lg text-white cursor-pointer transition-transform transform-gpu hover:scale-105">View Recipe</button>
-            <div class="mt-5 w-full h-10 border-2 border-gray-700 rounded-lg cursor-pointer bg-white transition-transform transform-gpu hover:scale-105">
-            <h1 class=" text-gray-700 text-sm text-center"> <i class="fa-solid fa-cart-shopping mt-2 text-lg"></i> Add to cart</h1>
-          
-          </div>
+    <section class="mx-auto md:container lg:container scrollrevs " id="Recipe">
+      
+      <div id="tabs" class="items-center mx-auto grid  mt-4">
+        <div class="flex justify-between font-semibold">
+          <button class="active-tab tab items-center justify-center flex mx-auto" id="breakfast-tab">Breakfast</button>
+        <button class="tab items-center justify-center flex mx-auto" id="lunch-tab">Lunch</button>
+        <button class="tab items-center justify-center flex mx-auto" id="dinner-tab">Dinner</button>
+        <button class="tab items-center justify-center flex mx-auto" id="snack-tab">Snack</button>
+        <button class="tab items-center justify-center flex mx-auto" id="dessert-tab">Dessert</button>
           </div>
        
-        </div>
-        
+        <div class="w-full container h-customs mb-2 -mt-0.5 bg-gray-300"></div>
+    </div>
+
+        <div id="results-section" class="mt-4">
+            <!-- Results will be displayed here -->
         </div>
 
-        <div class=" md:hidden lg:hidden border-1 border-gray-500 w-full  h-96 mt-6 rounded-2xl scrollrevss">
-          <img src="./img/adobo.jpg" onclick="toggleFullscreen()" class="w-full h-44 object-cover rounded-2xl cursor-pointer" alt="">
-          <!-- Hidden overlay and close button -->
-          <div id="imageOverlay" class="hidden fixed inset-0 bg-black bg-opacity-75 z-50">
-            <div id="imageContainer" class="flex justify-center items-center h-screen">
-              <!-- Added the title attribute for the tooltip -->
-              <img id="fullscreenImage" src="./img/adobo.jpg" class="max-h-[calc(100vh-80px)] object-cover rounded-2xl cursor-pointer" alt="" title="Click to Full Screen">
-              <button id="closeButton" class="absolute top-4 right-4 bg-white rounded-full p-2 text-gray-700">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
+        <div class="justify-center flex mx-auto mt-16">
+          <button class="bg-[#fdd835] p-2 rounded-md text-white">
+        See all recipe
+        </button>
           </div>
-          
-          
-          <div class="flex justify-between">
-            <h1 class="mt-7 text-xl text-gray-700">Adobong Baboy</h1>
-            <div class="rounded-full text-white bg-gray-500 w-1/4 h-8 mt-5 text-center">
-              <h1 class="mt-1">Medium</h1>
-            </div>
-          </div>
-          <div class="flex justify-between mt-4 mb-3.5 text-lg text-gray-500">
-           <h1 class=""><i class="fa-regular fa-clock"></i> 30m</h1>
-           <h1 class=""><i class="fa-solid fa-list"></i> 10</h1> 
-           <h1 class=""><i class="fa-solid fa-person"></i></i> 1-2</h1> 
-            </div>
-         
-          <p class="text-sm text-gray-500">Adobo is a famous Filipino dish of meat or fish cooked in a full-flavored sauce made from everyday pantry ingredients.</p>
-         
-          <div class="flex gap-6 scrollrevs">
-            <button class="bg-gray-700 w-full h-10 mt-5 rounded-lg text-white cursor-pointer transition-transform transform-gpu hover:scale-105">View Recipe</button>
-            <div class="mt-5 w-full h-10 border-2 border-gray-700 rounded-lg cursor-pointer bg-white transition-transform transform-gpu hover:scale-105">
-            <h1 class=" text-gray-700 text-sm text-center"> <i class="fa-solid fa-cart-shopping mt-2 text-lg"></i> Add to cart</h1>
-          
-          </div>
-          </div>
-       
-        </div>
+     
+
         
       </section>
     
-        
-        
-    
 
 
-    <section class="mt-28 mx-auto container">
-      <div class="mx-auto flex justify-between">
-        <h1 class="text-3xl font-bold mx-auto justify-center block scrollrevs">What they say</h1>
-
-      </div>
-      <p class="mt-2 text-gray-500 mx-auto justify-center flex text-sm scrollrevs">Testemonials for our valued customers</p>
-
-      
-      <div class="scrollrev slider-container bg-[#d7ccc8] px-0 py-0 rounded-xl mb-4 mt-12 overflow-hidden relative ">
-        <div class="slider-wrapper flex transition-transform">
-          
-          <div class="slide w-full flex ">
-            <img src="./img/chef2.jpg" class="w-1/2 h-auto object-cover rounded-l-xl">
-            <button
-    class="absolute end-4 top-4 z-10 rounded-full bg-white hover:bg-[#f06292] py-2 px-3 text-gray-900 transition hover:text-[#f06292]"
-  >
-    <span class="sr-only">Wishlist</span>
-
-    <i class="fa-regular fa-heart"></i>
-  </button>
-            
-            <div class="text-xl px-9 scrollrevs">
-              <div class="mt-24">
-                <img src="./img/qout.png" class="h-9 w-9">
-              </div>
-           
-              <h1 class="mt-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio corporis illo qui doloremque voluptatibus autem quia culpa nemo odit, aspernatur nostrum distinctio quo mollitia ab rem ut ex minus.</h1>
-
-              <div class="flex justify-between">
-                <div>
-                <p class="mt-12">- Rhea Junivixh</p>
-                <p class="italic text-sm px-4">Professional Chef</p>
-              </div>  
-                <div class="text-2xl gap-6 flex mt-14 text-gray-700">
-                  <i class="fa-regular fa-bookmark"></i>
-                  <i class="fa-regular fa-share-from-square"></i>
-                </div>
-              </div>
-             
-              <div class="flex mt-6 justify-end">
-
-                <div>
-                  <button class="slider-button bg-gray-400 hover:bg-gray-500 rounded-full text-white font-bold py-2 px-4 mr-2" onclick="prevSlide()"><i class="fa-solid fa-chevron-left"></i></button>
-                  <button class="slider-button bg-gray-400 hover:bg-gray-500 rounded-full text-white font-bold py-2 px-4" onclick="nextSlide()"><i class="fa-solid fa-chevron-right"></i></button>
-                </div>
-                
-              </div>
-            </div>
-            
-          </div>
-          <div class="slide w-full flex ">
-            <img src="./img/chef1.jpg" class="w-1/2 h-auto object-cover rounded-l-xl">
-            <button
-            class="absolute end-4 top-4 z-10 rounded-full bg-white hover:bg-[#f06292] py-2 px-3 text-gray-900 transition hover:text-gray-900/75"
-          >
-            <span class="sr-only">Wishlist</span>
-        
-            <i class="fa-regular fa-heart"></i>
-          </button>
-            
-            <div class="text-xl px-9 ">
-              <div class="mt-24">
-                <img src="./img/qout.png" class="h-9 w-9">
-              </div>
-           
-              <h1 class="mt-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio corporis illo qui doloremque voluptatibus autem quia culpa nemo odit, aspernatur nostrum distinctio quo mollitia ab rem ut ex minus.</h1>
-
-              <div class="flex justify-between">
-                <div>
-                <p class="mt-12">- John Doe</p>
-                <p class="italic text-sm px-4">Professional Chef</p>
-              </div>  
-                <div class="text-2xl gap-6 flex mt-14 text-gray-700">
-                  <i class="fa-regular fa-bookmark"></i>
-                  <i class="fa-regular fa-share-from-square"></i>
-                </div>
-              </div>
-             
-              <div class="flex mt-6 justify-end">
-
-                <div>
-                  <button class="slider-button bg-gray-400 hover:bg-gray-500 rounded-full text-white font-bold py-2 px-4 mr-2" onclick="prevSlide()"><i class="fa-solid fa-chevron-left"></i></button>
-                  <button class="slider-button bg-gray-400 hover:bg-gray-500 rounded-full text-white font-bold py-2 px-4" onclick="nextSlide()"><i class="fa-solid fa-chevron-right"></i></button>
-                </div>
-                
-              </div>
-            </div>
-            
-          </div>
-          <div class="slide w-full flex ">
-            <img src="./img/chef3.jpg" class="w-1/2 h-auto object-cover rounded-l-xl">
-            <button
-    class="absolute end-4 top-4 z-10 rounded-full bg-white py-2 px-3 text-gray-900 transition hover:text-gray-900/75"
-  >
-    <span class="sr-only">Wishlist</span>
-
-    <i class="fa-regular fa-heart"></i>
-  </button>
-            
-            <div class="text-xl px-9 group relative block overflow-hidden">
-              <div class="mt-24">
-                <img src="./img/qout.png" class="h-9 w-9">
-              </div>
-           
-              <h1 class="mt-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio corporis illo qui doloremque voluptatibus autem quia culpa nemo odit, aspernatur nostrum distinctio quo mollitia ab rem ut ex minus.</h1>
-
-              <div class="flex justify-between">
-                <div>
-                <p class="mt-12">- Julian Decruvida</p>
-                <p class="italic text-sm px-4">Professional Baker</p>
-              </div>  
-                <div class="text-2xl gap-6 flex mt-14 text-gray-700">
-                  <i class="fa-regular fa-bookmark"></i>
-                  <i class="fa-regular fa-share-from-square"></i>
-                </div>
-              </div>
-             
-              <div class="flex mt-6 justify-end">
-
-                <div>
-                  <button class="slider-button bg-gray-400 hover:bg-gray-500 rounded-full text-white font-bold py-2 px-4 mr-2" onclick="prevSlide()"><i class="fa-solid fa-chevron-left"></i></button>
-                  <button class="slider-button bg-gray-400 hover:bg-gray-500 rounded-full text-white font-bold py-2 px-4" onclick="nextSlide()"><i class="fa-solid fa-chevron-right"></i></button>
-                </div>
-                
-              </div>
-            </div>
-          </div>
-        </div>     
-      </div>  
-      </section>
-    
-      <section class="mx-auto container" id="Blogs" >
-        <div class="mx-auto flex justify-between">
-          <h1 class="mt-28 text-3xl font-bold mx-auto justify-center block scrollrevs" >Checkout our Food blogs</h1>
-  
-        </div>
-        <p class="mt-2 text-gray-500 mx-auto justify-center flex text-sm scrollrevs">Visit the most recent reviews and comments from our trusted customers</p>
-
-      <!--Blogs------------------------------>
-        <div class="flex gap-6">
-        <div class="mt-12 justify-between space-y-6 w-full">
-          <div class="card1 flex gap-6 w-full latest">
-            <img class="w-1/2 h-1/2 object-cover rounded-2xl" src="./img/blog1.jpg" alt="">
-            <div>
-            <div class="flex mt-4 gap-6 ">
-              <h1 class="text-sm mb-4"><i class="fa-regular fa-heart text-sm"></i> 500 LIKES</h1>
-              <h1 class="text-sm mb-4"><i class="fa-regular fa-comment text-lm"></i> 120 COMMENTS</h1>
-            </div>
-            
-            <div>
-            <div class="info">
-              <h1 class="text-md mb-3 font-semibold">Mastering the Art of Culinary Alchemy: Exploring Essential Cooking Techniques</h1>
-              <p class="text-gray-500 text-sm">In the culinary world, cooking techniques serve as the magical spells that transform raw ingredients into delectable masterpieces...</p>
-              <button class="mt-2 text-gray-700 underline">Read more</button>
-
-              <div class="justify-between flex ">
-                <div class="mt-3 flex gap-4">
-                  <img src="./img/commentor.jpg" class="rounded-full w-10 h-10" alt="">
-                  <div class="mt-1">
-                  <h1 class="text-sm">Reymark E. Boquiron</h1>
-                  <p class="text-gray-500 text-xs">July 4, 2023</p>
-                </div>
-        
-                
-                </div>
-                <div class="px-8 mt-6 gap-6 space-x-5">
-                  <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
-                  <i class="fa-sharp fa-regular fa-bookmark text-sm" style="color: #000000;"></i>
-                </div>
-              </div>
-            </div>
-            </div>
-          </div>
-          </div>
-
-          <div class="card2 flex gap-6 latest">
-            <img class="w-1/2 h-1/2 object-cover rounded-2xl" src="./img/blog2.jpg" alt="">
-            <div>
-            <div class="flex  mt-4 gap-6 ">
-              <h1 class="text-sm mb-4"><i class="fa-regular fa-heart text-sm"></i> 1500 LIKES</h1>
-              <h1 class="text-sm mb-4"><i class="fa-regular fa-comment text-lm"></i> 960 COMMENTS</h1>
-            </div>
-            
-            <div>
-            <div class="info">
-              <h1 class="text-md mb-3 font-semibold">Elevate Your Dining Experience: The Art of Proper Plating Unveiled</h1>
-              <p class="text-gray-500 text-sm">In the world of gastronomy, presentation is just as crucial as taste. "Elevate Your Dining Experience: The Art of Proper Plating Unveiled"...</p>
-              <button class="mt-2 text-gray-700 underline">Read more</button>
-
-              <div class="justify-between flex ">
-                <div class="mt-3 flex gap-4">
-                  <img src="./img/chef3.jpg" class="rounded-full w-10 h-10" alt="">
-                  <div class="mt-1">
-                  <h1 class="text-sm">Food Recipes</h1>
-                  <p class="text-gray-500 text-xs">July 26, 2023</p>
-                </div>
-        
-                
-                </div>
-                <div class="px-8 mt-6 gap-6 space-x-5">
-                  <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
-                  <i class="fa-sharp fa-regular fa-bookmark text-sm" style="color: #000000;"></i>
-                </div>
-              </div>
-            </div>
-            </div>
-          </div>
-          </div>
-
-          <div class="card3 flex gap-6 latest">
-            <img class="w-1/2 h-1/2 object-cover rounded-2xl" src="./img/blog3.jpg" alt="">
-            <div>
-            <div class="flex  mt-4 gap-6 ">
-              <h1 class="text-sm mb-4"><i class="fa-regular fa-heart text-sm"></i> 390 LIKES</h1>
-              <h1 class="text-sm mb-4"><i class="fa-regular fa-comment text-lm"></i> 390 LIKES</h1>
-            </div>
-            
-            <div>
-            <div class="info">
-              <h1 class="text-md mb-3 font-semibold">Playing with Fire: The Mesmerizing Art of Pyrotechnic Cooking</h1>
-              <p class="text-gray-500 text-sm">Prepare to be spellbound as we delve into the captivating world of pyrotechnic cooking in "Playing with Fire: The Mesmerizing Art of Pyrotechnic Cooking."...</p>
-              <button class="mt-2 text-gray-700 underline">Read more</button>
-
-              <div class="justify-between flex ">
-                <div class="mt-3 flex gap-4">
-                  <img src="./img/model.png" class="rounded-full w-10 h-10" alt="">
-                  <div class="mt-1">
-                  <h1 class="text-sm">Beauty cook</h1>
-                  <p class="text-gray-500 text-xs">January 15, 2023</p>
-                </div>
-        
-                
-                </div>
-                <div class="px-8 mt-6 gap-6 space-x-5">
-                  <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
-                  <i class="fa-sharp fa-regular fa-bookmark text-sm" style="color: #000000;"></i>
-                </div>
-              </div>
-            </div>
-            </div>
-          </div>
-          </div>
-
-          <div class="card3 flex gap-6 latest">
-            <img class="w-1/2 h-1/2 object-cover rounded-2xl" src="./img/turkey.jpg" alt="">
-            <div>
-            <div class="flex  mt-4 gap-6 ">
-              <h1 class="text-sm mb-4"><i class="fa-regular fa-heart text-sm"></i> 390 LIKES</h1>
-              <h1 class="text-sm mb-4"><i class="fa-regular fa-comment text-lm"></i> 390 LIKES</h1>
-            </div>
-            
-            <div>
-            <div class="info">
-              <h1 class="text-md mb-3 font-semibold">Playing with Fire: The Mesmerizing Art of Pyrotechnic Cooking</h1>
-              <p class="text-gray-500 text-sm">Prepare to be spellbound as we delve into the captivating world of pyrotechnic cooking in "Playing with Fire: The Mesmerizing Art of Pyrotechnic Cooking."...</p>
-              <button class="mt-2 text-gray-700 underline">Read more</button>
-
-              <div class="justify-between flex ">
-                <div class="mt-3 flex gap-4">
-                  <img src="./img/model.png" class="rounded-full w-10 h-10" alt="">
-                  <div class="mt-1">
-                  <h1 class="text-sm">Beauty cook</h1>
-                  <p class="text-gray-500 text-xs">January 15, 2023</p>
-                </div>
-        
-                
-                </div>
-                <div class="px-8 mt-6 gap-6 space-x-5">
-                  <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
-                  <i class="fa-sharp fa-regular fa-bookmark text-sm" style="color: #000000;"></i>
-                </div>
-              </div>
-            </div>
-            </div>
-          </div>
-          </div>
-          <div class="card3 flex gap-6 latest">
-            <img class="w-1/2 h-1/2 object-cover rounded-2xl" src="./img/salad.jpg" alt="">
-            <div>
-            <div class="flex  mt-4 gap-6 ">
-              <h1 class="text-sm mb-4"><i class="fa-regular fa-heart text-sm"></i> 390 LIKES</h1>
-              <h1 class="text-sm mb-4"><i class="fa-regular fa-comment text-lm"></i> 390 LIKES</h1>
-            </div>
-            
-            <div>
-            <div class="info">
-              <h1 class="text-md mb-3 font-semibold">Playing with Fire: The Mesmerizing Art of Pyrotechnic Cooking</h1>
-              <p class="text-gray-500 text-sm">Prepare to be spellbound as we delve into the captivating world of pyrotechnic cooking in "Playing with Fire: The Mesmerizing Art of Pyrotechnic Cooking."...</p>
-              <button class="mt-2 text-gray-700 underline">Read more</button>
-
-              <div class="justify-between flex ">
-                <div class="mt-3 flex gap-4">
-                  <img src="./img/model.png" class="rounded-full w-10 h-10" alt="">
-                  <div class="mt-1">
-                  <h1 class="text-sm">Beauty cook</h1>
-                  <p class="text-gray-500 text-xs">January 15, 2023</p>
-                </div>
-        
-                
-                </div>
-                <div class="px-8 mt-6 gap-6 space-x-5">
-                  <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
-                  <i class="fa-sharp fa-regular fa-bookmark text-sm" style="color: #000000;"></i>
-                </div>
-              </div>
-            </div>
-            </div>
-          </div>
-          </div>
-          
-        </div>
-
-        <!--Latest Post-->
-        <div class="mt-12 space-y-6">
-          <div class="w-full h-96 bg-[#efebe9] border 1px border-[#bcaaa4] rounded-2xl scrollrevs">
-            <h1 class="mt-6 text-center font-semibold">Latest Post</h1>
-
-            <div class="card3 flex gap-6 px-4 mt-6 mb-4 w-full scrollrevs">
-            <img class="w-28 h-20 object-cover " src="./img/turkey.jpg" alt="">
-            <div>
-            <div class="flex gap-6 mb-1">
-              <h1 class="text-xs "><i class="fa-regular fa-heart text-sm"></i> 390 LIKES</h1>
-              <h1 class="text-xs"><i class="fa-regular fa-comment text-lm"></i> 390 LIKES</h1>
-            </div>
-            
-            <div>
-            <div class="info">
-              <h1 class="text-sm mb-3 font-semibold">Its Turkey season: Filled your belly with this delicous turkey recipe</h1>
-            </div>
-            </div>
-
-          </div>
-          </div>
-
-          <div class="card3 flex gap-6 px-4 mb-4 scrollrevs">
-            <img class="w-28 h-20 object-cover " src="./img/salad.jpg" alt="">
-            <div>
-            <div class="flex gap-6 mb-1">
-              <h1 class="text-xs "><i class="fa-regular fa-heart text-sm"></i> 390 LIKES</h1>
-              <h1 class="text-xs"><i class="fa-regular fa-comment text-lm"></i> 390 LIKES</h1>
-            </div>
-            
-            <div>
-            <div class="info">
-              <h1 class="text-sm mb-3 font-semibold">Playing with Fire: The Mesmerizing Art of Pyrotechnic Cooking</h1>
-            </div>
-            </div>
-
-          </div>
-          </div>
-
-          <div class="card3 flex gap-6 px-4  mb-4 scrollrevs">
-            <img class="w-28 h-20 object-cover " src="./img/balls.jpg" alt="">
-            <div>
-            <div class="flex gap-6 mb-1">
-              <h1 class="text-xs "><i class="fa-regular fa-heart text-sm"></i> 390 LIKES</h1>
-              <h1 class="text-xs"><i class="fa-regular fa-comment text-lm"></i> 390 LIKES</h1>
-            </div>
-            
-            <div>
-            <div class="info">
-              <h1 class="text-sm mb-3 font-semibold">Playing with Fire: The Mesmerizing Art of Pyrotechnic Cooking</h1>
-            </div>
-            </div>
-
-          </div>
-          </div>
-
-            </div>
-
-            <div class="w-full h-72 bg-[#d7ccc8] border 1px border-[#d7ccc8] rounded-2xl scrollrevs">
-            <h1 class="mt-6 text-center font-semibold text-2xl scrollrevs">Never miss a Post!</h1>
-            <p class="text-center text-sm px-7 mt-4 text-gray-500 scrollrevs">Sign up and join our cooking community and get notified on latest update</p>
-            <div class="relative">
-
-  
-              <input type="text" placeholder="Enter your email" class="scrollrevs pl-10 pr-6 py-4 w-72 mx-auto flex mt-7 text-xs border border-gray-300 focus:ring focus:ring-blue-200 focus:border-blue-500">
-              <i class="scrollrevs absolute right-24 top-1/2 transform -translate-y-1/2 fas fa-envelope text-gray-400"></i></input>
-              </div>
-
-            <button class="mx-auto flex bg-gray-700 justify-center text-white mt-2 text-sm w-72 py-4 px-6 animate__bounceInRight scrollrevs">Subscribe</button>
-
-            </div>
-            
-            
-          </div>
-
-          
-      </div>
-
-      
-        <div class="flex mx-auto justify-center mt-28">
-          <button class="scrollrevs py-2 px-6 bg-gray-700 text-white rounded-full shadow-md hover:shadow-2xl transform hover:-translate-y-1 transition-all">See all blogs</button>
-
-
-        </div>
-    </section>
-
-    <section class="mt-28 w-full relative mx-auto justify-center container">
-      <div class="relative">
-        <img src="./img/bgvid.png" class="w-full rounded-2xl h-104 object-cover scrollrevs" alt="">
-        <div class="absolute top-16 justify-center mx-auto">
-          <h1 class="text-3xl font-bold mx-auto justify-center flex scrollrevs">New Recipes every week</h1>
-          <p class="mt-2 text-gray-500 mx-auto justify-center flex text-center px-64 text-sm scrollrevs">Lorem ipsum dolor sit amet consectetur adipisicing elit. A deleniti quod officia quis illo voluptatem porro corporis exercitationem ea optio, saepe, perferendis temporibus reprehenderit sunt? Officia quae nisi incidunt facilis?</p>
-        </div>
-
-        <div class="absolute gap-6 flex justify-center mx-auto container px-64 top-52">
-          
-            <img class="scrollrevs w-full h-72 cursor-pointer transition-transform transform-gpu hover:scale-105" src="./img/1.png" alt="">
-         <img class="scrollrevs w-full h-72 cursor-pointer transition-transform transform-gpu hover:scale-105" src="./img/2.png" alt="">
-           
-        
-        </div>
-       
-      </div>
-    </section>
     
     <section class="mt-28 w-full relative mx-auto justify-center container">
       <div class="sponsor__container container flex justify-center cursor-pointer scrollrevs">

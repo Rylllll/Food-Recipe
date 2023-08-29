@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../dist/output.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/730a8ae355.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="../src/input.css">
+   
+    <title>Food Recipe</title>
+  </head>
+
+  <body class="font-sans  scrollbar-thumb-gray-500 scrollbar-thin" id="Home">
+   
+    <header class="mx-auto justify-between flex h-20 w-full items-center border-b-gray-400 border 1px fixed top-0 bg-white z-10"> <!-- Add "fixed top-0 bg-white z-10" classes -->
+        <div class="container flex justify-between mx-auto">
+            <div class="flex">
+                
+                <h1 class="text-2xl font-semibold tracking-widest">FLAVORFUL BITES</h1>
+            </div>
+            <ul class="flex items-center gap-8 text-sm">
+                <li><a class="transition hover:text-gray-500/75" href="#Home">Home</a></li>
+                <li><a class="transition hover:text-gray-500/75" href="#Recipe">Recipes</a></li>
+                <li><a class="transition hover:text-gray-500/75" href="#Blogs">Blogs</a></li>
+                <li><a class="transition hover:text-gray-500/75" href="#Gallery">Gallery</a></li>
+            </ul>
+            <a href="" class="bg-[#fdd835] py-2 px-4 text-white rounded-md gap-2 flex text-sm">
+                <i class="fa-sharp fa-regular fa-bookmark mt-1"></i>
+                <h1>Favorites</h1>
+            </a>
+        </div>
+    </header>
+
+
+
+  <div class="flex h-screen mt-16 ">
+    <!-- Sidebar -->
+    <aside class=" w-1/4  text-black fixed h-full border-gray-400 border 1px ">
+       
+
+       
+        <div class="p-10  overflow-y-auto scrollbar-thin scrollbar-thumb-gray-400">
+            <div class="flex gap-2">
+    
+                <i class="fa-solid fa-sort text-lg mt-0.5"></i>
+                <h1 class="font-semibold mb-4 text-md ">Select Category</h1>
+            </div>
+      
+            
+            <!-- Search Bar -->
+            <div class="mb-4 relative">
+                <input type="text" placeholder="Search..." id="search-input" class="text-sm px-3 py-2 rounded w-full focus:outline-none focus:ring-0 focus:border-yellow-400 border 2px">
+                <i class="fa-solid fa-magnifying-glass absolute right-3 top-2.5 cursor-pointer" id="search-button"></i>
+            </div>
+            
+            
+            
+         
+            <div class="relative py-2 cursor-pointer w-full" id="cuisine">
+                <button class="gap-2 flex items-center text-sm">
+                    <i class="fa-solid fa-martini-glass"></i>
+                    <span class="block px-2 py-1 rounded cursor-pointer font-semibold text-sm">
+                        Cuisine
+                    </span>
+                    <div class="absolute right-0 mt-2">
+                        <i class="fa-solid fa-chevron-down text-sm font-semibold"></i>
+                    </div>
+                </button>
+                
+                <div class="mt-2 bg-white absolute rounded w-full border-gray-600 border 1px z-10 hidden text-sm">
+                    <!-- Dropdown content here -->
+                    <button class="tabs flex mx-auto" id="Italian-tab">Italian</button>
+                    <button class="tabs flex mx-auto" id="Mexican-tab">Mexican</button>
+                    <button class="tabs flex mx-auto" id="American-tab">American</button>
+                    <button class="tabs flex mx-auto" id="Chinese-tab">Chinese</button>
+                    <button class="tabs flex mx-auto" id="Indian-tab">Indian</button>
+                    <button class="tabs flex mx-auto" id="Japanese-tab">Japanese</button>
+                    <button class="tabs flex mx-auto" id="Korean-tab">Korean</button>
+                    <button class="tabs flex mx-auto" id="Filipino-tab">Filipino</button>
+                </div>
+            </div>
+            <!-- Dish -->
+          
+            <div class="relative  py-2 cursor-pointer w-full" id="dish">
+                <button class="gap-2 flex items-center text-sm">
+                    <i class="fa-solid fa-burger"></i>
+                    <span class="block px-2 py-1 rounded cursor-pointer font-semibold text-sm">
+                        Dish
+                    </span>
+                    <div class="absolute right-0 mt-2">
+                        <i class="fa-solid fa-chevron-down text-sm font-semibold"></i>
+                    </div>
+                </button>
+                
+                <div class="hidden mt-2 bg-white absolute rounded w-full border-gray-600 border 1px z-10 text-sm">
+                    <!-- Dropdown content here -->
+                    <button class="tabs flex mx-auto" id="Appetizer-tab">Appetizer</button>
+                    <button class="tabs flex mx-auto" id="Salad-tab">Salad</button>
+                    <button class="tabs flex mx-auto" id="Soup-tab">Soup</button>
+                    <button class="tabs flex mx-auto" id="Dessert-tab">Dessert</button>
+                    <button class="tabs flex mx-auto" id="Beverage-tab">Beverage</button>
+                    <button class="tabs flex mx-auto" id="Breakfast-tab">Breakfast</button>
+                    <button class="tabs flex mx-auto" id="Lunch-tab">Lunch</button>
+                    <button class="tabs flex mx-auto" id="Dinner-tab">Dinner</button>
+                </div>
+            </div>
+         <!-- Meal -->
+
+         <div class="relative  py-2 cursor-pointer w-full" id="meal">
+            <button class="gap-2 flex items-center">
+                <i class="fa-solid fa-utensils"></i>
+                <span class="block px-2 py-1 rounded cursor-pointer font-semibold text-sm">
+                    Meal
+                </span>
+                <div class="absolute right-0 mt-2">
+                    <i class="fa-solid fa-chevron-down text-sm font-semibold"></i>
+                </div>
+            </button>
+            
+            <div class="hidden mt-2 bg-white absolute rounded w-full border-gray-600 border 1px z-10 text-sm">
+                <!-- Dropdown content here -->
+                <button class="tabs flex mx-auto" id="Appetizer-tab">Appetizer</button>
+                <button class="tabs flex mx-auto" id="Salad-tab">Salad</button>
+                <button class="tabs flex mx-auto" id="Soup-tab">Soup</button>
+                <button class="tabs flex mx-auto" id="Dessert-tab">Dessert</button>
+                <button class="tabs flex mx-auto" id="Beverage-tab">Beverage</button>
+                <button class="tabs flex mx-auto" id="Breakfast-tab">Breakfast</button>
+                <button class="tabs flex mx-auto" id="Lunch-tab">Lunch</button>
+                <button class="tabs flex mx-auto" id="Dinner-tab">Dinner</button>
+            </div>
+        </div>
+
+        <!-- Ingredients -->
+        <div class="relative  py-2 cursor-pointer w-full" id="ing">
+            <button class="gap-2 flex items-center text-sm">
+                <i class="fa-solid fa-carrot"></i>
+                <span class="block px-2 py-1 rounded cursor-pointer font-semibold text-sm">
+                    Ingredients
+                </span>
+                <div class="absolute right-0 mt-2">
+                    <i class="fa-solid fa-chevron-down text-sm font-semibold"></i>
+                </div>
+            </button>
+            
+            <div class="hidden mt-2 bg-white absolute rounded w-full border-gray-600 border 1px z-10 text-sm">
+                <!-- Dropdown content here -->
+                <button class="tabs flex mx-auto" id="Appetizer-tab">Appetizer</button>
+                <button class="tabs flex mx-auto" id="Salad-tab">Salad</button>
+                <button class="tabs flex mx-auto" id="Soup-tab">Soup</button>
+                <button class="tabs flex mx-auto" id="Dessert-tab">Dessert</button>
+                <button class="tabs flex mx-auto" id="Beverage-tab">Beverage</button>
+                <button class="tabs flex mx-auto" id="Breakfast-tab">Breakfast</button>
+                <button class="tabs flex mx-auto" id="Lunch-tab">Lunch</button>
+                <button class="tabs flex mx-auto" id="Dinner-tab">Dinner</button>
+            </div>
+        </div>
+
+        <div class="relative  py-2 cursor-pointer w-full" id="ing">
+            <button class="gap-2 flex items-center text-sm">
+                <i class="fa-solid fa-clock"></i>
+                <span class="block px-2 py-1 rounded cursor-pointer font-semibold text-sm">
+                    Cooking Time
+                </span>
+                <div class="absolute right-0 mt-2">
+                    <i class="fa-solid fa-chevron-down text-sm font-semibold"></i>
+                </div>
+            </button>
+            
+            <div class="hidden mt-2 bg-white absolute rounded w-full border-gray-600 border 1px z-10 text-sm">
+                <!-- Dropdown content here -->
+                <button class="tabs flex mx-auto" id="Appetizer-tab">Appetizer</button>
+                <button class="tabs flex mx-auto" id="Salad-tab">Salad</button>
+                <button class="tabs flex mx-auto" id="Soup-tab">Soup</button>
+                <button class="tabs flex mx-auto" id="Dessert-tab">Dessert</button>
+                <button class="tabs flex mx-auto" id="Beverage-tab">Beverage</button>
+                <button class="tabs flex mx-auto" id="Breakfast-tab">Breakfast</button>
+                <button class="tabs flex mx-auto" id="Lunch-tab">Lunch</button>
+                <button class="tabs flex mx-auto" id="Dinner-tab">Dinner</button>
+            </div>
+        </div>
+
+        <div class="relative  py-2 cursor-pointer w-full" id="ing">
+            <button class="gap-2 flex items-center">
+                <i class="fa-solid fa-heart text-sm"></i>
+                <span class="block px-2 py-1 rounded cursor-pointer font-semibold text-sm">
+                    Calories
+                </span>
+                <div class="absolute right-0 mt-2">
+                    <i class="fa-solid fa-chevron-down text-sm font-semibold"></i>
+                </div>
+            </button>
+            
+            <div class="hidden mt-2 bg-white absolute rounded w-full border-gray-600 border 1px z-10 text-sm">
+                <!-- Dropdown content here -->
+                <button class="tabs flex mx-auto" id="Appetizer-tab">Appetizer</button>
+                <button class="tabs flex mx-auto" id="Salad-tab">Salad</button>
+                <button class="tabs flex mx-auto" id="Soup-tab">Soup</button>
+                <button class="tabs flex mx-auto" id="Dessert-tab">Dessert</button>
+                <button class="tabs flex mx-auto" id="Beverage-tab">Beverage</button>
+                <button class="tabs flex mx-auto" id="Breakfast-tab">Breakfast</button>
+                <button class="tabs flex mx-auto" id="Lunch-tab">Lunch</button>
+                <button class="tabs flex mx-auto" id="Dinner-tab">Dinner</button>
+            </div>
+        </div>
+          
+        <div class="relative  py-2 cursor-pointer w-full" id="ing">
+            <button class="gap-2 flex items-center">
+                <i class="fa-solid fa-seedling text-sm"></i>
+                <span class="block px-2 py-1 rounded cursor-pointer font-semibold text-sm">
+                    Diet
+                </span>
+                <div class="absolute right-0 mt-2">
+                    <i class="fa-solid fa-chevron-down font-semibold text-sm"></i>
+                </div>
+            </button>
+            
+            <div class="hidden mt-2 bg-white absolute rounded w-full border-gray-600 border 1px z-10 text-sm">
+                <!-- Dropdown content here -->
+                <button class="tabs flex mx-auto" id="Appetizer-tab">Appetizer</button>
+                <button class="tabs flex mx-auto" id="Salad-tab">Salad</button>
+                <button class="tabs flex mx-auto" id="Soup-tab">Soup</button>
+                <button class="tabs flex mx-auto" id="Dessert-tab">Dessert</button>
+                <button class="tabs flex mx-auto" id="Beverage-tab">Beverage</button>
+                <button class="tabs flex mx-auto" id="Breakfast-tab">Breakfast</button>
+                <button class="tabs flex mx-auto" id="Lunch-tab">Lunch</button>
+                <button class="tabs flex mx-auto" id="Dinner-tab">Dinner</button>
+            </div>
+        </div>
+
+        <div class="relative  py-2 cursor-pointer w-full" id="ing">
+            <button class="gap-2 flex items-center">
+                <i class="fa-solid fa-user-nurse text-sm"></i>
+                <span class="block px-2 py-1 rounded cursor-pointer font-semibold text-sm">
+                   Health
+                </span>
+                <div class="absolute right-0 mt-2">
+                    <i class="fa-solid fa-chevron-down text-sm font-semibold"></i>
+                </div>
+            </button>
+            
+            <div class="hidden mt-2 bg-white absolute rounded w-full border-gray-600 border 1px z-10 text-sm">
+                <!-- Dropdown content here -->
+                <button class="tabs flex mx-auto" id="Appetizer-tab">Appetizer</button>
+                <button class="tabs flex mx-auto" id="Salad-tab">Salad</button>
+                <button class="tabs flex mx-auto" id="Soup-tab">Soup</button>
+                <button class="tabs flex mx-auto" id="Dessert-tab">Dessert</button>
+                <button class="tabs flex mx-auto" id="Beverage-tab">Beverage</button>
+                <button class="tabs flex mx-auto" id="Breakfast-tab">Breakfast</button>
+                <button class="tabs flex mx-auto" id="Lunch-tab">Lunch</button>
+                <button class="tabs flex mx-auto" id="Dinner-tab">Dinner</button>
+            </div>
+        </div>
+        </div>
+   
+     
+         
+        <div class="px-10 ">
+            <button class="py-3 w-full bg-[#fdd835] rounded-md z-50 text-white">Clear</button>
+    
+           </div> 
+
+     
+    </aside>
+   
+
+    <!-- Main Content -->
+    <main class="w-3/4 p-8 bg-white ml-1/4" style="margin-left: 25%;"> <!-- Adjust margin-left here -->
+        <h1 class="text-2xl mb-2">All Recipes</h1>
+        <p class="text-sm text-gray-500" >Browse all the recipes</p>
+        <div id="results-section" class="mt-4">
+            <!-- Results will be displayed here -->
+        </div>
+    </main>
+</div>
+
+</body>
+</html>
+
+
+
+
+    
+
+
+ 
+    
+
+
+    
+   
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script> 
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="./js/mains.js"></script>
+<script src="./js/scroll.js"></script>
+<script src="./js/scrollreveal.min.js"></script>
+  </body>
+</html>

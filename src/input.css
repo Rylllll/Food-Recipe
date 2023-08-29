@@ -3,169 +3,50 @@
 @tailwind utilities;
 
 
-:root {
-    --cb: cubic-bezier(.05, .61, .41, .95);
-  }
-  
-
-  
-  body.dark {
-    background: #333;
-    color: white;
-  }
-  
-  .cards {
-    display: flex;
-    max-width: 800px;
-    width: calc(100% - 200px);
-    height: 400px;
-  }
-  
-  .cards .card .info .title {
-    font-weight: bold;
-    font-size: 1.2rem;
-  }
-  
-  .cards .card .label .icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 40px;
-    height: 40px;
-    background-color: white;
-    color: var(--color);
-    border-radius: 50%;
-  }
-  
-  .cards .card .label .info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 10px;
-    white-space: pre;
-    transition: 1s var(--cb);
-  }
-  
-  .cards .card {
-    position: relative;
-    min-width: 60px;
-    background: var(--bg);
-    overflow: hidden;
-    margin: 5px;
-    background-size: auto 150%;
-    background-position: center;
-    cursor: pointer;
-    transition: 0.5s var(--cb);
-    border-radius: 20px;
-  }
-  
-  .cards .card .label {
-    display: flex;
-    position: absolute;
-    right: 0;
-    height: 40px;
-    transition: 0.5s var(--cb);
-  }
-  
-  .cards .card.active .label {
-    bottom: 20px;
-    left: 20px;
-  }
-  
-  .cards .card.active {
-    flex-grow: 10000;
-    background-size: auto 100%;
-  }
-  
-  .cards .card:not(.active) .label {
-    bottom: 10px;
-    left: 10px;
-  }
-  
-  .cards .card .shadow {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100px;
-    background: linear-gradient(
-      0, #0004, transparent
-    );
-  }
-  
-  .cards .card.active .info {
-    opacity: 1;
-  }
-  
-  .cards .card:not(.active) .info {
-    opacity: 0;
-  }
-
-  .slider-wrapper {
-    display: flex;
-    transition: transform 0.5s ease;
-  }
-  .slide {
-    min-width: 100%;
-  }
-
-  .sticky-nav {
-    position: sticky;
-    top: 0;
-    z-index: 999;
-  }
-  .hidden-logo {
-    display: none;
-  }
-  
-  /*=============== SPONSORS ===============*/
-.sponsor__container {
- 
-  justify-items: center;
- 
+.tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  border-bottom: 2px solid transparent;
+  width: 100%;
+  background-color: transparent;
+  transition: border-color 0.2s ease-in; /* Added transition for the border color */
+}
+.tab:hover{
+  transition: 0.2s ease-in-out;
+  background-color: black;
+  opacity: 20%;
+  color:white;
 }
 
-.sponsor__content:hover .sponsor__img {
-  filter: invert(0.2);
+.active-tab {
+  border-color: #fdd835; /* Change this color to your desired active tab color */
+  color: #fdd835; /* Changing text color */
+  z-index: 100;
 }
 
-.sponsor__img {
-  width: 150px;
-  transition: var(--img-transition);
+.tabs {
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  background-color: transparent;
+  transition: ease-in, 0.2s;
 }
-/* Additional CSS to hide the logo initially and adjust Home nav when the logo is shown */
-/* Additional CSS to hide the logo initially and adjust Home nav when the logo is shown */
-.sticky-nav {
-  position: sticky;
-  top: 0;
-  justify-content: space-between;
-}
-
-.hidden-logo {
-  display: none;
-}
-
-.show-logo .hidden-logo {
-  display: block;
+.tabs:hover{
+  transition: 0.2s ease-in-out;
+  background-color: black;
+  opacity: 20%;
+  color:white;
 }
 
-.show-logo img {
-  display: block;
-}
-
-.show-logo nav {
-  justify-content: space-between;
-  margin-left: auto;
-  font-size: 100px;
-  margin-top: 10px; /* Adjust this value as per your requirements */
-}
-
-.search-bar {
-  display: none;
-}
-
-.search-bar.active {
-  display: block;
+.active-tabs {
+  border-radius: 4px;
+  background-color: #fdd835; /* Change this color to your desired active tab color */
+  color:white;
 }
 
 
+html {
+  scroll-behavior: smooth;
+}
