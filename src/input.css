@@ -46,6 +46,17 @@
   color:white;
 }
 
+.separator {
+  border-left: 1px solid #ccc;
+  height: 120px; /* Adjust this height as needed */
+  margin: 0 10px; /* Adjust the margin as needed */
+}
+
+/* Add this CSS to your existing styles */
+.ingredients-list {
+  list-style-type: disc; /* Add bullet points */
+  padding-left: 20px; /* Adjust the spacing */
+}
 
 html {
   scroll-behavior: smooth;

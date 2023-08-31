@@ -93,12 +93,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    searchButton.addEventListener('click', () => {
-        const query = searchInput.value.trim();
-        if (query !== '') {
-            const maxResults = 10;
-            fetchAndDisplayRecipes(query, maxResults);
+    
+    searchButton.addEventListener("click", () => {
+        const searchInput = document.getElementById("search-input").value.trim();
+        
+        if (searchInput !== "") {
+          // Store the search query in localStorage
+          localStorage.setItem("searchQuery", searchInput);
+          
+          // Replace "search-results.html" with the URL of the search results HTML page
+          window.location.href = `recipe.html`;
         }
-    });
+      });
 });
 
