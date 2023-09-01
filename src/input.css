@@ -46,11 +46,11 @@
   color:white;
 }
 
-.separator {
-  border-left: 1px solid #ccc;
-  height: 120px; /* Adjust this height as needed */
-  margin: 0 10px; /* Adjust the margin as needed */
-}
+/* .separator {
+  border-left: 1px solid #151515;
+  height: 120px; 
+  margin: 0 10px;
+} */
 
 /* Add this CSS to your existing styles */
 .ingredients-list {

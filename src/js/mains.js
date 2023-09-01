@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    
     const tabs = document.querySelectorAll('.tabs');
     const resultsSection = document.getElementById('results-section');
     const searchButton = document.getElementById('search-button');
@@ -28,57 +29,74 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    const displayRecipes = (recipes) => {
-        resultsSection.innerHTML = '';
-    
-        const recipeCardsContainer = document.createElement('div');
-        recipeCardsContainer.className = 'grid grid-cols-5 gap-4'; // Use grid layout
-    
-        // Add skeleton loading structure
-        for (let i = 0; i < 10; i++) {
-            const skeletonCard = document.createElement('div');
-            skeletonCard.className = 'recipe-card-skeleton animate-pulse';
-            recipeCardsContainer.appendChild(skeletonCard);
-        }
-    
-        resultsSection.appendChild(recipeCardsContainer);
-    
-        setTimeout(() => {
-            recipeCardsContainer.innerHTML = ''; // Clear skeleton loading
-    
-            recipes.forEach(recipe => {
-                const recipeCard = document.createElement('div');
-                recipeCard.className = 'recipe-card rounded-lg flex flex-col relative transition hover:text-[#fdd835]'; // Added "relative" class
-        
-                recipeCard.innerHTML = `
-                <div class="relative transition hover:scale-105">
-                <i class="fa-solid fa-heart border-white hover:text-pink-400 hover:transition shadow-md cursor-pointer absolute top-2 right-2 bg-[#fdd835] text-white p-2 rounded-full"></i>
-                <a href="details.html?id=${encodeURIComponent(recipe.label)}"> <!-- Pass the recipe label as ID -->
-                    <img src="${recipe.image}" alt="${recipe.label}" class="w-full h-44 mb-2 object-cover rounded ">
-                </a>
+    const MAX_LABEL_LENGTH = 30; // Set the maximum number of characters
+
+const truncateText = (text, maxLength) => {
+  if (text.length > maxLength) {
+    return text.slice(0, maxLength) + '...';
+  }
+  return text;
+};
+
+const displayRecipes = (recipes) => {
+    resultsSection.innerHTML = '';
+
+    const recipeCardsContainer = document.createElement('div');
+    recipeCardsContainer.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-2'; // Use responsive grid layout
+
+    resultsSection.appendChild(recipeCardsContainer);
+
+    // Add skeleton loading structure
+    for (let i = 0; i < 100; i++) {
+        const skeletonCard = document.createElement('div');
+        skeletonCard.className = 'recipe-card rounded-lg flex flex-col relative transition hover:text-[#d45101] animate-pulse'; // Added "animate-pulse" for Tailwind CSS pulse animation
+
+        skeletonCard.innerHTML = `
+            <div class="bg-gray-500 w-full h-28 mb-2 rounded"></div>
+            <div class="bg-gray-500 p-2 items-center text-center rounded-md font-semibold">
+                <p class="text-black text-xs mt-1 uppercase w-20 h-4"></p>
             </div>
-                    <div class="bg-[#fdd835] p-2 items-center text-center rounded-md font-semibold">
-                        <p class="text-black text-xs mt-1 uppercase">${recipe.cuisineType}</p>
-                    </div>
-                    
-                    <div class="recipe-name-container mt-2" style="height: 70px;"> 
-                        <h2 class="text-sm font-semibold">${recipe.label}</h2>
-                    
-                    </div>
-                   
-                    <div class="justify-between flex">
-                        <p class="text-gray-600 text-xs "><i class="fa-regular fa-clock text-sm"></i> ${recipe.totalTime} minutes</p>
-                        <a href="${recipe.url}" target="_blank" rel="noopener noreferrer" class="text-sm font-sans text-gray-600 hover:text-black">Link
-                           
-                        </a>
-                    </div>
-                `;
-    
-                recipeCardsContainer.appendChild(recipeCard);
-            });
-        }, 1500); // Simulate delay for fetching data
-    };
-    
+            <div class="recipe-name-container mt-2 bg-gray-500 " style="height: 10px;"> 
+                <h2 class="text-sm font-semibold w-32 h-4"></h2>
+            </div>
+           
+        `;
+
+        recipeCardsContainer.appendChild(skeletonCard);
+    }
+
+    setTimeout(() => {
+        recipeCardsContainer.innerHTML = ''; // Clear skeleton loading
+
+        recipes.forEach(recipe => {
+
+            const recipeCard = document.createElement('div');
+            recipeCard.className = 'recipe-card rounded-lg flex flex-col relative transition hover:text-[#d45101]';
+
+            recipeCard.innerHTML = `
+                <div class="relative transition hover:scale-105">
+                    <i class="fa-solid fa-heart border-white hover:text-pink-400 hover:transition shadow-md cursor-pointer absolute top-2 right-2 bg-[#d45101] text-white p-2 rounded-full"></i>
+                    <a href="details.html?id=${encodeURIComponent(recipe.label)}">
+                        <img src="${recipe.image}" alt="${recipe.label}" class="w-full h-28 mb-2 object-cover rounded">
+                    </a>
+                </div>
+                <div class="bg-[#d45101] py-1 items-center text-center rounded-md font-semibold">
+                    <p class="text-white text-xs mt-1 uppercase">${recipe.cuisineType}</p>
+                </div>
+                <div class="recipe-name-container mt-2" style="height: 70px;"> 
+                    <h2 class="text-sm font-semibold" id="recipe-label">${truncateText(recipe.label, MAX_LABEL_LENGTH)}</h2>
+                </div>
+                <div class="justify-between flex">
+                    <p class="text-gray-600 text-xs"><i class="fa-regular fa-clock text-sm"></i> ${recipe.totalTime} minutes</p>
+                    <a href="${recipe.url}" target="_blank" rel="noopener noreferrer" class="text-sm font-sans text-gray-600 hover:text-black">Link</a>
+                </div>
+            `;
+
+            recipeCardsContainer.appendChild(recipeCard);
+        });
+    }, 1500); // Simulate delay for fetching data
+};
+
     // Rest of your code
     
     

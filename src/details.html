@@ -20,57 +20,328 @@
     <title>Food Recipe</title>
   </head>
   <body class="font-sans scrollbar-thumb-gray-500 scrollbar-thin">
-    <header
-      class="mx-auto justify-between flex h-20 w-full items-center shadow-md"
-    >
-      <div class="container flex justify-between mx-auto">
-        <div class="flex">
-          <h1 class="text-2xl font-semibold tracking-widest">
-            FLAVORFUL BITES
+
+
+<div class="header-container fixed top-0 w-full z-10">
+  <header class="mx-auto justify-between flex h-20 w-full items-center bg-[#151515] p-4 xl:p-0 lg:p-0 md:p-0"> <!-- Add "fixed top-0" classes to make the header fixed -->
+    <div class="container flex gap-28 mx-auto bg-[#151515]">
+  
+      <div class="">
+        <a class="flex gap-1 hover:scale-105 transition" href="index.html">
+          <img src="./img/logo.png" class="w-10 h-10" alt="">
+          <h1 class="text-3xl font-bai font-semibold mt-1 text-white">
+            RecipeCuisine
           </h1>
-        </div>
-
-        <ul class="flex items-center gap-8 text-sm">
-          <li>
-            <a class="transition hover:text-gray-500/75" href="#Home">Home</a>
-          </li>
-          <li>
-            <a class="transition hover:text-gray-500/75" href="#Recipe"
-              >Recipes</a
-            >
-          </li>
-          <li>
-            <a class="transition hover:text-gray-500/75" href="#Blogs">Blogs</a>
-          </li>
-          <li>
-            <a class="transition hover:text-gray-500/75" href="#Gallery"
-              >Gallery</a
-            >
-          </li>
-        </ul>
-
-        <a
-          href=""
-          class="bg-[#fdd835] py-2 px-4 text-white rounded-md gap-2 flex text-sm"
-        >
-          <i class="fa-sharp fa-regular fa-bookmark mt-1"></i>
-          <h1>Favorites</h1>
         </a>
       </div>
-    </header>
+  
+      <ul class="flex items-center gap-8 text-sm text-white">
+        <li><a class="transition hover:text-[#d45101]" href="#Home">Home</a></li>
+        <li><a class="transition hover:text-[#d45101]" href="#Recipe">Recipes</a></li>
+        <li><a class="transition hover:text-[#d45101]" href="#Blogs">Blogs</a></li>
+        <li><a class="transition hover:text-[#d45101]" href="#Gallery">Gallery</a></li>
+      </ul>
+  
+      <div class="flex w-full gap-2">
+        <div class="flex items-center relative w-full mt-1" id="search-section">
+          <i class="fas fa-utensils absolute left-5 top-1/2 transform -translate-y-1/2 "></i>
+          <input
+            type="text"
+            class="w-full py-2.5 px-12 rounded-md text-xs focus:outline-none focus:ring-0 focus:border-[#d45101] focus:border-2"
+            placeholder="Search recipes..."
+          >
+          <button
+            type="button"
+            class="absolute right-1 px-6 py-1 bg-[#d45101] text-white rounded-md hover:opacity-50 transition"
+          >
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+  
+        <div class="mt-1 cursor-pointer ">
+          <i class="fa-solid fa-heart hover:bg-[#151515] transition shadow-md border-2 border-[#151515] hover:border-[#d45101] hover:border-2 bg-[#d45101] px-3 py-2.5 rounded-md text-white "></i>
+        </div>
+      </div>
+    </div>
+  </header>
+</div>
+<!-- Breadcrumbs -->
+<div class="w-full bg-gray-100 mt-20 py-2 p-4 md:p-0 lg:p-0 xl:p-0 lg:py-2 xl:py-2 md:py-2">
+  <div class="breadcrumbs text-sm container mx-auto "></div>
+</div>
 
-    <div class="container mx-auto mt-24 px-44" id="recipe-details">
+   
+    
+    <div class="container mx-auto mt-16 " id="recipe-details">
       <!-- Display the recipe details based on the URL parameter -->
     </div>
 
-    <div class="container mx-auto w-full h-1 bg-gray-300 mt-24" >
 
+    
+
+<footer class="bg-[#d45101] mt-20 text-white">
+  <div class="mx-auto max-w-screen-xl p-4 xl:pt-16 md:pt-16 lg:pt-24">
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+      <div>
+        <div class="">
+          <a class="flex gap-1  hover:scale-105 transition" href="index.html">
+            <img src="./img/logowhite.png" class="w-10 h-10" alt="">
+            <h1 class="text-3xl font-bai font-semibold mt-1">
+              RecipeCuisine
+            </h1>
+          </a>
+        </div>
+
+        <p
+          class="mt-6 max-w-md text-center leading-relaxed text-[#151515]sm:max-w-xs sm:text-left"
+        >
+        Unlock Flavorful Delights: Your Culinary Journey Starts Here!
+        </p>
+
+        <ul class="mt-8 flex justify-center gap-6 sm:justify-start md:gap-8 text-2xl text-white">
+          <li>
+            <i class="fa-brands fa-facebook"></i>
+          </li>
+
+          <li>
+            <i class="fa-brands fa-x-twitter"></i>
+          </li>
+
+          <li>
+            <i class="fa-brands fa-instagram"></i>
+          </li>
+
+          <li>
+            <i class="fa-brands fa-github"></i>
+          </li>
+
+          <li>
+            <i class="fa-brands fa-dribbble"></i>
+          </li>
+        </ul>
       </div>
 
-      <section>
-        
-      </section>
+      <div
+        class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:col-span-2"
+      >
+        <div class="text-center sm:text-left">
+          <p class="text-lg font-medium text-white">About Us</p>
 
+          <ul class="mt-8 space-y-4 text-sm">
+            <li>
+              <a
+                class="text-white transition hover:text-black"
+                href="/"
+              >
+                All Recipes
+              </a>
+            </li>
+
+            <li>
+              <a
+                class="text-white transition hover:text-[#151515]"
+                href="/"
+              >
+                Blog
+              </a>
+            </li>
+
+            <li>
+              <a
+                class="text-white transition hover:text-[#151515]"
+                href="/"
+              >
+                Gallery
+              </a>
+            </li>
+
+            
+          </ul>
+        </div>
+
+        <div class="text-center sm:text-left">
+          <p class="text-lg font-medium ">Our Services</p>
+
+          <ul class="mt-8 space-y-4 text-sm">
+            <li>
+              <a
+                class=" transition hover:text-[#151515]"
+                href="/"
+              >
+                Web Development
+              </a>
+            </li>
+
+            <li>
+              <a
+                class=" transition hover:text-[#151515]"
+                href="/"
+              >
+                Web Design
+              </a>
+            </li>
+
+            <li>
+              <a
+                class=" transition hover:text-[#151515]"
+                href="/"
+              >
+                Marketing
+              </a>
+            </li>
+
+            <li>
+              <a
+                class=" transition hover:text-[#151515]"
+                href="/"
+              >
+                Google Ads
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="text-center sm:text-left">
+          <p class="text-lg font-medium ">Helpful Links</p>
+
+          <ul class="mt-8 space-y-4 text-sm">
+            <li>
+              <a
+                class=" transition hover:text-[#151515]"
+                href="/"
+              >
+                FAQs
+              </a>
+            </li>
+
+            <li>
+              <a
+                class=" transition hover:text-[#151515]"
+                href="/"
+              >
+                Support
+              </a>
+            </li>
+
+           
+          </ul>
+        </div>
+
+        <div class="text-center sm:text-left">
+          <p class="text-lg font-medium ">Contact Us</p>
+
+          <ul class="mt-8 space-y-4 text-sm">
+            <li>
+              <a
+                class="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
+                href="/"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 shrink-0 "
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
+
+                <span class="flex-1 ">john@doe.com</span>
+              </a>
+            </li>
+
+            <li>
+              <a
+                class="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
+                href="/"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 shrink-0 "
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  />
+                </svg>
+
+                <span class="flex-1 ">0123456789</span>
+              </a>
+            </li>
+
+            <li
+              class="flex items-start justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 shrink-0"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+              </svg>
+
+              <address class="-mt-0.5 flex-1 not-italic ">
+                213 Lane, London, United Kingdom
+              </address>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-12 border-t border-gray-100 pt-6">
+      <div class="text-center sm:flex sm:justify-between sm:text-left">
+        <p class="text-sm text-white">
+          <span class="block sm:inline">All rights reserved.</span>
+
+          <a
+            class="inline-block text-white underline transition hover:text-[#151515]"
+            href="/"
+          >
+            Terms & Conditions
+          </a>
+
+          <span>&middot;</span>
+
+          <a
+            class="inline-block text-white underline transition hover:text-[#151515]"
+            href="/"
+          >
+            Privacy Policy
+          </a>
+        </p>
+
+        <p class="mt-4 text-sm text-white sm:order-first sm:mt-0">
+          &copy; 2022 RecipeCuisine
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+      
     <script src="./js/details.js"></script>
   </body>
 </html>

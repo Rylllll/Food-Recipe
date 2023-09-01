@@ -74,6 +74,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const recipeDetailsContainer = document.createElement("div");
     recipeDetailsContainer.className = "";
 
+    const breadcrumbs = document.querySelector('.breadcrumbs');
+    breadcrumbs.innerHTML = `
+    <div class="gap-2 flex">
+    <a href="index.html" class=" hover:underline"><i class="fa-solid fa-house text-sm"></i></a> <i class="fa-solid fa-chevron-right text-xs mt-1"></i> <a href="recipe.html" class=" hover:underline">Recipes</a>  <i class="fa-solid fa-chevron-right text-xs mt-1"></i> <h1 class="text-[#d45101]"> ${recipe.label}</h1>
+    </div>
+    `;
+    
     if (recipe) {
       const totalServings = recipe.yield;
       const totalIngredients = recipe.ingredientLines.length;
@@ -82,27 +89,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Populate the recipe details container
       recipeDetailsContainer.innerHTML = `
-                <div class="flex gap-12">
+                <div class="xl:flex lg:flex grid p-4 xl:p-0 lg:p-0 md:p-0 gap-12">
                     <img src="${recipe.image}" 
                          srcset="${recipe.image}, ${
                      recipe.image
                      }?quality=80&resize=1200x800 2x"
                          alt="${recipe.label}" 
-                         class="w-96 h-96 obkect-cover rounded">
+                         class="lg:w-custom xl:w-custom w-full h-display obkect-cover rounded">
 
-                    <div class="">
+                    <div class="w-full">
                     
                         <!-- Label and author-->
 
                         <div>
-                        <div class="flex">
-                        <h2 class="text-4xl font-bold">${recipe.label}</h2>
+                        <div class="flex justify-between gap-10">
+                        <h2 class="md:text-5xl lg:text-5xl xl:text-5xl text-3xl font-bai font-bold hover:text-[#d45101] transition">${recipe.label}</h2>
+
+                        <div class="flex gap-4">
+
                         <div>
-                        <i class="fa-solid fa-heart border-white hover:text-pink-400 hover:transition shadow-md cursor-pointer bg-[#fdd835] text-white p-2 rounded-full"></i>
+                        <i class="fa-solid fa-heart border-white hover:text-pink-400 hover:transition shadow-md cursor-pointer bg-[#d45101] text-white p-2 rounded-full"></i>
+                        </div>
+
+                        <div class="mt-1">
+                        <a href="${recipe.url}" target="_blank" rel="noopener noreferrer" class=" font-sans text-white hover:text-pink-400 bg-[#d45101] px-2 py-1 shadow-md rounded-full "><i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                        </div>
+
                         </div>
                         </div>
-                        <div class ="flex mt-8 gap-2 text-sm " >
-                        <p class="">by <p class="font-semibold">${
+                        <div class ="flex mt-4 gap-2 text-sm" >
+                        <p class="">By: <p class="font-semibold">${
                           recipe.source
                         }.</p></p>
                         </div>
@@ -113,25 +130,22 @@ document.addEventListener("DOMContentLoaded", () => {
                         <div class="gap-4 mt-4 flex justify-between">
 
                         <div class="rounded-md mx-auto w-full flex flex-col items-center text-center py-2 justify-center">
-                        <p class="mt-2 text-5xl">${calories}</p>
+                        <p class="mt-2 md:text-5xl lg:text-5xl xl:text-5xl text-lg text-[#f07a00]">${calories}</p>
                             <p class="mt-2 text-sm">Calories</p>
                         </div>
                         
                         <!-- Add a separating gray line -->
-                        <div class="separator"></div>
+                        <div class="h-120 border-l border-[#151515] "></div>
                         
                         <div class="rounded-md mx-auto w-full flex flex-col items-center text-center py-2 justify-center">
-                        <p class="mt-2 text-5xl">${totalIngredients}</p>
+                        <p class="mt-2 md:text-5xl lg:text-5xl xl:text-5xl text-lg text-[#f07a00]">${totalIngredients}</p>
                             <p class="mt-2 text-sm">Ingredients needs</p>
                         </div>
-                        
-                        
-                      
-                        
+      
                         <!-- Add a separating gray line -->
-                        <div class="separator"></div>
+                        <div class="h-120 border-l border-[#151515] "></div>
                         <div class="rounded-md mx-auto w-full flex flex-col items-center text-center py-2 justify-center">
-                        <p class="mt-2 text-5xl">${recipe.totalTime}</p>
+                        <p class="mt-2 md:text-5xl lg:text-5xl xl:text-5xl text-lg text-[#f07a00]">${recipe.totalTime}</p>
                             <p class="mt-2 text-sm">Minutes</p>
                         </div>
                     </div>
@@ -140,35 +154,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
                         <!-- Tags-->
                         
-                        <div class="flex justify-between mt-4">
+                        <div class="xl:flex lg:flex md:flex flex md:gap-0 lg:gap-0 xl:gap-0 gap-4 justify-between mt-4">
                         
 
-                        <div class="flex gap-2 mt-4 text-sm ">
-                        <p class="px-3 py-1 border 1px border-gray-300 rounded-md">${
+                        <div class="flex gap-2 mt-4 text-xs ">
+                        <p class="px-3 py-1 border 1px border-[#151515] rounded-md ">${
                           recipe.cuisineType
                         }</p>
-                        <p class="px-3 py-1 border 1px border-gray-300 rounded-md">${
+                        <p class="px-3 py-1 border 1px border-[#151515] rounded-md">${
                           recipe.dishType
                         }</p>
-                        <p class="px-3 py-1 border 1px border-gray-300 rounded-md">${dietLabels}</p>
+                        <p class="px-3 py-1 border 1px border-[#151515] rounded-md">${dietLabels}</p>
                         
                         </div>
-                        <p class="mt-5 text-sm font-semibold">${totalServings} Servings</p>
+                        <p class="mt-5 md:text-sm lg:text-sm xl:text-sm text-xs">${totalServings} Servings</p>
                         </div>
 
                         <!-- Ingredients-->
 
                         
-                        <div class="mt-4">
-                        <div id="ingredients-toggle" class="toggle-button cursor-pointer py-2 px-2 rounded-md w-full justify-between flex bg-gray-200 ">
-                        <h1 class="mt-1 font-semibold">
+                        <div class="mt-7">
+                        <div id="ingredients-toggle" class="toggle-button cursor-pointer py-2 px-2 rounded-md w-full justify-between flex bg-[#151515] ">
+                        <h1 class="mt-1 font-semibold text-white">
                             Ingredients
                             </h1>
-                            <span id="arrow-icon" class="fa-solid fa-chevron-right text-xs font-semibold transition-transform px-2.5 py-2 bg-[#fdd835] rounded-full text-white"></span>
+                            <span id="arrow-icon" class="fa-solid fa-chevron-right text-xs font-semibold transition-transform px-2.5 py-2 bg-[#d45101] rounded-full text-white"></span>
                         </div>
-                        <div class="grid ingredients-grid hidden mt-4">
+                        <div class="grid ingredients-grid hidden mt-4 mb-4">
                         <ul class="ingredients-list text-sm">
-                            ${recipe.ingredientLines.map(ingredient => `<li>${ingredient}</li>`).join('')}
+                            ${recipe.ingredientLines.map(ingredient => `<li>${ingredient}.</li>`).join('')}
                         </ul>
                         </div>
                         </div>
@@ -180,21 +194,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     <!-- health labels-->
                     <div class="mt-2">
-                    <div id="health-labels-toggle" class="toggle-button cursor-pointer py-2 px-2 rounded-md w-full justify-between flex bg-gray-200 ">
-                    <h1 class="mt-1 font-semibold">
-                        Health Labels
+                    <div id="health-labels-toggle" class="toggle-button cursor-pointer py-2 px-2 rounded-md w-full justify-between flex bg-[#151515]">
+                    <h1 class="mt-1 font-semibold text-white">
+                       Nutritional Labels
                         </h1>
-                        <span id="arrow-icons" class="fa-solid fa-chevron-right text-xs font-semibold transition-transform px-2.5 py-2 bg-[#fdd835] rounded-full text-white"></span>
+                        <span id="arrow-icons" class="fa-solid fa-chevron-right text-xs font-semibold transition-transform px-2.5 py-2 bg-[#d45101] rounded-full text-white"></span>
                     </div>
-                    <div class="health-labels-grid hidden mt-4">
+                    <div class="health-labels-grid hidden mt-4 mb-4">
                         <ul class="health-labels-list text-sm flex flex-wrap gap-1">
-                            ${recipe.healthLabels.map(label => `<li class="border 1px border-gray-300 rounded-full text-center px-3 py-1">${label}</li>`).join('')}
+                            ${recipe.healthLabels.map(label => `<li class="border 1px border-[#151515] rounded-full text-center px-3 py-1">${label}</li>`).join('')}
                         </ul>
                     </div>
                 </div>
                     
-
-                       
+              
 
                        
                     </div>
