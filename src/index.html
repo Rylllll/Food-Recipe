@@ -19,41 +19,57 @@
 
   <body class="font-sans  scrollbar-thumb-gray-500 scrollbar-thin" id="Home">
    
-  <header class="mx-auto justify-between flex h-20 w-full items-center shadow-md ">
-  
-    <div class="container flex justify-between mx-auto">
-     
-    <div class="flex">
+    <header class="mx-auto justify-between flex h-20 w-full items-center  fixed top-0 bg-[#151515] z-10"> <!-- Add "fixed top-0 bg-white z-10" classes -->
+      <div class="container flex gap-28 mx-auto bg-[#151515]">
       
-  <h1 class="text-2xl font-semibold tracking-widest">FLAVORFUL BITES</h1>
-      </div>
-
-   
-     
-      <ul class="flex items-center gap-8 text-sm ">
-        <li><a class="transition hover:text-gray-500/75" href="#Home">Home</a></li>
-        <li><a class="transition hover:text-gray-500/75" href="#Recipe">Recipes</a></li>
-        <li><a class="transition hover:text-gray-500/75" href="#Blogs">Blogs</a></li>
-        <li><a class="transition hover:text-gray-500/75" href="#Gallery">Gallery</a></li>
-      </ul>
-
-    <a href="" class="bg-[#fdd835] py-2 px-4 text-white rounded-md gap-2 flex text-sm" >
-            <i class="fa-sharp fa-regular fa-bookmark mt-1"></i>
-            <h1>Favorites</h1>
-          </a>
-        
-     
-   
-        </div>
-   
-
+          <div class="">
+            <a class="flex gap-1  hover:scale-105 transition" href="index.html">
+              <img src="./img/logo.png" class="w-10 h-10" alt="">
+              <h1 class="text-3xl font-bai font-semibold mt-1 text-white">
+                RecipeCuisine
+              </h1>
+            </a>
+          </div>
+         
+          <ul class="flex items-center gap-8 text-sm text-white">
+            <li><a class="transition hover:text-[#d45101]" href="#Home">Home</a></li>
+            <li><a class="transition hover:text-[#d45101]" href="#Recipe">Recipes</a></li>
+            <li><a class="transition hover:text-[#d45101]" href="#Blogs">Blogs</a></li>
+            <li><a class="transition hover:text-[#d45101]" href="#Gallery">Gallery</a></li>
+          </ul>
+  
+          <div class="flex w-full gap-2">
+            <div class="flex items-center relative w-full mt-1" id="search-section">
+              <i class="fas fa-utensils absolute left-5 top-1/2 transform -translate-y-1/2 "></i>
+              <input
+                type="text"
+                
+                class="w-full py-2.5 px-12 rounded-md text-xs focus:outline-none focus:ring-0 focus:border-[#d45101] focus:border-2"
+                placeholder="Search recipes..."
+              >
+              <button
+                type="button"
+              
+                class="absolute right-1 px-6 py-1 bg-[#d45101]  text-white rounded-md hover:opacity-50 transition"
+              >
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+  
+            <div class="mt-1 cursor-pointer ">
+              <i class="fa-solid fa-heart hover:bg-[#151515] transition shadow-md border-2 border-[#151515] hover:border-[#d45101] hover:border-2 bg-[#d45101] px-3 py-2.5 rounded-md text-white "></i>
+            </div>
+    
+          </div>
+  
+    
+          </div>
   </header>
 
+   
+ 
 
-
-
-
-<section class="mx-auto w-full container mt-6 relative">
+<section class="mx-auto w-full container mt-24 relative">
   <div class="relative container">
     <img src="./img/bg.jpg" class="w-full h-custom object-cover rounded-lg" alt="">
     <div class="absolute inset-0 flex flex-col justify-center items-center">
