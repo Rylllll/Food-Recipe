@@ -24,6 +24,7 @@ module.exports = {
         'customs': '2px',
         'side': '650px',
         'display': '450px',
+        'cover': '600px',
 
 
         

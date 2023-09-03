@@ -17,10 +17,10 @@
     <title>Food Recipe</title>
   </head>
 
-  <body class="font-sans  scrollbar-thumb-gray-500 scrollbar-thin" id="Home">
+  <body class="font-sans  scrollbar-thumb-[#d45101] scrollbar-thin" id="Home">
    
-    <header class="mx-auto justify-between flex h-20 w-full items-center  fixed top-0 bg-[#151515] z-10"> <!-- Add "fixed top-0 bg-white z-10" classes -->
-      <div class="container flex gap-28 mx-auto bg-[#151515]">
+    <header class="mx-auto justify-between flex h-20 w-full items-center  fixed top-0 bg-scroll z-10">
+      <div class="container flex gap-28 mx-auto bg-scroll">
       
           <div class="">
             <a class="flex gap-1  hover:scale-105 transition" href="index.html">
@@ -44,20 +44,20 @@
               <input
                 type="text"
                 
-                class="w-full py-2.5 px-12 rounded-md text-xs focus:outline-none focus:ring-0 focus:border-[#d45101] focus:border-2"
+                class="w-full py-2.5 px-12  text-xs focus:outline-none focus:ring-0 focus:border-[#d45101] focus:border-2"
                 placeholder="Search recipes..."
               >
               <button
                 type="button"
               
-                class="absolute right-1 px-6 py-1 bg-[#d45101]  text-white rounded-md hover:opacity-50 transition"
+                class="absolute right-1 px-6 py-1 bg-[#d45101]  text-white  hover:opacity-50 transition"
               >
                 <i class="fas fa-search"></i>
               </button>
             </div>
   
             <div class="mt-1 cursor-pointer ">
-              <i class="fa-solid fa-heart hover:bg-[#151515] transition shadow-md border-2 border-[#151515] hover:border-[#d45101] hover:border-2 bg-[#d45101] px-3 py-2.5 rounded-md text-white "></i>
+              <i class="fa-solid fa-heart hover:bg-[#151515] transition shadow-md border-2 border-[#151515] hover:border-[#d45101] hover:border-2 bg-[#d45101] px-3 py-2.5  text-white "></i>
             </div>
     
           </div>
@@ -68,10 +68,10 @@
 
    
  
-
-<section class="mx-auto w-full container mt-24 relative">
-  <div class="relative container">
-    <img src="./img/bg.jpg" class="w-full h-custom object-cover rounded-lg" alt="">
+<!-- Hero section -->
+<section class="mx-auto w-full relative">
+  <div class="relative ">
+    <img src="./img/bg.jpg" class="w-full h-display object-cover" alt="">
     <div class="absolute inset-0 flex flex-col justify-center items-center">
       <h1 class="text-5xl font-bai text-white font-semibold mb-6">Got any Favorites?</h1>
       <div class="flex items-center relative" id="search-section">
@@ -79,13 +79,13 @@
         <input
           type="text"
           id="search-input" 
-          class="w-custom py-3 px-12 rounded-sm text-sm border-gray-300 focus:outline-none"
+          class="w-custom py-3 px-12 text-sm border-gray-300 focus:outline-none"
           placeholder="Search recipes..."
         >
         <button
           type="button"
           id="search-button"
-          class="absolute right-1 px-6 py-2 bg-[#fdd835] text-white rounded-sm hover:opacity-50 transition"
+          class="absolute right-1 px-6 py-2 bg-[#d45101] text-white hover:opacity-50 transition"
         >
           <i class="fas fa-search"></i>
         </button>
@@ -97,12 +97,27 @@
 </section>
 
 
+<!-- Featured Recipe -->
+<section class="mx-auto md:container lg:container scrollrevs mt-10">
+  <div class="flex gap-1 text-2xl tracking-widest">
+    <h1 class="font-semibold ">Featured</h1>
+    <h1>Recipe</h1>
+  </div>
+  <div id="featured-section" class="mt-4 container mx-auto lg:mt-8 xl:mt-8">
+    <!-- Results will be displayed here -->
+</div>
+  <div id="results-sections" class="mt-8">
+    <!-- Results will be displayed here -->
+</div>
+</section>
 
-    
 <!-- Recipes -->
 
-    <section class="mx-auto md:container lg:container scrollrevs " id="Recipe">
-      
+    <section class="mx-auto md:container lg:container scrollrevs mt-10" id="Recipe">
+      <div class="flex gap-1 text-2xl tracking-widest">
+        <h1 class="font-semibold ">Select</h1>
+        <h1>Category</h1>
+      </div>
       <div id="tabs" class="items-center mx-auto grid  mt-4">
         <div class="flex justify-between font-semibold">
           <button class="active-tab tab items-center justify-center flex mx-auto" id="breakfast-tab">Breakfast</button>
@@ -119,111 +134,441 @@
             <!-- Results will be displayed here -->
         </div>
 
-        <div class="justify-center flex mx-auto mt-16">
-          <button class="bg-[#fdd835] p-2 rounded-md text-white">
-        See all recipe
-        </button>
+        <a href="./recipe.html">
+          <div class="justify-center flex mx-auto mt-16">
+            <button class="bg-[#d45101] p-2  text-white">
+          See all recipe
+          </button>
+        </a>
+        
           </div>
      
 
         
       </section>
     
+<!-- blogs -->
 
-
-    
-    <section class="mt-28 w-full relative mx-auto justify-center container">
-      <div class="sponsor__container container flex justify-center cursor-pointer scrollrevs">
-                    <div class="sponsor__content">
-                        <img src="./img/bigbitelogo.png" alt="" class="sponsor__img">
-                    </div>
-                    <div class="sponsor__content">
-                        <img src="./img/crispylogo.png" alt="" class="sponsor__img">
-                    </div>
-                    <div class="sponsor__content">
-                        <img src="./img/lolilogo.png" alt="" class="sponsor__img">
-                    </div>
-                    <div class="sponsor__content">
-                        <img src="./img/burgerlogo.png" alt="" class="sponsor__img">
-                    </div>
-                    <div class="sponsor__content">
-                        <img src="./img/traylogo.png" alt="" class="sponsor__img">
-                    </div>
-                    <div class="sponsor__content">
-                        <img src="./img/olivelogo.png" alt="" class="sponsor__img">
-                    </div>
-                </div>
-    </section>
-
-  <section class="mt-28 mb-28 container mx-auto justify-center">
-  <div class="mx-auto flex justify-between">
-    <h1 class="text-3xl font-bold mx-auto justify-center block scrollrevs">Websites gallery</h1>
+<section class="mt-28 w-full relative mx-auto justify-center container">
+  <div class="flex gap-1 text-2xl tracking-widest">
+    <h1 class="font-semibold ">See Our</h1>
+    <h1>Blogs</h1>
+  </div>
+  <div class="flex gap-4 mt-4">
+    <!-- Card 1 -->
+    <div>
+      <img src="./img/blog1.jpg" class="w-full" alt="">
+      <h1 class="font-semibold mt-4 text-lg">Cooking with Passion</h1>
+      <p class="text-xs mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam impedit quibusdam officiis optio nesciunt. Amet odit illo minima nihil non, deserunt quae ullam ad beatae neque velit dicta a officiis!</p>
+      <div class="flex justify-between mt-4">
+          <div class="flex justify-between w-full">
+            
+            <div class="flex gap-4">
+              <img src="./img/commentor.jpg" class="w-12 h-12 rounded-full" alt="">
+            <div class="grid text-xs mt-2">
+              <h1>Reymark Boquiron</h1>
+              <h1>May 05 2023</h1>
+            </div>
+            </div>
+            
+            <div class="gap-2 text-sm mt-2">
+              <i class="fa-solid fa-up-right-from-square p-2 bg-[#d45101] text-white rounded-full"></i>
+              <i class="fa-regular fa-bookmark p-2 px-2.5 bg-[#d45101] text-white rounded-full"></i>
+            </div>
+          </div>   
+      </div>
+    </div>
+    <!-- Card 2 -->
+    <div>
+      <img src="./img/blog2.jpg" class="w-full" alt="">
+      <h1 class="font-semibold mt-4 text-lg">Chef of the Universe</h1>
+      <p class="text-xs mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam impedit quibusdam officiis optio nesciunt. Amet odit illo minima nihil non, deserunt quae ullam ad beatae neque velit dicta a officiis!</p>
+      <div class="flex justify-between mt-4">
+          <div class="flex justify-between w-full">
+            
+            <div class="flex gap-4">
+              <img src="./img/chef1.jpg" class="w-12 h-12 rounded-full" alt="">
+            <div class="grid text-xs mt-2">
+              <h1>Roy Valentin</h1>
+              <h1>June 26 2022</h1>
+            </div>
+            </div>
+            
+            <div class="gap-2 text-sm mt-2">
+              <i class="fa-solid fa-up-right-from-square p-2 bg-[#d45101] text-white rounded-full"></i>
+              <i class="fa-regular fa-bookmark p-2 px-2.5 bg-[#d45101] text-white rounded-full"></i>
+            </div>
+          </div>   
+      </div>
+    </div>
+    <!-- Card 3 -->
+    <div>
+      <img src="./img/blog3.jpg" class="w-full" alt="">
+      <h1 class="font-semibold mt-4 text-lg">Playing with fire</h1>
+      <p class="text-xs mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam impedit quibusdam officiis optio nesciunt. Amet odit illo minima nihil non, deserunt quae ullam ad beatae neque velit dicta a officiis!</p>
+      <div class="flex justify-between mt-4">
+          <div class="flex justify-between w-full">
+            
+            <div class="flex gap-4">
+              <img src="./img/chef2.jpg" class="w-12 h-12 rounded-full" alt="">
+            <div class="grid text-xs mt-2">
+              <h1>Stratov Gevin</h1>
+              <h1>December 25 2020</h1>
+            </div>
+            </div>
+            
+            <div class="gap-2 text-sm mt-2">
+              <i class="fa-solid fa-up-right-from-square p-2 bg-[#d45101] text-white rounded-full"></i>
+              <i class="fa-regular fa-bookmark p-2 px-2.5 bg-[#d45101] text-white rounded-full"></i>
+            </div>
+          </div>   
+      </div>
+    </div>
+    <!-- Card 4 -->
+    <div>
+      <img src="./img/turkey.jpg" class="w-full text-lg" alt="">
+      <h1 class="font-semibold mt-4">Culinary expertise</h1>
+      <p class="text-xs mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam impedit quibusdam officiis optio nesciunt. Amet odit illo minima nihil non, deserunt quae ullam ad beatae neque velit dicta a officiis!</p>
+      <div class="flex justify-between mt-4">
+          <div class="flex justify-between w-full">
+            
+            <div class="flex gap-4">
+              <img src="./img/chef4.jpg" class="w-12 h-12 rounded-full" alt="">
+            <div class="grid text-xs mt-2">
+              <h1>The Baker</h1>
+              <h1>September 07 2022</h1>
+            </div>
+            </div>
+            
+            <div class="gap-2 text-sm mt-2">
+              <i class="fa-solid fa-up-right-from-square p-2 bg-[#d45101] text-white rounded-full"></i>
+              <i class="fa-regular fa-bookmark p-2 px-2.5 bg-[#d45101] text-white rounded-full"></i>
+            </div>
+          </div>   
+      </div>
+    </div>
 
   </div>
-  <p class="mt-2 text-gray-500 mx-auto justify-center flex text-sm px-64 text-center scrollrevs">Lorem ipsum dolor sit amet consectetur adipisicing elit. A deleniti quod officia quis illo voluptatem porro corporis exercitationem ea optio, saepe, perferendis temporibus reprehenderit sunt? Officia quae nisi incidunt facilis?</p>
 
-  <div class="w-full max-w-full p-5 pb-10 mx-auto mb-10 gap-5 columns-3 space-y-5 mt-12">
-    <img class="scrollrevs rounded-2xl cursor-pointer transition-transform transform-gpu hover:scale-105" src="./img/por2.jpg" alt="">
-   <img class="scrollrevs rounded-2xl cursor-pointer transition-transform transform-gpu hover:scale-105" src="./img/adobo.jpg" alt="">
-   <img class="scrollrevs rounded-2xl cursor-pointer transition-transform transform-gpu hover:scale-105" src="./img/katsudon.jpg" alt="">
-   <img class="scrollrevs rounded-2xl cursor-pointer transition-transform transform-gpu hover:scale-105" src="./img/french.jpg" alt="">
-   <img class="scrollrevs rounded-2xl cursor-pointer transition-transform transform-gpu hover:scale-105" src="./img/por1.jpg" alt="">
-   <img class="scrollrevs rounded-2xl cursor-pointer transition-transform transform-gpu hover:scale-105" src="./img/britain.jpg" alt="">
-   <img class="scrollrevs rounded-2xl cursor-pointer transition-transform transform-gpu hover:scale-105" src="./img/bg.jpg" alt="">
-   <img class="scrollrevs rounded-2xl cursor-pointer transition-transform transform-gpu hover:scale-105" src="./img/salad.jpg" alt="">
-   <img class="scrollrevs rounded-2xl cursor-pointer transition-transform transform-gpu hover:scale-105" src="./img/turkey.jpg" alt=""><img class="rounded-2xl" src="./img/india.jpg" alt="">
+</section>
+
+  
+
+    <!-- Gallery -->
+  <section class="mt-28 mb-28 container mx-auto r">
+    <div class="flex gap-1 text-2xl tracking-widest">
+      <h1 class="font-semibold ">Website</h1>
+      <h1>Gallery</h1>
+    </div>
+
+
+  <div class="w-full max-w-full pb-10 mx-auto mb-10 gap-2 columns-3 space-y-5 mt-4">
+    <img class="scrollrevs cursor-pointer transition-transform transform-gpu hover:scale-105" src="./img/por2.jpg" alt="">
+   <img class="scrollrevs  cursor-pointer transition-transform transform-gpu hover:scale-105" src="./img/adobo.jpg" alt="">
+   <img class="scrollrevs  cursor-pointer transition-transform transform-gpu hover:scale-105" src="./img/katsudon.jpg" alt="">
+   <img class="scrollrevs  cursor-pointer transition-transform transform-gpu hover:scale-105" src="./img/french.jpg" alt="">
+   <img class="scrollrevs  cursor-pointer transition-transform transform-gpu hover:scale-105" src="./img/por1.jpg" alt="">
+   <img class="scrollrevs  cursor-pointer transition-transform transform-gpu hover:scale-105" src="./img/britain.jpg" alt="">
+   <img class="scrollrevs  cursor-pointer transition-transform transform-gpu hover:scale-105" src="./img/bg.jpg" alt="">
+   <img class="scrollrevs  cursor-pointer transition-transform transform-gpu hover:scale-105" src="./img/salad.jpg" alt="">
+   <img class="scrollrevs  cursor-pointer transition-transform transform-gpu hover:scale-105" src="./img/turkey.jpg" alt=""><img class="rounded-2xl" src="./img/india.jpg" alt="">
    
 </div>
 
 <div class="flex mx-auto justify-center scrollrevs">
-  <button class="py-2 px-6 bg-gray-700 text-white rounded-full">See all photos</button>
+  <div class="justify-center flex mx-auto mt-16">
+    <button class="bg-[#d45101] p-2  text-white">
+  See all Photos
+  </button>
 
   </div>
 </section>
 
-<footer class="bg-[#d7ccc8] rounded-t-3xl">
-  <div class="relative">
-    <img src="./img/bgvid1.png" class="w-full rounded-2xl h-80 object-cover" alt="">
-    <!--subscribe boxcentered on the image -->
-    <div class="w-full h-72 bg-[#d7ccc8] border 1px border-[#d7ccc8] rounded-2xl scrollrevs">
-            <h1 class="mt-6 text-center font-semibold text-2xl scrollrevs">Never miss a Post!</h1>
-            <p class="text-center text-sm px-7 mt-4 text-gray-500 scrollrevs">Sign up and join our cooking community and get notified on latest update</p>
-            <div class="relative">
-
-  
-              <input type="text" placeholder="Enter your email" class="scrollrevs pl-10 pr-6 py-4 w-72 mx-auto flex mt-7 text-xs border border-gray-300 focus:ring focus:ring-blue-200 focus:border-blue-500">
-              <i class="scrollrevs absolute right-24 top-1/2 transform -translate-y-1/2 fas fa-envelope text-gray-400"></i></input>
+  <!-- Sponsor -->
+  <section class="mt-28 w-full relative mx-auto justify-center container">
+    <div class="sponsor__container container flex justify-center cursor-pointer scrollrevs">
+                  <div class="sponsor__content">
+                      <img src="./img/bigbitelogo.png" alt="" class="sponsor__img">
+                  </div>
+                  <div class="sponsor__content">
+                      <img src="./img/crispylogo.png" alt="" class="sponsor__img">
+                  </div>
+                  <div class="sponsor__content">
+                      <img src="./img/lolilogo.png" alt="" class="sponsor__img">
+                  </div>
+                  <div class="sponsor__content">
+                      <img src="./img/burgerlogo.png" alt="" class="sponsor__img">
+                  </div>
+                  <div class="sponsor__content">
+                      <img src="./img/traylogo.png" alt="" class="sponsor__img">
+                  </div>
+                  <div class="sponsor__content">
+                      <img src="./img/olivelogo.png" alt="" class="sponsor__img">
+                  </div>
               </div>
+  </section>
+<footer class="bg-[#151515] mt-20 text-white p-4 mx-auto">
+  <div class="mx-auto container xl:pt-16 md:pt-16 lg:pt-24">
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+      <div>
+        <div class="  md:justify-normal lg:justify-normal xl:justify-normal md:mx-0 lg:mx-0 xl:mx-0">
+          <a class="flex  hover:scale-105 gap-1 transition" href="index.html">
+            <img src="./img/logo.png" class="w-10 h-10" alt="">
+            <h1 class="text-3xl font-bai font-semibold mt-1">
+              RecipeCuisine
+            </h1>
+          </a>
+        </div>
 
-            <button class="mx-auto flex bg-gray-700 justify-center text-white mt-2 text-sm w-72 py-4 px-6 animate__bounceInRight scrollrevs">Subscribe</button>
+        <p
+          class="mt-6 max-w-md text-center leading-relaxed text-[#d45101]sm:max-w-xs sm:text-left"
+        >
+        Unlock Flavorful Delights: Your Culinary Journey Starts Here!
+        </p>
 
-            </div>
-    <!-- End white box -->
-    <div class="text-gray-700 mx-auto flex item-center container py-4 justify-between">
-      <div class="text-sm">
-        <h1>©2023Reymark-Boquiron</h1>
+        <ul class="mt-8 flex justify-center gap-6 sm:justify-start md:gap-8 text-2xl text-white">
+          <li>
+            <i class="fa-brands fa-facebook"></i>
+          </li>
+
+          <li>
+            <i class="fa-brands fa-x-twitter"></i>
+          </li>
+
+          <li>
+            <i class="fa-brands fa-instagram"></i>
+          </li>
+
+          <li>
+            <i class="fa-brands fa-github"></i>
+          </li>
+
+          <li>
+            <i class="fa-brands fa-dribbble"></i>
+          </li>
+        </ul>
       </div>
-      <nav aria-label="Site Nav" class="hidden md:block">
-        <ul class="flex items-center gap-8 text-sm">
-          <li><a class="transition hover:text-gray-500/75" href="#Home">Home</a></li>
-          <li><a class="transition hover:text-gray-500/75" href="#Recipe">Recipes</a></li>
-          <li><a class="transition hover:text-gray-500/75" href="#Blogs">Blogs</a></li>
-          <li><a class="transition hover:text-gray-500/75" href="#Gallery">Gallery</a></li>
-        </ul>
-      </nav>
-      <nav>
-        <ul class="flex items-center gap-4 text-sm">
-          <li><a class="transition hover:text-gray-500/75" href="/"><i class="fa-brands fa-facebook-f text-gray-700 hover:text-gray-500/75"></i></a></li>
-          <li><a class="transition hover:text-gray-500/75" href="/"><i class="fa-brands fa-twitter text-gray-700 hover:text-gray-500/75"></i></a></li>
-          <li><a class="transition hover:text-gray-500/75" href="/"><i class="fa-brands fa-pinterest-p text-gray-700 hover:text-gray-500/75"></i></a></li>
-          <li><a class="transition hover:text-gray-500/75" href="/"><i class="fa-brands fa-instagram text-gray-700 hover:text-gray-500/75"></i></a></li>
-          <li><a class="transition hover:text-gray-500/75" href="/"><i class="fa-brands fa-dribbble text-gray-700 hover:text-gray-500/75"></i></a></li>
-          <li><a class="transition hover:text-gray-500/75" href="/"><i class="fa-brands fa-github text-gray-700 hover:text-gray-500/75"></i></a></li>
-        </ul>
-      </nav>
+
+      <div
+        class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:col-span-2"
+      >
+        <div class="text-center sm:text-left">
+          <p class="text-lg font-medium text-white">About Us</p>
+
+          <ul class="mt-8 space-y-4 text-sm">
+            <li>
+              <a
+                class="text-white transition hover:[#151515]"
+                href="/"
+              >
+                All Recipes
+              </a>
+            </li>
+
+            <li>
+              <a
+                class="text-white transition hover:text-[#d45101]"
+                href="/"
+              >
+                Blog
+              </a>
+            </li>
+
+            <li>
+              <a
+                class="text-white transition hover:text-[#d45101]"
+                href="/"
+              >
+                Gallery
+              </a>
+            </li>
+
+            
+          </ul>
+        </div>
+
+        <div class="text-center sm:text-left">
+          <p class="text-lg font-medium ">Our Services</p>
+
+          <ul class="mt-8 space-y-4 text-sm">
+            <li>
+              <a
+                class=" transition hover:text-[#d45101]"
+                href="/"
+              >
+                Web Development
+              </a>
+            </li>
+
+            <li>
+              <a
+                class=" transition hover:text-[#d45101]"
+                href="/"
+              >
+                Web Design
+              </a>
+            </li>
+
+            <li>
+              <a
+                class=" transition hover:text-[#d45101]"
+                href="/"
+              >
+                Marketing
+              </a>
+            </li>
+
+            <li>
+              <a
+                class=" transition hover:text-[#d45101]"
+                href="/"
+              >
+                Google Ads
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="text-center sm:text-left">
+          <p class="text-lg font-medium ">Helpful Links</p>
+
+          <ul class="mt-8 space-y-4 text-sm">
+            <li>
+              <a
+                class=" transition hover:text-[#d45101]"
+                href="/"
+              >
+                FAQs
+              </a>
+            </li>
+
+            <li>
+              <a
+                class=" transition hover:text-[#d45101]"
+                href="/"
+              >
+                Support
+              </a>
+            </li>
+
+           
+          </ul>
+        </div>
+
+        <div class="text-center sm:text-left">
+          <p class="text-lg font-medium ">Contact Us</p>
+
+          <ul class="mt-8 space-y-4 text-sm">
+            <li>
+              <a
+                class="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
+                href="/"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 shrink-0 "
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
+
+                <span class="flex-1 ">john@doe.com</span>
+              </a>
+            </li>
+
+            <li>
+              <a
+                class="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
+                href="/"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 shrink-0 "
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  />
+                </svg>
+
+                <span class="flex-1 ">0123456789</span>
+              </a>
+            </li>
+
+            <li
+              class="flex items-start justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 shrink-0"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+              </svg>
+
+              <address class="-mt-0.5 flex-1 not-italic ">
+               Cupang, Antipolo City
+              </address>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-12 border-t border-gray-100 pt-6">
+      <div class="text-center sm:flex sm:justify-between sm:text-left">
+        <p class="text-sm text-white">
+          <span class="block sm:inline">All rights reserved.</span>
+
+          <a
+            class="inline-block text-white underline transition hover:text-[#d45101]"
+            href="/"
+          >
+            Terms & Conditions
+          </a>
+
+          <span>&middot;</span>
+
+          <a
+            class="inline-block text-white underline transition hover:text-[#d45101]"
+            href="/"
+          >
+            Privacy Policy
+          </a>
+        </p>
+
+        <p class="mt-4 text-sm text-white sm:order-first sm:mt-0">
+          &copy; 2022 RecipeCuisine
+        </p>
+      </div>
     </div>
   </div>
 </footer>
+
 
 
 

@@ -23,8 +23,8 @@
 
 
 <div class="header-container fixed top-0 w-full z-10">
-  <header class="mx-auto justify-between flex h-20 w-full items-center bg-[#151515] p-4 xl:p-0 lg:p-0 md:p-0"> <!-- Add "fixed top-0" classes to make the header fixed -->
-    <div class="container flex gap-28 mx-auto bg-[#151515]">
+  <header class="mx-auto  flex h-20 w-full items-center bg-[#151515] p-4 xl:p-0 lg:p-0"> <!-- Add "fixed top-0" classes to make the header fixed -->
+    <div class="container flex gap-28 mx-auto bg-[#151515] justify-between">
   
       <div class="">
         <a class="flex gap-1 hover:scale-105 transition" href="index.html">
@@ -35,14 +35,14 @@
         </a>
       </div>
   
-      <ul class="flex items-center gap-8 text-sm text-white">
+      <ul class="lg:flex xl:flex items-center gap-8 text-sm text-white hidden">
         <li><a class="transition hover:text-[#d45101]" href="#Home">Home</a></li>
         <li><a class="transition hover:text-[#d45101]" href="#Recipe">Recipes</a></li>
         <li><a class="transition hover:text-[#d45101]" href="#Blogs">Blogs</a></li>
         <li><a class="transition hover:text-[#d45101]" href="#Gallery">Gallery</a></li>
       </ul>
   
-      <div class="flex w-full gap-2">
+      <div class="lg:flex xl:flex w-full gap-2 hidden">
         <div class="flex items-center relative w-full mt-1" id="search-section">
           <i class="fas fa-utensils absolute left-5 top-1/2 transform -translate-y-1/2 "></i>
           <input
@@ -61,7 +61,20 @@
         <div class="mt-1 cursor-pointer ">
           <i class="fa-solid fa-heart hover:bg-[#151515] transition shadow-md border-2 border-[#151515] hover:border-[#d45101] hover:border-2 bg-[#d45101] px-3 py-2.5 rounded-md text-white "></i>
         </div>
+
+     
+
       </div>
+
+         <!-- Burger menu -->
+         <div class="group cursor-pointer transition mt-2 flex lg:hidden xl:hidden">
+          <a href="#" onclick="openPopup()" class="">
+            <div class="bg-white h-0.5 w-7 mt-1.5 group-hover:bg-[#d45101]"></div>
+            <div class="bg-white h-0.5 w-7 mt-1.5 group-hover:bg-[#d45101]"></div>
+            <div class="bg-white h-0.5 w-7 mt-1.5 group-hover:bg-[#d45101]"></div>
+          </a>
+        </div>
+
     </div>
   </header>
 </div>
@@ -72,20 +85,126 @@
 
    
     
-    <div class="container mx-auto mt-16 " id="recipe-details">
+    <div class="container mx-auto lg:mt-16 xl:mt-16 mt-4" id="recipe-details">
       <!-- Display the recipe details based on the URL parameter -->
     </div>
 
 
-    
+     <!-- The pop-up container -->
+     <div
+     id="popupContainer"
+     class="fixed top-0 left-0 w-full h-full bg-[#151515] flex hidden mx-auto z-50 "
+   >
+   
+     <div class="flex mt-5 justify-between w-full mx-auto container gap-28 ">
 
-<footer class="bg-[#d45101] mt-20 text-white">
-  <div class="mx-auto max-w-screen-xl p-4 xl:pt-16 md:pt-16 lg:pt-24">
+      <!-- Header -->
+       <div class="container flex gap-28 mx-auto bg-[#151515] justify-between fixed px-4 md:p-0 xl:p-0 lg:p-0">
+        
+        <!-- Icon -->
+        <div class="">
+          <a class="flex gap-1 hover:scale-105 transition" href="index.html">
+            <img src="./img/logo.png" class="w-10 h-10" alt="">
+            <h1 class="text-3xl font-bai font-semibold mt-1 text-white">
+              RecipeCuisine
+            </h1>
+          </a>
+        </div>
+
+        <!-- Close button -->
+         <div class="flex gap-6 mt-2">
+           <div class="cursor-pointer hover:text-[#d45101]">
+             <button class="" onclick="closePopup()">
+               <i
+                 class="text-white text-3xl cursor-pointer transition hover:text-[#d45101] text-md fa-solid fa-times"
+               ></i>
+             </button>
+           </div>
+         </div>
+
+       </div>
+
+       <!-- Body -->
+       <div class="container mx-auto mt-20 flex ">
+        
+         <div class=" lg:px-14 xl:px-14 px-4 gap-6 w-full">
+          
+          <!-- Search -->
+          <div class="flex w-full gap-2 animate__animated animate__fadeInUp">
+            <div class="flex items-center relative w-full mt-1" id="search-section">
+              <i class="fas fa-utensils absolute left-5 top-1/2 transform -translate-y-1/2 "></i>
+              <input
+                type="text"
+                class="w-full py-2.5 px-12 rounded-md text-xs focus:outline-none focus:ring-0 focus:border-[#d45101] focus:border-2"
+                placeholder="Search recipes..."
+              >
+              <button
+                type="button"
+                class="absolute right-1 px-6 py-1 bg-[#d45101] text-white rounded-md hover:opacity-50 transition"
+              >
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+      
+            <div class="mt-1 cursor-pointer ">
+              <i class="fa-solid fa-heart hover:bg-[#151515] transition shadow-md border-2 border-[#151515] hover:border-[#d45101] hover:border-2 bg-[#d45101] px-3 py-2.5 rounded-md text-white "></i>
+            </div>
+    
+         
+    
+          </div>
+
+          <div class="inline-grid  gap-6 mt-8">
+
+        
+           <a href="index.html" class="menu-link animate__animated animate__fadeInUp md:text-3xl lg:text-3xl xl:text-3xl text-3xl text-gray-400">Homepage</a>
+           <a href="https://rylllll.github.io/Portfolio/src/portfolio.html" class="menu-link animate__animated animate__fadeInUp md:text-3xl lg:text-3xl xl:text-3xl text-3xl text-white transition hover:text-white">Recipes</a>
+           <a href="https://rylllll.github.io/Portfolio/src/resume.html" class="menu-link animate__animated animate__fadeInUp md:text-3xl lg:text-3xl xl:text-3xl text-3xl text-gray-400 transition hover:text-white">Blogs</a>
+           <a href="https://rylllll.github.io/Portfolio/src/contact.html" class="menu-link animate__animated animate__fadeInUp md:text-3xl lg:text-3xl xl:text-3xl text-3xl text-gray-400 transition hover:text-white">Gallery</a>
+           
+         
+         
+           <div class="grid  mt-16">
+         <div class="md:flex lg:flex xl:flex grid gap-4  md:text-md lg:text-md xl:text-md ">
+           <h1 class="text-white">Follow us</h1>
+           <div class="flex  font-semibold gap-4 text-white text-xl">
+             <a href="https://www.facebook.com/reymark.boquiron" target="_blank" class="hover:text-white transition text-[#d45101]"><i class="fa-brands fa-facebook"></i></a>
+             <a href="https://www.instagram.com/rylllls/" target="_blank" class="hover:text-white transition text-[#d45101]"><i class="fa-brands fa-instagram"></i></a>
+             <a href="https://www.linkedin.com/in/reymark-boquiron-b6b19b175/" target="_blank" class="hover:text-white transition text-[#d45101]"><i class="fa-brands fa-x-twitter"></i></a>
+           </div>
+         </div>
+
+         <div class="justify-between flex md:mt-0 lg:mt-0 xl:mt-0 mt-6">
+           <div class="text-white mb-20 md:flex lg:flex xl:flex flex md:gap-1 lg:gap-1 xl:gap-1 gap-1">
+             <h1>© 2023. RecipeCuisine</h1>
+             <h1>All rights reserved.</h1>
+           </div>
+         
+         </div>
+       
+         </div>
+        </div>
+       </div>
+
+     
+
+       </div>
+       
+       
+     </div>
+
+  
+
+     
+   </div>
+
+<footer class="bg-[#151515] mt-20 text-white p-4 mx-auto">
+  <div class="mx-auto container xl:pt-16 md:pt-16 lg:pt-24">
     <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
       <div>
-        <div class="">
-          <a class="flex gap-1  hover:scale-105 transition" href="index.html">
-            <img src="./img/logowhite.png" class="w-10 h-10" alt="">
+        <div class="  md:justify-normal lg:justify-normal xl:justify-normal md:mx-0 lg:mx-0 xl:mx-0">
+          <a class="flex  hover:scale-105 gap-1 transition" href="index.html">
+            <img src="./img/logo.png" class="w-10 h-10" alt="">
             <h1 class="text-3xl font-bai font-semibold mt-1">
               RecipeCuisine
             </h1>
@@ -93,7 +212,7 @@
         </div>
 
         <p
-          class="mt-6 max-w-md text-center leading-relaxed text-[#151515]sm:max-w-xs sm:text-left"
+          class="mt-6 max-w-md text-center leading-relaxed text-[#d45101]sm:max-w-xs sm:text-left"
         >
         Unlock Flavorful Delights: Your Culinary Journey Starts Here!
         </p>
@@ -130,7 +249,7 @@
           <ul class="mt-8 space-y-4 text-sm">
             <li>
               <a
-                class="text-white transition hover:text-black"
+                class="text-white transition hover:[#151515]"
                 href="/"
               >
                 All Recipes
@@ -139,7 +258,7 @@
 
             <li>
               <a
-                class="text-white transition hover:text-[#151515]"
+                class="text-white transition hover:text-[#d45101]"
                 href="/"
               >
                 Blog
@@ -148,7 +267,7 @@
 
             <li>
               <a
-                class="text-white transition hover:text-[#151515]"
+                class="text-white transition hover:text-[#d45101]"
                 href="/"
               >
                 Gallery
@@ -165,7 +284,7 @@
           <ul class="mt-8 space-y-4 text-sm">
             <li>
               <a
-                class=" transition hover:text-[#151515]"
+                class=" transition hover:text-[#d45101]"
                 href="/"
               >
                 Web Development
@@ -174,7 +293,7 @@
 
             <li>
               <a
-                class=" transition hover:text-[#151515]"
+                class=" transition hover:text-[#d45101]"
                 href="/"
               >
                 Web Design
@@ -183,7 +302,7 @@
 
             <li>
               <a
-                class=" transition hover:text-[#151515]"
+                class=" transition hover:text-[#d45101]"
                 href="/"
               >
                 Marketing
@@ -192,7 +311,7 @@
 
             <li>
               <a
-                class=" transition hover:text-[#151515]"
+                class=" transition hover:text-[#d45101]"
                 href="/"
               >
                 Google Ads
@@ -207,7 +326,7 @@
           <ul class="mt-8 space-y-4 text-sm">
             <li>
               <a
-                class=" transition hover:text-[#151515]"
+                class=" transition hover:text-[#d45101]"
                 href="/"
               >
                 FAQs
@@ -216,7 +335,7 @@
 
             <li>
               <a
-                class=" transition hover:text-[#151515]"
+                class=" transition hover:text-[#d45101]"
                 href="/"
               >
                 Support
@@ -303,7 +422,7 @@
               </svg>
 
               <address class="-mt-0.5 flex-1 not-italic ">
-                213 Lane, London, United Kingdom
+               Cupang, Antipolo City
               </address>
             </li>
           </ul>
@@ -317,7 +436,7 @@
           <span class="block sm:inline">All rights reserved.</span>
 
           <a
-            class="inline-block text-white underline transition hover:text-[#151515]"
+            class="inline-block text-white underline transition hover:text-[#d45101]"
             href="/"
           >
             Terms & Conditions
@@ -326,7 +445,7 @@
           <span>&middot;</span>
 
           <a
-            class="inline-block text-white underline transition hover:text-[#151515]"
+            class="inline-block text-white underline transition hover:text-[#d45101]"
             href="/"
           >
             Privacy Policy
@@ -343,5 +462,6 @@
 
       
     <script src="./js/details.js"></script>
+    <script src="./js/pop.js"></script>
   </body>
 </html>
