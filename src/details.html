@@ -19,12 +19,12 @@
 
     <title>Food Recipe</title>
   </head>
-  <body class="font-sans scrollbar-thumb-gray-500 scrollbar-thin">
+  <body class="font-sans scrollbar-thumb-gray-500 scrollbar-thin ">
 
 
-<div class="header-container fixed top-0 w-full z-10">
-  <header class="mx-auto  flex h-20 w-full items-center bg-[#151515] p-4 xl:p-0 lg:p-0"> <!-- Add "fixed top-0" classes to make the header fixed -->
-    <div class="container flex gap-28 mx-auto bg-[#151515] justify-between">
+<div class="header-container fixed top-0 w-full bg-[#151515] z-10">
+  <header class="container mx-auto  flex h-20 w-full items-center bg-[#151515] px-4 xl:p-0 lg:p-0 md:p-0"> <!-- Add "fixed top-0" classes to make the header fixed -->
+    <div class="container flex gap-28 mx-auto bg-[#151515] justify-between ">
   
       <div class="">
         <a class="flex gap-1 hover:scale-105 transition" href="index.html">
@@ -66,11 +66,11 @@
 
       </div>
 
-       
+      
 
     </div>
-      <!-- Burger menu -->
-      <div class="group cursor-pointer transition mt-2 flex lg:hidden xl:hidden">
+       <!-- Burger menu -->
+       <div class="group cursor-pointer transition  flex lg:hidden xl:hidden">
         <a href="#" onclick="openPopup()" class="">
           <div class="bg-white h-0.5 w-7 mt-1.5 group-hover:bg-[#d45101]"></div>
           <div class="bg-white h-0.5 w-7 mt-1.5 group-hover:bg-[#d45101]"></div>
@@ -80,8 +80,8 @@
   </header>
 </div>
 <!-- Breadcrumbs -->
-<div class="w-full bg-gray-100 mt-20 py-2 p-4 md:p-0 lg:p-0 xl:p-0 lg:py-2 xl:py-2 md:py-2">
-  <div class="breadcrumbs text-sm container mx-auto "></div>
+<div class="w-full bg-gray-100 mt-20 py-2 md:p-0 lg:p-0 xl:p-0 lg:py-2 xl:py-2 md:py-2">
+  <div class="px-4 xl:p-0 lg:p-0 md:p-0 breadcrumbs text-sm container mx-auto "></div>
 </div>
 
    
@@ -100,35 +100,39 @@
      <div class="flex mt-5 justify-between w-full mx-auto container gap-28 ">
 
       <!-- Header -->
-       <div class="container flex gap-28 mx-auto bg-[#151515] justify-between fixed px-4 md:p-0 xl:p-0 lg:p-0">
+      
+        <header class="container mx-auto fixed top-0 flex h-20 w-full items-center bg-[#151515] px-4 xl:p-0 lg:p-0 md:p-0"> <!-- Add "fixed top-0" classes to make the header fixed -->
+          <div class="container flex gap-28 mx-auto bg-[#151515] justify-between ">
         
-        <!-- Icon -->
-        <div class="">
-          <a class="flex gap-1 hover:scale-105 transition" href="index.html">
-            <img src="./img/logo.png" class="w-10 h-10" alt="">
-            <h1 class="text-3xl font-bai font-semibold mt-1 text-white">
-              RecipeCuisine
-            </h1>
-          </a>
-        </div>
-
-        <!-- Close button -->
-         <div class="flex gap-6 mt-2">
-           <div class="cursor-pointer hover:text-[#d45101]">
-             <button class="" onclick="closePopup()">
-               <i
-                 class="text-white text-3xl cursor-pointer transition hover:text-[#d45101] text-md fa-solid fa-times"
-               ></i>
-             </button>
-           </div>
-         </div>
-
-       </div>
+            <div class="">
+              <a class="flex gap-1 hover:scale-105 transition" href="index.html">
+                <img src="./img/logo.png" class="w-10 h-10" alt="">
+                <h1 class="text-3xl font-bai font-semibold mt-1 text-white">
+                  RecipeCuisine
+                </h1>
+              </a>
+            </div>
+      
+          </div>
+             <!-- Burger menu -->
+             <div class="flex gap-6 mt-2">
+              <div class="cursor-pointer hover:text-[#d45101]">
+                <button class="" onclick="closePopup()">
+                  <i
+                    class="text-white text-3xl cursor-pointer transition hover:text-[#d45101] text-md fa-solid fa-times"
+                  ></i>
+                </button>
+              </div>
+            </div>
+            
+        </header>
+    
+      
 
        <!-- Body -->
        <div class="container mx-auto mt-20 flex ">
         
-         <div class=" lg:px-14 xl:px-14 px-4 gap-6 w-full">
+         <div class="md:px-0 lg:px-0 xl:px-0 px-4 gap-6 w-full">
           
           <!-- Search -->
           <div class="flex w-full gap-2 animate__animated animate__fadeInUp">
@@ -199,7 +203,7 @@
      
    </div>
 
-<footer class="bg-[#151515] mt-20 text-white p-4 mx-auto">
+<footer class="bg-[#151515] mt-20 text-white px-4 mx-auto">
   <div class="mx-auto container xl:pt-16 md:pt-16 lg:pt-24">
     <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
       <div>

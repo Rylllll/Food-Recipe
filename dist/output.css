@@ -2140,6 +2140,11 @@ html {
     padding-bottom: 0.5rem;
   }
 
+  .md\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
   .md\:pt-16 {
     padding-top: 4rem;
   }
