@@ -14,8 +14,7 @@
 }
 .tab:hover{
   transition: 0.2s ease-in-out;
-  background-color: black;
-  opacity: 20%;
+  background-color: #151515;
   color:white;
 }
 

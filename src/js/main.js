@@ -67,14 +67,14 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="flex justify-between gap-10">
         <h2 class="md:text-5xl lg:text-5xl xl:text-5xl text-3xl font-bai font-bold hover:text-[#d45101] transition">${recipe.label}</h2>
 
-        <div class="flex gap-4">
+        <div class="flex gap-2">
 
         <div>
-        <i class="fa-solid fa-heart border-white hover:text-pink-400 hover:transition shadow-md cursor-pointer bg-[#d45101] text-white p-2 rounded-full"></i>
+        <i class="fa-solid fa-heart border-white hover:text-[#151515] hover:transition shadow-md cursor-pointer bg-[#d45101] text-white p-2 "></i>
         </div>
 
         <div class="mt-1">
-        <a href="${recipe.url}" target="_blank" rel="noopener noreferrer" class=" font-sans text-white hover:text-pink-400 bg-[#d45101] px-2 py-1 shadow-md rounded-full "><i class="fa-solid fa-arrow-up-right-from-square"></i>
+        <a href="${recipe.url}" target="_blank" rel="noopener noreferrer" class=" font-sans text-white hover:text-[#151515] bg-[#d45101] px-2 py-1 shadow-md  "><i class="fa-solid fa-arrow-up-right-from-square"></i>
         </a>
         </div>
 
@@ -264,7 +264,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
             recipeCard.innerHTML = `
             <div class="relative transition hover:scale-105">
-            <i class="fa-solid fa-heart border-white hover:text-pink-400 hover:transition shadow-md cursor-pointer absolute top-2 right-2 bg-[#d45101] text-white p-2 rounded-full"></i>
+            <i class="fa-solid fa-heart border-white hover:text-pink-400 hover:transition shadow-md cursor-pointer absolute top-2 right-2 bg-[#d45101] text-white p-2"></i>
             <a href="details.html?id=${encodeURIComponent(recipe.label)}">
                 <img src="${recipe.image}" alt="${recipe.label}" class="w-full h-28 mb-2 object-cover">
             </a>
