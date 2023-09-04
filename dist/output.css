@@ -978,10 +978,6 @@ input[type="range"]::-ms-fill-lower {
   margin-bottom: 5rem;
 }
 
-.mb-28 {
-  margin-bottom: 7rem;
-}
-
 .mb-4 {
   margin-bottom: 1rem;
 }
@@ -1016,10 +1012,6 @@ input[type="range"]::-ms-fill-lower {
 
 .mt-20 {
   margin-top: 5rem;
-}
-
-.mt-28 {
-  margin-top: 7rem;
 }
 
 .mt-4 {
@@ -1150,10 +1142,6 @@ input[type="range"]::-ms-fill-lower {
   width: 1.25rem;
 }
 
-.w-7 {
-  width: 1.75rem;
-}
-
 .w-96 {
   width: 24rem;
 }
@@ -1164,6 +1152,10 @@ input[type="range"]::-ms-fill-lower {
 
 .w-full {
   width: 100%;
+}
+
+.w-7 {
+  width: 1.75rem;
 }
 
 .max-w-full {
@@ -1254,6 +1246,10 @@ input[type="range"]::-ms-fill-lower {
 
 .items-center {
   align-items: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
 }
 
 .justify-center {
@@ -1496,6 +1492,11 @@ input[type="range"]::-ms-fill-lower {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.px-7 {
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
 }
 
 .pb-10 {
@@ -1976,6 +1977,11 @@ html {
   background-color: rgb(21 21 21 / var(--tw-bg-opacity));
 }
 
+.hover\:text-\[\#151515\]:hover {
+  --tw-text-opacity: 1;
+  color: rgb(21 21 21 / var(--tw-text-opacity));
+}
+
 .hover\:text-\[\#d45101\]:hover {
   --tw-text-opacity: 1;
   color: rgb(212 81 1 / var(--tw-text-opacity));
@@ -1994,11 +2000,6 @@ html {
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.hover\:text-\[\#151515\]:hover {
-  --tw-text-opacity: 1;
-  color: rgb(21 21 21 / var(--tw-text-opacity));
 }
 
 .hover\:underline:hover {
@@ -2231,6 +2232,11 @@ html {
     padding-bottom: 0.5rem;
   }
 
+  .lg\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
   .lg\:pt-24 {
     padding-top: 6rem;
   }
@@ -2305,6 +2311,11 @@ html {
   .xl\:py-2 {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+  }
+
+  .xl\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .xl\:pt-16 {
