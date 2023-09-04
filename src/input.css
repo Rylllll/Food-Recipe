@@ -3,24 +3,25 @@
 @tailwind utilities;
 
 
-.tab {
+/* .tab {
   padding: 10px 20px;
   cursor: pointer;
   border: none;
   border-bottom: 2px solid transparent;
   width: 100%;
+  font-size: 1rem;
   background-color: transparent;
-  transition: border-color 0.2s ease-in; /* Added transition for the border color */
-}
-.tab:hover{
+  transition: border-color 0.2s ease-in;
+} */
+/* .tab:hover{
   transition: 0.2s ease-in-out;
   background-color: #151515;
   color:white;
-}
+} */
 
 .active-tab {
-  border-color: #d45101; /* Change this color to your desired active tab color */
-  color: #d45101; /* Changing text color */
+  border-color: #d45101;
+  color: #d45101; 
   z-index: 100;
 }
 

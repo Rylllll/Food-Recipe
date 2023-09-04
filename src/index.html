@@ -19,123 +19,247 @@
 
   <body class="font-sans  scrollbar-thumb-[#d45101] scrollbar-thin" id="Home">
    
-    <header class="mx-auto justify-between flex h-20 w-full items-center  fixed top-0 bg-scroll z-10">
-      <div class="container flex gap-28 mx-auto bg-scroll">
+    <!-- header -->
+    <div class="header-container fixed top-0 w-full  z-10 bg-scroll">
+      <header class="container mx-auto  flex h-20 w-full items-center  px-4 xl:p-0 lg:p-0 md:p-0"> <!-- Add "fixed top-0" classes to make the header fixed -->
+        <div class="container flex gap-28 mx-auto  justify-between ">
       
           <div class="">
-            <a class="flex gap-1  hover:scale-105 transition" href="index.html">
+            <a class="flex gap-1 hover:scale-105 transition" href="index.html">
               <img src="./img/logo.png" class="w-10 h-10" alt="">
               <h1 class="text-3xl font-bai font-semibold mt-1 text-white">
                 RecipeCuisine
               </h1>
             </a>
           </div>
-         
-          <ul class="flex items-center gap-8 text-sm text-white">
+      
+          <ul class="lg:flex xl:flex items-center gap-8 text-sm text-white hidden">
             <li><a class="transition hover:text-[#d45101]" href="#Home">Home</a></li>
             <li><a class="transition hover:text-[#d45101]" href="#Recipe">Recipes</a></li>
             <li><a class="transition hover:text-[#d45101]" href="#Blogs">Blogs</a></li>
             <li><a class="transition hover:text-[#d45101]" href="#Gallery">Gallery</a></li>
           </ul>
-  
-          <div class="flex w-full gap-2">
+      
+          <div class="lg:flex xl:flex w-full gap-2 hidden">
             <div class="flex items-center relative w-full mt-1" id="search-section">
               <i class="fas fa-utensils absolute left-5 top-1/2 transform -translate-y-1/2 "></i>
               <input
                 type="text"
-                
                 class="w-full py-2.5 px-12  text-xs focus:outline-none focus:ring-0 focus:border-[#d45101] focus:border-2"
                 placeholder="Search recipes..."
               >
               <button
                 type="button"
-              
-                class="absolute right-1 px-6 py-1 bg-[#d45101]  text-white  hover:opacity-50 transition"
+                class="absolute right-1 px-6 py-1 bg-[#d45101] text-white  hover:opacity-50 transition"
               >
                 <i class="fas fa-search"></i>
               </button>
             </div>
-  
+      
             <div class="mt-1 cursor-pointer ">
               <i class="fa-solid fa-heart hover:bg-[#151515] transition shadow-md border-2 border-[#151515] hover:border-[#d45101] hover:border-2 bg-[#d45101] px-3 py-2.5  text-white "></i>
             </div>
     
-          </div>
-  
+         
     
           </div>
-  </header>
+    
+          
+    
+        </div>
+           <!-- Burger menu -->
+           <div class="group cursor-pointer transition  flex lg:hidden xl:hidden">
+            <a href="#" onclick="openPopup()" class="">
+              <div class="bg-white h-0.5 w-7 mt-1.5 group-hover:bg-[#d45101]"></div>
+              <div class="bg-white h-0.5 w-7 mt-1.5 group-hover:bg-[#d45101]"></div>
+              <div class="bg-white h-0.5 w-7 mt-1.5 group-hover:bg-[#d45101]"></div>
+            </a>
+          </div>
+      </header>
+    </div>
 
+    <!-- The pop-up container -->
+    <div
+    id="popupContainer"
+    class="fixed top-0 left-0 w-full h-full bg-[#151515] flex hidden mx-auto z-50 "
+  >
+  
+    <div class="flex mt-5 justify-between w-full mx-auto container gap-28 ">
+
+     <!-- Header -->
+     
+       <header class="container mx-auto fixed top-0 flex h-20 w-full items-center bg-[#151515] px-4 xl:p-0 lg:p-0 md:p-0"> <!-- Add "fixed top-0" classes to make the header fixed -->
+         <div class="container flex gap-28 mx-auto bg-[#151515] justify-between ">
+       
+           <div class="">
+             <a class="flex gap-1 hover:scale-105 transition" href="index.html">
+               <img src="./img/logo.png" class="w-10 h-10" alt="">
+               <h1 class="text-3xl font-bai font-semibold mt-1 text-white">
+                 RecipeCuisine
+               </h1>
+             </a>
+           </div>
+     
+         </div>
+            <!-- Burger menu -->
+            <div class="flex gap-6 mt-2">
+             <div class="cursor-pointer hover:text-[#d45101]">
+               <button class="" onclick="closePopup()">
+                 <i
+                   class="text-white text-3xl cursor-pointer transition hover:text-[#d45101] text-md fa-solid fa-times"
+                 ></i>
+               </button>
+             </div>
+           </div>
+           
+       </header>
    
+     
+
+      <!-- Body -->
+      <div class="container mx-auto mt-20 flex ">
+       
+        <div class="md:px-0 lg:px-0 xl:px-0 px-4 gap-6 w-full">
+         
+         <!-- Search -->
+         <div class="flex w-full gap-2 animate__animated animate__fadeInUp">
+           <div class="flex items-center relative w-full mt-1" id="search-section">
+             <i class="fas fa-utensils absolute left-5 top-1/2 transform -translate-y-1/2 "></i>
+             <input
+               type="text"
+               class="w-full py-2.5 px-12  text-xs focus:outline-none focus:ring-0 focus:border-[#d45101] focus:border-2"
+               placeholder="Search recipes..."
+             >
+             <button
+               type="button"
+               class="absolute right-1 px-6 py-1 bg-[#d45101] text-white  hover:opacity-50 transition"
+             >
+               <i class="fas fa-search"></i>
+             </button>
+           </div>
+     
+           <div class="mt-1 cursor-pointer ">
+             <i class="fa-solid fa-heart hover:bg-[#151515] transition shadow-md border-2 border-[#151515] hover:border-[#d45101] hover:border-2 bg-[#d45101] px-3 py-2.5  text-white "></i>
+           </div>
+   
+        
+   
+         </div>
+
+         <div class="inline-grid  gap-6 mt-8">
+
+       
+          <a href="index.html" class="menu-link animate__animated animate__fadeInUp md:text-3xl lg:text-3xl xl:text-3xl text-3xl text-gray-400">Homepage</a>
+          <a href="https://rylllll.github.io/Portfolio/src/portfolio.html" class="menu-link animate__animated animate__fadeInUp md:text-3xl lg:text-3xl xl:text-3xl text-3xl text-white transition hover:text-white">Recipes</a>
+          <a href="https://rylllll.github.io/Portfolio/src/resume.html" class="menu-link animate__animated animate__fadeInUp md:text-3xl lg:text-3xl xl:text-3xl text-3xl text-gray-400 transition hover:text-white">Blogs</a>
+          <a href="https://rylllll.github.io/Portfolio/src/contact.html" class="menu-link animate__animated animate__fadeInUp md:text-3xl lg:text-3xl xl:text-3xl text-3xl text-gray-400 transition hover:text-white">Gallery</a>
+          
+        
+        
+          <div class="grid  mt-16">
+        <div class="md:flex lg:flex xl:flex grid gap-4  md:text-md lg:text-md xl:text-md ">
+          <h1 class="text-white">Follow us</h1>
+          <div class="flex  font-semibold gap-4 text-white text-xl">
+            <a href="https://www.facebook.com/reymark.boquiron" target="_blank" class="hover:text-white transition text-[#d45101]"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/rylllls/" target="_blank" class="hover:text-white transition text-[#d45101]"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/reymark-boquiron-b6b19b175/" target="_blank" class="hover:text-white transition text-[#d45101]"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+
+        <div class="justify-between flex md:mt-0 lg:mt-0 xl:mt-0 mt-6">
+          <div class="text-white mb-20 md:flex lg:flex xl:flex flex md:gap-1 lg:gap-1 xl:gap-1 gap-1">
+            <h1>© 2023. RecipeCuisine</h1>
+            <h1>All rights reserved.</h1>
+          </div>
+        
+        </div>
+      
+        </div>
+       </div>
+      </div>
+
+    
+
+      </div>
+      
+      
+    </div>
+
+ 
+
+    
+  </div>
  
 <!-- Hero section -->
 <section class="mx-auto w-full relative">
   <div class="relative ">
-    <img src="./img/bg.jpg" class="w-full h-display object-cover" alt="">
-    <div class="absolute inset-0 flex flex-col justify-center items-center">
-      <h1 class="text-5xl font-bai text-white font-semibold mb-6">Got any Favorites?</h1>
+    <img src="./img/bg.jpg" class="w-full h-display object-cover hidden md:flex lg:flex xl:flex" alt="">
+    <img src="./img/salad.jpg" class="w-full h-display object-cover md:hidden lg:hidden xl:hidden flex" alt="">
+    <div class="absolute inset-0  flex flex-col justify-center items-center">
+      <h1 class="md:text-5xl lg:text-5xl xl:text-5xl text-4xl font-bai mx-auto justify-center text-white font-semibold mb-6">Got any Favorites?</h1>
       <div class="flex items-center relative" id="search-section">
         <i class="fas fa-utensils absolute left-5 top-1/2 transform -translate-y-1/2 "></i>
         <input
           type="text"
           id="search-input" 
-          class="w-custom py-3 px-12 text-sm border-gray-300 focus:outline-none focus:ring-0 focus:border-[#d45101] focus:border-2"
+          class="md:w-custom lg:w-custom xl:w-custom w-80 py-3 px-12 text-sm border-gray-300 focus:outline-none focus:ring-0 focus:border-[#d45101] focus:border-2"
           placeholder="Search recipes..."
         >
         <button
           type="button"
           id="search-button"
-          class="absolute right-1 px-6 py-2 bg-[#d45101] text-white hover:opacity-50 transition"
+          class="absolute right-1 px-6 py-2 bg-[#d45101]  text-white hover:opacity-50 transition"
         >
           <i class="fas fa-search"></i>
         </button>
       </div>
-      
-      <h1 class="text-xs font-sans text-white mt-4">Search your favorite recipes or any recipe around the world.</h1>
+    
+      <h1 class="text-xs font-sans text-white mx-auto justify-center mt-4  lg:p-0 xl:p-0 px-4 ">Search your favorite recipes or any recipe around the world.</h1>
     </div>
   </div>
 </section>
 
 
 <!-- Featured Recipe -->
-<section class="mx-auto md:container lg:container scrollrevs mt-10">
-  <div class="flex gap-1 text-2xl tracking-widest hover:text-[#d45101] transition">
+<section class="mx-auto container scrollrevs mt-10">
+  <div class="xl:p-0 lg:p-0 md:p-0 p-4 flex gap-1 text-2xl tracking-widest hover:text-[#d45101] transition">
     <h1 class="font-semibold ">Featured</h1>
     <h1>Recipe</h1>
   </div>
   <div id="featured-section" class="mt-4 container mx-auto lg:mt-8 xl:mt-8">
     <!-- Results will be displayed here -->
 </div>
-  <div id="results-sections" class="mt-8">
+  <div id="results-sections" class="mt-4 xl:p-0 lg:p-0 md:p-0 p-4 ">
     <!-- Results will be displayed here -->
 </div>
 </section>
 
 <!-- Recipes -->
 
-    <section class="mx-auto md:container lg:container scrollrevs mt-10" id="Recipe">
-      <div class="flex gap-1 text-2xl tracking-widest hover:text-[#d45101] transition">
+    <section class="mx-auto container scrollrevs mt-10" id="Recipe">
+      <div class="xl:p-0 lg:p-0 md:p-0 p-4 flex gap-1 text-2xl tracking-widest hover:text-[#d45101] transition">
         <h1 class="font-semibold ">Select</h1>
         <h1>Category</h1>
       </div>
-      <div id="tabs" class="items-center mx-auto grid  mt-4">
+      <div id="tabs" class="items-center mx-auto grid md:p-0 lg:p-0 xl:p-0 px-4 mt-4">
         <div class="flex justify-between font-semibold">
-          <button class="active-tab tab items-center justify-center flex mx-auto" id="breakfast-tab">Breakfast</button>
-        <button class="tab items-center justify-center flex mx-auto" id="lunch-tab">Lunch</button>
-        <button class="tab items-center justify-center flex mx-auto" id="dinner-tab">Dinner</button>
-        <button class="tab items-center justify-center flex mx-auto" id="snack-tab">Snack</button>
-        <button class="tab items-center justify-center flex mx-auto" id="dessert-tab">Dessert</button>
-          </div>
+          <button class="active-tab tab items-center justify-center hover:bg-[#151515] hover:text-white flex mx-auto md:text-base py-2 lg:text-base xl:text-base text-xs border-b-2 border-transparent bg-transparent transition duration-200 ease-in w-full" id="breakfast-tab">Breakfast</button>
+          <button class="tab items-center justify-center flex mx-auto hover:bg-[#151515] hover:text-white md:text-base lg:text-base py-2 xl:text-base text-xs border-b-2 w-full border-transparent bg-transparent transition duration-200 ease-in" id="lunch-tab">Lunch</button>
+          <button class="tab items-center justify-center flex mx-auto hover:bg-[#151515] hover:text-white md:text-base lg:text-base py-2 xl:text-base text-xs border-b-2 w-full border-transparent bg-transparent transition duration-200 ease-in" id="dinner-tab">Dinner</button>
+          <button class="tab items-center justify-center flex mx-auto hover:bg-[#151515] hover:text-white md:text-base lg:text-base py-2 xl:text-base text-xs border-b-2 w-full border-transparent bg-transparent transition duration-200 ease-in" id="snack-tab">Snack</button>
+          <button class="tab items-center justify-center flex mx-auto hover:bg-[#151515] hover:text-white md:text-base lg:text-base py-2 xl:text-base text-xs border-b-2  w-full border-transparent bg-transparent transition duration-200 ease-in" id="dessert-tab">Dessert</button>
+        </div>
+        
        
         <div class="w-full container h-customs mb-2 -mt-0.5 bg-gray-300"></div>
     </div>
 
-        <div id="results-section" class="mt-4">
+        <div id="results-section" class="mt-4 md:p-0 lg:p-0 xl:p-0 px-4">
             <!-- Results will be displayed here -->
         </div>
 
         <a href="./recipe.html">
-          <div class="justify-center flex mx-auto mt-16">
+          <div class="justify-center flex mx-auto mt-10">
             <button class="bg-[#d45101] p-2  text-white">
           See all recipe
           </button>
@@ -150,11 +274,11 @@
 <!-- blogs -->
 
 <section class="mt-10 w-full relative mx-auto justify-center container">
-  <div class="flex gap-1 text-2xl tracking-widest hover:text-[#d45101] transition">
+  <div class="flex xl:p-0 lg:p-0 md:p-0 p-4 gap-1 text-2xl tracking-widest hover:text-[#d45101] transition">
     <h1 class="font-semibold ">See Our</h1>
     <h1>Blogs</h1>
   </div>
-  <div class="flex gap-4 mt-4">
+  <div class="md:flex lg:flex xl:flex grid md:gap-4 lg:gap-4 xl:gap-4 gap-6 mt-4 xl:p-0 lg:p-0 md:p-0 p-4">
     <!-- Card 1 -->
     <div>
       <img src="./img/blog1.jpg" class="w-full" alt="">
@@ -164,7 +288,7 @@
           <div class="flex justify-between w-full">
             
             <div class="flex gap-4">
-              <img src="./img/commentor.jpg" class="w-12 h-12 " alt="">
+              <img src="./img/commentor.jpg" class="w-12 h-12 rounded-full" alt="">
             <div class="grid text-xs mt-2">
               <h1>Reymark Boquiron</h1>
               <h1>May 05 2023</h1>
@@ -179,12 +303,12 @@
       </div>
     </div>
     <!-- Card 2 -->
-    <div>
+    <div class="">
       <img src="./img/blog2.jpg" class="w-full" alt="">
       <h1 class="font-semibold mt-4 text-lg">Chef of the Universe</h1>
       <p class="text-xs mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam impedit quibusdam officiis optio nesciunt. Amet odit illo minima nihil non, deserunt quae ullam ad beatae neque velit dicta a officiis!</p>
       <div class="flex justify-between mt-4">
-          <div class="flex justify-between w-full">
+          <div class="flex  justify-between w-full">
             
             <div class="flex gap-4">
               <img src="./img/chef1.jpg" class="w-12 h-12 rounded-full" alt="">
@@ -202,12 +326,12 @@
       </div>
     </div>
     <!-- Card 3 -->
-    <div>
+    <div class="">
       <img src="./img/blog3.jpg" class="w-full" alt="">
       <h1 class="font-semibold mt-4 text-lg">Playing with fire</h1>
       <p class="text-xs mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam impedit quibusdam officiis optio nesciunt. Amet odit illo minima nihil non, deserunt quae ullam ad beatae neque velit dicta a officiis!</p>
       <div class="flex justify-between mt-4">
-          <div class="flex justify-between w-full">
+          <div class="flex  justify-between w-full">
             
             <div class="flex gap-4">
               <img src="./img/chef2.jpg" class="w-12 h-12 rounded-full" alt="">
@@ -225,7 +349,7 @@
       </div>
     </div>
     <!-- Card 4 -->
-    <div>
+    <div class="">
       <img src="./img/turkey.jpg" class="w-full text-lg" alt="">
       <h1 class="font-semibold mt-4">Culinary expertise</h1>
       <p class="text-xs mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam impedit quibusdam officiis optio nesciunt. Amet odit illo minima nihil non, deserunt quae ullam ad beatae neque velit dicta a officiis!</p>
@@ -256,13 +380,13 @@
 
     <!-- Gallery -->
   <section class="mt-10 container mx-auto r">
-    <div class="flex gap-1 text-2xl tracking-widest hover:text-[#d45101] transition">
+    <div class="flex  xl:p-0 lg:p-0 md:p-0 p-4 gap-1 text-2xl tracking-widest hover:text-[#d45101] transition">
       <h1 class="font-semibold ">Website</h1>
       <h1>Gallery</h1>
     </div>
 
 
-  <div class="w-full max-w-full pb-10 mx-auto mb-10 gap-2 columns-3 space-y-5 mt-4">
+  <div class="w-full max-w-full pb-10 mx-auto mb-10 gap-2 lg:columns-3 xl:columns-3 columns-1 space-y-5 mt-4  xl:p-0 lg:p-0 md:p-0 p-4">
     <img class="scrollrevs cursor-pointer transition-transform transform-gpu hover:scale-105" src="./img/por2.jpg" alt="">
    <img class="scrollrevs  cursor-pointer transition-transform transform-gpu hover:scale-105" src="./img/adobo.jpg" alt="">
    <img class="scrollrevs  cursor-pointer transition-transform transform-gpu hover:scale-105" src="./img/katsudon.jpg" alt="">
@@ -271,12 +395,13 @@
    <img class="scrollrevs  cursor-pointer transition-transform transform-gpu hover:scale-105" src="./img/britain.jpg" alt="">
    <img class="scrollrevs  cursor-pointer transition-transform transform-gpu hover:scale-105" src="./img/bg.jpg" alt="">
    <img class="scrollrevs  cursor-pointer transition-transform transform-gpu hover:scale-105" src="./img/salad.jpg" alt="">
-   <img class="scrollrevs  cursor-pointer transition-transform transform-gpu hover:scale-105" src="./img/turkey.jpg" alt=""><img class="rounded-2xl" src="./img/india.jpg" alt="">
+   <img class="scrollrevs  cursor-pointer transition-transform transform-gpu hover:scale-105" src="./img/turkey.jpg" alt="">
+   <img class="scrollrevs  cursor-pointer transition-transform transform-gpu hover:scale-105" src="./img/india.jpg" alt="">
    
 </div>
 
 <div class="flex mx-auto justify-center scrollrevs">
-  <div class="justify-center flex mx-auto mt-16">
+  <div class="justify-center flex mx-auto">
     <button class="bg-[#d45101] p-2  text-white">
   See all Photos
   </button>
@@ -575,6 +700,7 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script> 
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="./js/main.js"></script>
+<script src="./js/pop.js"></script>
 <script src="./js/scroll.js"></script>
 <script src="./js/scrollreveal.min.js"></script>
   </body>

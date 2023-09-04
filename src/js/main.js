@@ -49,14 +49,14 @@ document.addEventListener('DOMContentLoaded', () => {
             recipeCard.className = 'recipe-card  relative transition w-full'; // Added "relative" class
     
             recipeCard.innerHTML = `
-            <div class="flex gap-8 w-full">
+            <div class="xl:flex lg:flex grid p-4 xl:p-0 lg:p-0 md:p-0 gap-8">
             <div class="relative transition w-full">
             <img src="${recipe.image}" 
                          srcset="${recipe.image}, ${
                      recipe.image
                      }?quality=80&resize=1200x800 2x"
                          alt="${recipe.label}" 
-                         class="lg:w-custom xl:w-custom w-96 h-display object-cover">
+                         class="lg:w-custom xl:w-custom w-full h-display object-cover">
         </div>
                 
         <div class="w-full">
@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
             resultsSections.innerHTML = '';
         
             const recipeCardsContainer = document.createElement('div');
-            recipeCardsContainer.className = 'flex gap-2'; // Use grid layout
+            recipeCardsContainer.className = 'md:flex lg:flex xl:flex grid gap-2'; // Use grid layout
             resultsSections.appendChild(recipeCardsContainer);
         
             recipes.forEach(recipe => {
@@ -199,7 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="relative transition hover:scale-105">
                
                 <a href="details.html?id=${encodeURIComponent(recipe.label)}">
-                    <img src="${recipe.image}" alt="${recipe.label}" class="w-96 h-28 mb-2 object-cover ">
+                    <img src="${recipe.image}" alt="${recipe.label}" class="w-96 h-full mb-2 object-cover ">
                 </a>
             </div>
                     
@@ -255,7 +255,7 @@ document.addEventListener('DOMContentLoaded', () => {
         resultsSection.innerHTML = '';
     
         const recipeCardsContainer = document.createElement('div');
-        recipeCardsContainer.className = 'grid grid-cols-6 gap-2'; // Use grid layout
+        recipeCardsContainer.className = 'grid md:grid-cols-6 lg:grid-cols-6 xl:grid-cols-6 grid-cols-3  gap-2'; // Use grid layout
         resultsSection.appendChild(recipeCardsContainer);
     
         recipes.forEach(recipe => {
