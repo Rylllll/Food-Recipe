@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const breadcrumbs = document.querySelector('.breadcrumbs');
     breadcrumbs.innerHTML = `
     <div class="gap-2 flex">
-    <a href="index.html" class=" hover:underline"><i class="fa-solid fa-house text-sm"></i></a> <i class="fa-solid fa-chevron-right text-xs mt-1"></i> <a href="recipe.html" class=" hover:underline">Recipes</a>  <i class="fa-solid fa-chevron-right text-xs mt-1"></i> <h1 class="text-[#d45101]"> ${recipe.label}</h1>
+    <a href="index.html" class=" hover:underline"><i class="fa-solid fa-house text-sm"></i></a> <i class="fa-solid fa-chevron-right text-xs mt-1"></i> <a href="recipe.html" class=" hover:underline hover:text-[#d45101] transition">Recipes</a>  <i class="fa-solid fa-chevron-right text-xs mt-1"></i> <h1 class="text-[#d45101]"> ${recipe.label}</h1>
     </div>
     `;
     
@@ -91,11 +91,9 @@ document.addEventListener("DOMContentLoaded", () => {
       recipeDetailsContainer.innerHTML = `
                 <div class="xl:flex lg:flex grid p-4 xl:p-0 lg:p-0 md:p-0 gap-12">
                     <img src="${recipe.image}" 
-                         srcset="${recipe.image}, ${
-                     recipe.image
-                     }?quality=80&resize=1200x800 2x"
+                        
                          alt="${recipe.label}" 
-                         class="lg:w-custom xl:w-custom w-full h-display obkect-cover rounded">
+                         class="lg:w-custom xl:w-custom w-full h-display obkect-cover ">
 
                     <div class="w-full">
                     
