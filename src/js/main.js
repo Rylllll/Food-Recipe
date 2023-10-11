@@ -52,9 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="xl:flex lg:flex grid p-4 xl:p-0 lg:p-0 md:p-0 gap-8">
             <div class="relative transition w-full">
             <img src="${recipe.image}" 
-                         srcset="${recipe.image}, ${
-                     recipe.image
-                     }?quality=80&resize=1200x800 2x"
+                         
                          alt="${recipe.label}" 
                          class="lg:w-custom xl:w-custom w-full h-display object-cover">
         </div>
@@ -199,7 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="relative transition hover:scale-105">
                
                 <a href="details.html?id=${encodeURIComponent(recipe.label)}">
-                    <img src="${recipe.image}" alt="${recipe.label}" class="w-96 h-full mb-2 object-cover ">
+                    <img src="${recipe.image}" alt="${recipe.label}" class="w-full h-full mb-2 object-cover ">
                 </a>
             </div>
                     
