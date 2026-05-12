@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
   const fetchRecipeDetails = async (label) => {
     const appId = "2bed754d";
-    const appKey = "b3d365a0e5a86f2751ca4d2284738aee"; // Replace with your Edamam app key
+    const appKey = "be0d11be5811118351ec90964689042e"; 
     const apiUrl = `https://api.edamam.com/search?q=${label}&app_id=${appId}&app_key=${appKey}`;
 
     try {
