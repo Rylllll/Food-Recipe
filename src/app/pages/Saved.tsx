@@ -43,7 +43,7 @@ export function Saved() {
            <Link to="/recipes" className="px-8 py-4 bg-[#1947E5] text-white font-black uppercase text-xl md:text-2xl border-[3px] border-theme-border shadow-[6px_6px_0_0_var(--border-color)] hover:translate-x-1 hover:-translate-y-1 hover:shadow-[10px_10px_0_0_var(--border-color)] transition-all flex items-center gap-3 group">
              Find Recipes <ArrowRight className="w-6 h-6 md:w-8 md:h-8 group-hover:translate-x-3 transition-transform" />
            </Link>
-        </div>
+        </div> 
       )}
 
     </div>
